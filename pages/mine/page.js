@@ -1,7 +1,12 @@
+let hello = require('common/hello.js');
+
 Page({
   data: {
     nickname: '体验账号',
-    desc: 'V2 组件与布局示例',
+    desc: hello.text,
     version: '1.0.0'
+  },
+  onRunSample() {
+    Engines.executeScript('tasks/sample.js');
   }
 });

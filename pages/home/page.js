@@ -1,6 +1,10 @@
+let hello = require('common/hello.js');
+let helper = require('./helper.js');
+
 Page({
   data: {
-    hello: '你好，这是 V2 示例',
+    hello: helper.greet('体验者'),
+    hint: hello.runHint,
     metrics: [
       { label: '组件', value: '19' },
       { label: '页面', value: '15' },
@@ -20,8 +24,10 @@ Page({
       { name: '深色顶栏', icon: 'img/ks.svg', page: 'pages/contrast' }
     ]
   },
-  onLoad() {
-    // let data = JSON.parse(Http.get('https://example.com/dke/home'));
-    // this.setData(data);
+  onRunSample() {
+    Engines.executeScript('tasks/sample.js');
+  },
+  onRunFollow() {
+    Engines.executeScript('tasks/follow.js');
   }
 });

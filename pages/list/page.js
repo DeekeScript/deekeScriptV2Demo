@@ -1,3 +1,5 @@
+let line = require('common/line.js');
+
 Page({
   data: {
     tasks: [
@@ -23,6 +25,6 @@ Page({
     }
     this.setData({ loading: true });
     System.sleep(2000);
-    this.setData({ loading: false, noMore: true, footer: '—— 我是有底线的 ——' });
+    this.setData({ loading: false, noMore: true, footer: line.end() });
   }
 });

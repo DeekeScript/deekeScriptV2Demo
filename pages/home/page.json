@@ -44,6 +44,22 @@
       }
     },
     { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "运行脚本", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{hint}}" },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "button", "text": "运行示例", "onClick": "onRunSample" },
+            { "type": "button", "text": "运行关注", "size": "md", "onClick": "onRunFollow" }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
     { "type": "text", "text": "样式与布局", "style": { "fontWeight": "bold" } },
     {
       "type": "grid",
