@@ -25,7 +25,8 @@
           "style": { "padding": 12, "gap": 4 },
           "children": [
             { "type": "text", "text": "{{hello}}", "style": { "fontWeight": "bold", "fontSize": 16 } },
-            { "type": "notice", "text": "从下面入口查看各组件与布局" }
+            { "type": "title", "text": "{{clock}}", "style": { "align": "center" } },
+            { "type": "notice", "text": "{{date}} · 每秒由 setData 刷新", "style": { "align": "center" } }
           ]
         }
       ]

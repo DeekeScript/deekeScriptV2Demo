@@ -13,7 +13,10 @@ Page({
     platform: 'xhs',
     enable_comment: true,
     enable_like: false,
-    speed: 50
+    speed: 50,
+    extras: [
+      { key: 'kw_1', label: '关键词 1' }
+    ]
   },
   onLoad() {
     let task_name = Storage.get('v2demo.task_name');
@@ -44,5 +47,20 @@ Page({
     Storage.put('v2demo.follow_min', this.data.follow_min);
     Storage.put('v2demo.follow_max', this.data.follow_max);
     Storage.put('v2demo.speed', this.data.speed);
+  },
+  onAddExtra() {
+    var n = this.data.extras.length + 1;
+    this.appendData('extras', [{ key: 'kw_' + n, label: '关键词 ' + n }]);
+  },
+  onRemoveExtra() {
+    var list = this.data.extras;
+    if (!list || list.length <= 1) {
+      return;
+    }
+    var next = [];
+    for (var i = 0; i < list.length - 1; i++) {
+      next.push(list[i]);
+    }
+    this.setData({ extras: next });
   }
 });

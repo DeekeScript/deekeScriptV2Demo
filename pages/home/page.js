@@ -5,6 +5,8 @@ Page({
   data: {
     hello: helper.greet('体验者'),
     hint: hello.runHint,
+    clock: '--:--:--',
+    date: '',
     metrics: [
       { label: '组件', value: '19' },
       { label: '页面', value: '15' },
@@ -23,6 +25,28 @@ Page({
       { name: '无标题', icon: 'img/xhs.svg', page: 'pages/plain' },
       { name: '深色顶栏', icon: 'img/ks.svg', page: 'pages/contrast' }
     ]
+  },
+  onLoad() {
+    this.tick();
+    var page = this;
+    this.timer = setInterval(function () {
+      page.tick();
+    }, 1000);
+  },
+  onUnload() {
+    if (this.timer) {
+      clearInterval(this.timer);
+    }
+  },
+  tick() {
+    var d = new Date();
+    function pad(n) {
+      return n < 10 ? '0' + n : '' + n;
+    }
+    this.setData({
+      clock: pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()),
+      date: d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate())
+    });
   },
   onRunSample() {
     Engines.executeScript('tasks/sample.js');

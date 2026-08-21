@@ -30,6 +30,32 @@
     {
       "type": "card",
       "children": [
+        { "type": "text", "text": "动态关键词", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "点「增加一项」会 appendData，输入框数量跟着变。" },
+        {
+          "type": "list",
+          "bind": "extras",
+          "item": {
+            "type": "input",
+            "name": "{{item.key}}",
+            "label": "{{item.label}}",
+            "hint": "选填"
+          }
+        },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "button", "text": "增加一项", "size": "md", "onClick": "onAddExtra" },
+            { "type": "button", "text": "去掉最后一项", "size": "md", "style": { "background": "#5F6D6B" }, "onClick": "onRemoveExtra" }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
         { "type": "text", "text": "区间、选择、开关", "style": { "fontWeight": "bold" } },
         {
           "type": "range",

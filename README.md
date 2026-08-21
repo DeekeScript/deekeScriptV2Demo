@@ -1,5 +1,7 @@
 # DeekeScript V2 示例
 
+> **特别说明：v2版本正在筹划中，预计2026年底（预计11月左右）对外发布**
+
 用 `deekeScript-v2.json` 作为入口。在 DeekeScript 里打开本目录即可预览。
 
 ## 底部 Tab
