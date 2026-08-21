@@ -13,6 +13,9 @@ Page({
     platform: 'xhs',
     enable_comment: true,
     enable_like: false,
+    agree: true,
+    platforms: ['xhs'],
+    mode: 'safe',
     speed: 50,
     extras: [
       { key: 'kw_1', label: '关键词 1' }

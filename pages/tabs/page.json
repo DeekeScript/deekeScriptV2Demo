@@ -1,0 +1,79 @@
+{
+  "title": {
+    "text": "选项卡",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "tabs 是页内选项卡。底部 Tab 颜色写在 window.tabBar。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "style": { "padding": 0 },
+      "children": [
+        {
+          "type": "tabs",
+          "name": "tab",
+          "value": "follow",
+          "onChange": "onTab",
+          "items": [
+            {
+              "text": "关注",
+              "value": "follow",
+              "children": [
+                {
+                  "type": "column",
+                  "style": { "padding": 12, "gap": 6 },
+                  "children": [
+                    { "type": "text", "text": "今日关注 12 人", "style": { "fontWeight": "bold" } },
+                    { "type": "notice", "text": "先完成养号，再处理私信。" },
+                    {
+                      "type": "row",
+                      "style": { "gap": 6 },
+                      "children": [
+                        { "type": "tag", "text": "养号" },
+                        { "type": "tag", "text": "关注" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "点赞",
+              "value": "like",
+              "badge": "8",
+              "children": [
+                {
+                  "type": "column",
+                  "style": { "padding": 12, "gap": 6 },
+                  "children": [
+                    { "type": "text", "text": "点赞进行中", "style": { "fontWeight": "bold" } },
+                    { "type": "notice", "text": "已完成 36 次" },
+                    { "type": "badge", "text": "8" }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "记录",
+              "value": "log",
+              "children": [
+                { "type": "empty", "text": "暂无记录" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "notice", "text": "当前 tab：{{tab}}" },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
+  ]
+}

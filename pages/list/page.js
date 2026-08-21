@@ -2,6 +2,8 @@ let line = require('common/line.js');
 
 Page({
   data: {
+    keyword: '',
+    all: [],
     tasks: [
       { id: 1, title: '今日关注 12 人', time: '10:21', status: '完成', icon: 'img/avatar-1.svg', jsFile: 'tasks/sample.js' },
       { id: 2, title: '今日点赞 36 次', time: '11:08', status: '进行中', icon: 'img/avatar-2.svg', jsFile: 'tasks/sample.js' },
@@ -15,6 +17,22 @@ Page({
     loading: false,
     noMore: false,
     footer: ''
+  },
+  onLoad() {
+    this.setData({ all: this.data.tasks });
+  },
+  onSearch(e) {
+    var q = String(e.value || '').trim().toLowerCase();
+    var src = this.data.all;
+    var next = [];
+    for (var i = 0; i < src.length; i++) {
+      var t = src[i];
+      var blob = (t.title + ' ' + t.status + ' ' + t.time).toLowerCase();
+      if (!q || blob.indexOf(q) >= 0) {
+        next.push(t);
+      }
+    }
+    this.setData({ keyword: e.value, tasks: next });
   },
   onRun(e) {
     Engines.executeScript(e.item.jsFile);

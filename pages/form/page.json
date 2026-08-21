@@ -77,7 +77,34 @@
           ]
         },
         { "type": "switch", "name": "enable_comment", "label": "自动评论", "value": true },
-        { "type": "switch", "name": "enable_like", "label": "自动点赞", "value": false }
+        { "type": "switch", "name": "enable_like", "label": "自动点赞", "value": false },
+        {
+          "type": "checkbox",
+          "name": "agree",
+          "label": "已阅读并同意协议",
+          "value": true
+        },
+        {
+          "type": "checkbox",
+          "name": "platforms",
+          "label": "同步平台",
+          "options": [
+            { "label": "小红书", "value": "xhs" },
+            { "label": "抖音", "value": "dy" },
+            { "label": "快手", "value": "ks" }
+          ],
+          "value": ["xhs"]
+        },
+        {
+          "type": "radio",
+          "name": "mode",
+          "label": "运行模式",
+          "options": [
+            { "label": "稳妥", "value": "safe" },
+            { "label": "激进", "value": "fast" }
+          ],
+          "value": "safe"
+        }
       ]
     },
     { "type": "space", "height": 8 },

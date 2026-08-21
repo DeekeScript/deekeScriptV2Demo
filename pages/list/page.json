@@ -10,6 +10,13 @@
     "padding": 12
   },
   "body": [
+    {
+      "type": "search",
+      "name": "keyword",
+      "hint": "搜索任务",
+      "onChange": "onSearch",
+      "style": { "sticky": "top", "background": "#F5F5F5", "paddingBottom": 8 }
+    },
     { "type": "notice", "text": "点卡片进详情，点运行执行 tasks/sample.js。滑到底会加载，没有数据后显示底线。" },
     { "type": "space", "height": 8 },
     {

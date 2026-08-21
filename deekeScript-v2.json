@@ -18,6 +18,12 @@
     "statusBar": {
       "background": "#006A65",
       "color": "light"
+    },
+    "tabBar": {
+      "color": "#6F7978",
+      "selectedColor": "#006A65",
+      "background": "#FFFFFF",
+      "borderColor": "#EEEEEE"
     }
   },
   "pages": [
@@ -26,6 +32,7 @@
     { "id": "mine", "file": "pages/mine", "title": "我的" },
     { "id": "text", "file": "pages/text", "title": "文案" },
     { "id": "tag", "file": "pages/tag", "title": "标签" },
+    { "id": "tabs", "file": "pages/tabs", "title": "选项卡" },
     { "id": "image", "file": "pages/image", "title": "图片" },
     { "id": "button", "file": "pages/button", "title": "按钮" },
     { "id": "layout", "file": "pages/layout", "title": "布局" },
@@ -40,7 +47,7 @@
   "bottomMenus": [
     { "title": "首页", "icon": "img/home.svg", "page": "pages/home" },
     { "title": "表单", "icon": "img/setting.svg", "page": "pages/form" },
-    { "title": "列表", "icon": "img/records.svg", "page": "pages/list" },
+    { "title": "列表", "icon": "img/records.svg", "page": "pages/list", "badge": 8 },
     { "title": "我的", "icon": "img/like.svg", "page": "pages/mine" }
   ]
 }
