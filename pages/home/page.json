@@ -26,7 +26,14 @@
           "children": [
             { "type": "text", "text": "{{hello}}", "style": { "fontWeight": "bold", "fontSize": 16 } },
             { "type": "title", "text": "{{clock}}", "style": { "align": "center" } },
-            { "type": "notice", "text": "{{date}} · 每秒由 setData 刷新", "style": { "align": "center" } }
+            { "type": "notice", "text": "{{date}} · 每秒由 setData 刷新", "style": { "align": "center" } },
+            {
+              "type": "list",
+              "direction": "row",
+              "bind": "tags",
+              "style": { "gap": 6, "align": "center" },
+              "item": { "type": "tag", "text": "{{item}}" }
+            }
           ]
         }
       ]

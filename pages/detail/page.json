@@ -13,8 +13,15 @@
     {
       "type": "card",
       "children": [
-        { "type": "title", "text": "{{item.title}}" },
-        { "type": "notice", "text": "编号 {{params.id}} · {{item.status}}" },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "title", "text": "{{item.title}}", "style": { "weight": 1 } },
+            { "type": "tag", "text": "{{item.status}}" }
+          ]
+        },
+        { "type": "notice", "text": "编号 {{params.id}}" },
         { "type": "divider" },
         { "type": "text", "text": "{{item.time}}" },
         { "type": "notice", "text": "{{item.desc}}" }

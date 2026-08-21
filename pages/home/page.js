@@ -7,14 +7,16 @@ Page({
     hint: hello.runHint,
     clock: '--:--:--',
     date: '',
+    tags: ['养号', '关注', '私信'],
     metrics: [
-      { label: '组件', value: '19' },
-      { label: '页面', value: '15' },
+      { label: '组件', value: '20' },
+      { label: '页面', value: '16' },
       { label: '表单', value: '7' },
       { label: '布局', value: '4' }
     ],
     entries: [
       { name: '文案', icon: 'img/dy.svg', page: 'pages/text' },
+      { name: '标签', icon: 'img/like.svg', page: 'pages/tag' },
       { name: '图片', icon: 'img/xhs.svg', page: 'pages/image' },
       { name: '按钮', icon: 'img/ks.svg', page: 'pages/button' },
       { name: '布局', icon: 'img/like.svg', page: 'pages/layout' },

@@ -33,8 +33,15 @@
                 "type": "column",
                 "style": { "weight": 1, "gap": 2 },
                 "children": [
-                  { "type": "text", "text": "{{item.title}}", "style": { "fontWeight": "bold" } },
-                  { "type": "notice", "text": "{{item.time}} · {{item.status}}" }
+                  {
+                    "type": "row",
+                    "style": { "gap": 6 },
+                    "children": [
+                      { "type": "text", "text": "{{item.title}}", "style": { "weight": 1, "fontWeight": "bold" } },
+                      { "type": "tag", "text": "{{item.status}}" }
+                    ]
+                  },
+                  { "type": "notice", "text": "{{item.time}}" }
                 ]
               },
               {

@@ -1,0 +1,63 @@
+{
+  "title": {
+    "text": "标签",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "tag 是短标签。默认浅绿底，可用 style 改颜色。多个标签用 row 或横向 list。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "默认", "style": { "fontWeight": "bold" } },
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            { "type": "tag", "text": "养号" },
+            { "type": "tag", "text": "关注" },
+            { "type": "tag", "text": "私信" }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            { "type": "tag", "text": "完成", "style": { "background": "#E6F4F1", "color": "#006A65" } },
+            { "type": "tag", "text": "进行中", "style": { "background": "#FFF4E5", "color": "#B25E09" } },
+            { "type": "tag", "text": "失败", "style": { "background": "#FDECEC", "color": "#B42318" } }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "列表绑定", "style": { "fontWeight": "bold" } },
+        {
+          "type": "list",
+          "direction": "row",
+          "bind": "tags",
+          "style": { "gap": 6 },
+          "item": { "type": "tag", "text": "{{item}}" }
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
+  ]
+}

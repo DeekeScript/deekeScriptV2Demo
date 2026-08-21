@@ -23,7 +23,14 @@
               "style": { "weight": 1, "gap": 2 },
               "children": [
                 { "type": "text", "text": "{{nickname}}", "style": { "fontWeight": "bold", "fontSize": 16 } },
-                { "type": "notice", "text": "{{desc}}" }
+                { "type": "notice", "text": "{{desc}}" },
+                {
+                  "type": "list",
+                  "direction": "row",
+                  "bind": "tags",
+                  "style": { "gap": 6 },
+                  "item": { "type": "tag", "text": "{{item}}" }
+                }
               ]
             }
           ]

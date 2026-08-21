@@ -25,6 +25,7 @@
     { "id": "list", "file": "pages/list", "title": "列表" },
     { "id": "mine", "file": "pages/mine", "title": "我的" },
     { "id": "text", "file": "pages/text", "title": "文案" },
+    { "id": "tag", "file": "pages/tag", "title": "标签" },
     { "id": "image", "file": "pages/image", "title": "图片" },
     { "id": "button", "file": "pages/button", "title": "按钮" },
     { "id": "layout", "file": "pages/layout", "title": "布局" },
