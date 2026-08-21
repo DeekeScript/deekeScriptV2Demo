@@ -1,0 +1,24 @@
+{
+  "statusBar": {
+    "background": "#F5F5F5",
+    "color": "dark"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 20
+  },
+  "body": [
+    { "type": "title", "text": "无导航栏" },
+    { "type": "notice", "text": "本页未写 title，所以不显示顶部导航栏。状态栏改成浅底深色图标。" },
+    { "type": "space", "height": 12 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "适合引导、协议、全屏内容", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "需要返回时自己放按钮，或依赖系统返回键。" }
+      ]
+    },
+    { "type": "space", "height": 16 },
+    { "type": "button", "text": "返回", "style": { "width": "match" }, "action": { "type": "back" } }
+  ]
+}

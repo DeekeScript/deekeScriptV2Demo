@@ -1,0 +1,71 @@
+{
+  "title": {
+    "text": "进度条",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "progress 别名 slider。min / max / step / unit 自定义刻度，不一定是百分比。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "progress",
+          "name": "speed",
+          "label": "运行速度",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "unit": "%"
+        },
+        {
+          "type": "progress",
+          "name": "level",
+          "label": "强度档位",
+          "value": 3,
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "unit": "档"
+        },
+        {
+          "type": "slider",
+          "name": "delay",
+          "label": "间隔（slider 别名）",
+          "value": 1500,
+          "min": 500,
+          "max": 3000,
+          "step": 500,
+          "unit": "ms"
+        },
+        {
+          "type": "progress",
+          "name": "volume",
+          "label": "只读展示",
+          "value": 70,
+          "min": 0,
+          "max": 100,
+          "unit": "%",
+          "disabled": true
+        },
+        {
+          "type": "progress",
+          "name": "hiddenValue",
+          "label": "不显示当前值",
+          "value": 40,
+          "showValue": false
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "notice", "text": "速度 {{speed}}% · 档位 {{level}} · 间隔 {{delay}}ms" },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
+  ]
+}

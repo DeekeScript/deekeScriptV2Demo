@@ -1,0 +1,72 @@
+{
+  "title": {
+    "text": "宫格",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "text", "text": "一行两个", "style": { "fontWeight": "bold" } },
+    {
+      "type": "grid",
+      "bind": "metrics",
+      "columns": 2,
+      "item": {
+        "type": "card",
+        "children": [
+          { "type": "notice", "text": "{{item.label}}" },
+          { "type": "title", "text": "{{item.value}}" }
+        ]
+      }
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "一行三个", "style": { "fontWeight": "bold" } },
+    {
+      "type": "grid",
+      "bind": "apps3",
+      "columns": 3,
+      "item": {
+        "type": "card",
+        "action": { "type": "toast", "text": "{{item.name}}" },
+        "style": { "padding": 8, "gap": 8 },
+        "children": [
+          { "type": "image", "src": "{{item.icon}}", "style": { "width": "50%" } },
+          { "type": "text", "text": "{{item.name}}", "style": { "fontSize": 11, "align": "center" } }
+        ]
+      }
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "一行四个", "style": { "fontWeight": "bold" } },
+    {
+      "type": "grid",
+      "bind": "apps4",
+      "columns": 4,
+      "item": {
+        "type": "card",
+        "style": { "padding": 6, "gap": 6 },
+        "children": [
+          { "type": "image", "src": "{{item.icon}}", "style": { "width": "50%" } },
+          { "type": "text", "text": "{{item.name}}", "style": { "fontSize": 10, "align": "center" } }
+        ]
+      }
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "空宫格", "style": { "fontWeight": "bold" } },
+    {
+      "type": "grid",
+      "bind": "emptyApps",
+      "columns": 3,
+      "empty": "暂无入口",
+      "item": {
+        "type": "card",
+        "children": [{ "type": "text", "text": "{{item.name}}" }]
+      }
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "DeekeV2Demo",
+  "packageName": "cn.deeke.v2demo",
+  "versionCode": "100",
+  "versionName": "1.0.0",
+  "host": "https://doc.deeke.cn",
+  "homePage": "pages/home",
+  "window": {
+    "style": {
+      "background": "#F5F5F5",
+      "padding": 12
+    },
+    "title": {
+      "fontSize": 18,
+      "color": "#FFFFFF",
+      "background": "#006A65"
+    },
+    "statusBar": {
+      "background": "#006A65",
+      "color": "light"
+    }
+  },
+  "pages": [
+    { "id": "form", "file": "pages/form", "title": "表单" },
+    { "id": "list", "file": "pages/list", "title": "列表" },
+    { "id": "mine", "file": "pages/mine", "title": "我的" },
+    { "id": "text", "file": "pages/text", "title": "文案" },
+    { "id": "image", "file": "pages/image", "title": "图片" },
+    { "id": "button", "file": "pages/button", "title": "按钮" },
+    { "id": "layout", "file": "pages/layout", "title": "布局" },
+    { "id": "grid", "file": "pages/grid", "title": "宫格" },
+    { "id": "loading", "file": "pages/loading", "title": "加载" },
+    { "id": "progress", "file": "pages/progress", "title": "进度" },
+    { "id": "center", "file": "pages/center", "title": "居中" },
+    { "id": "plain", "file": "pages/plain" },
+    { "id": "contrast", "file": "pages/contrast", "title": "对比" },
+    { "id": "detail", "file": "pages/detail", "title": "详情" }
+  ],
+  "bottomMenus": [
+    { "title": "首页", "icon": "img/home.svg", "page": "pages/home" },
+    { "title": "表单", "icon": "img/setting.svg", "page": "pages/form" },
+    { "title": "列表", "icon": "img/records.svg", "page": "pages/list" },
+    { "title": "我的", "icon": "img/like.svg", "page": "pages/mine" }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "title": {
+    "text": "组件示例",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "card",
+      "style": { "padding": 0, "gap": 0 },
+      "children": [
+        {
+          "type": "image",
+          "src": "img/banner.svg",
+          "fit": "cover",
+          "style": { "height": 88, "radius": 0, "width": "match" }
+        },
+        {
+          "type": "column",
+          "style": { "padding": 12, "gap": 4 },
+          "children": [
+            { "type": "text", "text": "{{hello}}", "style": { "fontWeight": "bold", "fontSize": 16 } },
+            { "type": "notice", "text": "从下面入口查看各组件与布局" }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "grid",
+      "bind": "metrics",
+      "columns": 2,
+      "item": {
+        "type": "card",
+        "children": [
+          { "type": "notice", "text": "{{item.label}}" },
+          { "type": "title", "text": "{{item.value}}" }
+        ]
+      }
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "样式与布局", "style": { "fontWeight": "bold" } },
+    {
+      "type": "grid",
+      "bind": "entries",
+      "columns": 3,
+      "item": {
+        "type": "card",
+        "action": { "type": "navigate", "page": "{{item.page}}" },
+        "style": { "padding": 8, "gap": 8 },
+        "children": [
+          { "type": "image", "src": "{{item.icon}}", "style": { "width": "50%" } },
+          { "type": "text", "text": "{{item.name}}", "style": { "fontSize": 11, "align": "center" } }
+        ]
+      }
+    }
+  ]
+}

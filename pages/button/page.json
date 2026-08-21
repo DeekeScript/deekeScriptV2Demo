@@ -1,0 +1,64 @@
+{
+  "title": {
+    "text": "按钮样式",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "size 分 sm / md / lg，不写即为大按钮。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "三种尺寸", "style": { "fontWeight": "bold" } },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "button", "text": "小 sm", "size": "sm", "action": { "type": "toast", "text": "小按钮" } },
+            { "type": "button", "text": "中 md", "size": "md", "action": { "type": "toast", "text": "中按钮" } },
+            { "type": "button", "text": "大 lg", "size": "lg", "action": { "type": "toast", "text": "大按钮" } }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "颜色", "style": { "fontWeight": "bold" } },
+        { "type": "button", "text": "品牌绿", "style": { "background": "#006A65" } },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "强调橙", "style": { "background": "#C45C26" } },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "深色", "style": { "background": "#191C1C" } },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "浅底深字", "style": { "background": "#E6F2F0", "color": "#006A65" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "通栏与圆角", "style": { "fontWeight": "bold" } },
+        { "type": "button", "text": "通栏主按钮", "style": { "width": "match", "radius": 8 } },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "大圆角", "style": { "width": "match", "radius": 20, "background": "#006A65" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } },
+        { "type": "button", "text": "打开官网", "size": "md", "action": { "type": "openUrl", "url": "https://deeke.cn" } }
+      ]
+    }
+  ]
+}

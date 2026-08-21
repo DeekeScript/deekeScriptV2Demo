@@ -1,0 +1,62 @@
+{
+  "title": {
+    "text": "图片样式",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "src 可用项目内文件。fit 为 contain 或 cover。" },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "头图 cover", "style": { "fontWeight": "bold" } },
+    {
+      "type": "image",
+      "src": "img/banner.svg",
+      "fit": "cover",
+      "style": { "height": 100, "width": "match", "radius": 8 }
+    },
+    { "type": "space", "height": 12 },
+    { "type": "text", "text": "圆角头像", "style": { "fontWeight": "bold" } },
+    {
+      "type": "row",
+      "style": { "gap": 12 },
+      "children": [
+        { "type": "image", "src": "img/avatar-1.svg", "style": { "width": 40, "height": 40, "radius": 20 } },
+        { "type": "image", "src": "img/avatar-2.svg", "style": { "width": 48, "height": 48, "radius": 24 } },
+        { "type": "image", "src": "img/avatar-3.svg", "style": { "width": 56, "height": 56, "radius": 8 } },
+        { "type": "image", "src": "img/avatar-4.svg", "style": { "width": 56, "height": 56, "radius": 0 } }
+      ]
+    },
+    { "type": "space", "height": 12 },
+    { "type": "text", "text": "contain 完整显示", "style": { "fontWeight": "bold" } },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "image",
+          "src": "img/xhs.svg",
+          "fit": "contain",
+          "style": { "width": 64, "height": 64 }
+        }
+      ]
+    },
+    { "type": "space", "height": 12 },
+    { "type": "text", "text": "平台图标", "style": { "fontWeight": "bold" } },
+    {
+      "type": "row",
+      "style": { "gap": 16 },
+      "children": [
+        { "type": "image", "src": "img/xhs.svg", "style": { "width": 32, "height": 32 } },
+        { "type": "image", "src": "img/dy.svg", "style": { "width": 32, "height": 32 } },
+        { "type": "image", "src": "img/ks.svg", "style": { "width": 32, "height": 32 } },
+        { "type": "image", "src": "img/like.svg", "style": { "width": 32, "height": 32 } }
+      ]
+    },
+    { "type": "space", "height": 12 },
+    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
+  ]
+}

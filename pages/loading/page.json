@@ -1,0 +1,48 @@
+{
+  "title": {
+    "text": "加载",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "loading 配合 showIf。列表滑到底时才在 onReachBottom 里打开。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "带文字", "style": { "fontWeight": "bold" } },
+        { "type": "loading", "text": "正在拉取数据", "showIf": "loading" },
+        {
+          "type": "text",
+          "text": "加载完成",
+          "showIf": "done",
+          "style": { "align": "center", "color": "#006A65" }
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "仅转圈", "style": { "fontWeight": "bold" } },
+        { "type": "loading", "showIf": "spinOnly" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "button", "text": "开始加载", "size": "md", "onClick": "onStart" },
+        { "type": "button", "text": "结束", "size": "md", "style": { "background": "#5F6D6B" }, "onClick": "onDone" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
+  ]
+}

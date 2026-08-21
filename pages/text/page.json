@@ -1,0 +1,65 @@
+{
+  "title": {
+    "text": "文案样式",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "text / title / notice 三个层级，配合字号、颜色、对齐。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "title", "text": "标题 title" },
+        { "type": "text", "text": "正文 text，用于说明和主要内容。" },
+        { "type": "notice", "text": "辅助 notice，颜色更浅，适合提示。" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "字号", "style": { "fontWeight": "bold" } },
+        { "type": "text", "text": "12 号辅助", "style": { "fontSize": 12, "color": "#6B7C7A" } },
+        { "type": "text", "text": "14 号正文", "style": { "fontSize": 14 } },
+        { "type": "text", "text": "18 号强调", "style": { "fontSize": 18, "fontWeight": "bold" } },
+        { "type": "text", "text": "22 号大标题", "style": { "fontSize": 22, "fontWeight": "bold", "color": "#006A65" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "对齐", "style": { "fontWeight": "bold" } },
+        { "type": "text", "text": "左对齐", "style": { "align": "left" } },
+        { "type": "text", "text": "居中", "style": { "align": "center" } },
+        { "type": "text", "text": "右对齐", "style": { "align": "right" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "style": { "background": "#006A65", "padding": 16 },
+      "children": [
+        { "type": "title", "text": "深色卡片", "style": { "color": "#FFFFFF" } },
+        { "type": "notice", "text": "卡片 background 可单独改色。", "style": { "color": "#C9E8E5" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "模板替换", "style": { "fontWeight": "bold" } },
+        { "type": "text", "text": "{{hello}}" },
+        { "type": "notice", "text": "版本 {{version}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
+  ]
+}

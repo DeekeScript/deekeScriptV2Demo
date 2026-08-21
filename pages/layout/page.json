@@ -1,0 +1,129 @@
+{
+  "title": {
+    "text": "布局",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "card",
+      "style": { "sticky": "top", "padding": 10, "background": "#E6F2F0", "gap": 2 },
+      "children": [
+        { "type": "text", "text": "吸顶区域", "style": { "fontWeight": "bold", "fontSize": 13 } },
+        { "type": "notice", "text": "滚动时固定在内容区顶部" }
+      ]
+    },
+    { "type": "text", "text": "column 纵向", "style": { "fontWeight": "bold" } },
+    {
+      "type": "column",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "card", "style": { "padding": 10 }, "children": [{ "type": "text", "text": "第一块" }] },
+        { "type": "card", "style": { "padding": 10 }, "children": [{ "type": "text", "text": "第二块" }] },
+        { "type": "card", "style": { "padding": 10 }, "children": [{ "type": "text", "text": "第三块" }] }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "row + weight", "style": { "fontWeight": "bold" } },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        {
+          "type": "card",
+          "style": { "weight": 1, "padding": 10, "background": "#DCEAE8" },
+          "children": [{ "type": "text", "text": "1", "style": { "align": "center" } }]
+        },
+        {
+          "type": "card",
+          "style": { "weight": 1, "padding": 10, "background": "#C9E8E5" },
+          "children": [{ "type": "text", "text": "1", "style": { "align": "center" } }]
+        },
+        {
+          "type": "card",
+          "style": { "weight": 2, "padding": 10, "background": "#A9D9D4" },
+          "children": [{ "type": "text", "text": "2", "style": { "align": "center" } }]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "row 垂直对齐", "style": { "fontWeight": "bold" } },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "row",
+          "style": { "gap": 8, "valign": "center" },
+          "children": [
+            { "type": "image", "src": "img/avatar-2.svg", "style": { "width": 40, "height": 40, "radius": 20 } },
+            {
+              "type": "column",
+              "style": { "weight": 1, "gap": 2 },
+              "children": [
+                { "type": "text", "text": "运营账号 A", "style": { "fontWeight": "bold" } },
+                { "type": "notice", "text": "小红书 · 已登录" }
+              ]
+            },
+            { "type": "button", "text": "切换", "size": "sm", "action": { "type": "toast", "text": "切换账号" } }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "divider / space", "style": { "fontWeight": "bold" } },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "上方内容" },
+        { "type": "divider" },
+        { "type": "text", "text": "分割线下面" },
+        { "type": "space", "height": 16 },
+        { "type": "notice", "text": "space 高度 16dp" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "可点击卡片", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "整卡绑定 toast" }
+      ],
+      "action": { "type": "toast", "text": "点了卡片" }
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "滚动占位 1", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "往下滚可以看到吸底按钮" }
+      ]
+    },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "滚动占位 2" },
+        { "type": "notice", "text": "column / row / card 可以任意嵌套" }
+      ]
+    },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "滚动占位 3" },
+        { "type": "notice", "text": "第一层 sticky 才会吸顶或吸底" }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "sticky": "bottom", "gap": 8 },
+      "children": [
+        { "type": "button", "text": "返回", "size": "md", "style": { "weight": 1, "background": "#5F6D6B" }, "action": { "type": "back" } },
+        { "type": "button", "text": "确定", "size": "md", "style": { "weight": 1 }, "action": { "type": "toast", "text": "已确定" } }
+      ]
+    }
+  ]
+}

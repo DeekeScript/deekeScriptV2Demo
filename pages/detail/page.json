@@ -1,0 +1,33 @@
+{
+  "title": {
+    "text": "详情",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "card",
+      "children": [
+        { "type": "title", "text": "{{item.title}}" },
+        { "type": "notice", "text": "编号 {{params.id}} · {{item.status}}" },
+        { "type": "divider" },
+        { "type": "text", "text": "{{item.time}}" },
+        { "type": "notice", "text": "{{item.desc}}" }
+      ]
+    },
+    { "type": "space", "height": 12 },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "button", "text": "运行脚本", "onClick": "onRun" },
+        { "type": "button", "text": "返回", "size": "md", "style": { "background": "#5F6D6B" }, "action": { "type": "back" } }
+      ]
+    }
+  ]
+}

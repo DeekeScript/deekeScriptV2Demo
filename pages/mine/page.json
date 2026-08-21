@@ -1,0 +1,51 @@
+{
+  "title": {
+    "text": "我的",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "row",
+          "style": { "gap": 12 },
+          "children": [
+            { "type": "image", "src": "img/avatar-1.svg", "style": { "width": 48, "height": 48, "radius": 24 } },
+            {
+              "type": "column",
+              "style": { "weight": 1, "gap": 2 },
+              "children": [
+                { "type": "text", "text": "{{nickname}}", "style": { "fontWeight": "bold", "fontSize": 16 } },
+                { "type": "notice", "text": "{{desc}}" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "关于本示例", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "用 JSON 描述页面，JS 填充数据。底部四个 Tab 对应首页、表单、列表、我的。" },
+        { "type": "divider" },
+        { "type": "text", "text": "版本 {{version}}" },
+        { "type": "notice", "text": "入口文件 deekeScript-v2.json" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "button",
+      "text": "打开文档",
+      "action": { "type": "openUrl", "url": "https://doc.deeke.cn" }
+    }
+  ]
+}

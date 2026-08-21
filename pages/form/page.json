@@ -1,0 +1,85 @@
+{
+  "title": {
+    "text": "表单",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "输入会写回 this.data，点保存才持久化。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "基础输入", "style": { "fontWeight": "bold" } },
+        { "type": "input", "name": "task_name", "label": "任务名", "hint": "例如：每日关注", "value": "每日关注" },
+        { "type": "input", "name": "nickname", "label": "账号备注", "hint": "选填" },
+        { "type": "input", "name": "password", "label": "密码", "inputType": "password", "hint": "不会回显明文" },
+        { "type": "input", "name": "count", "label": "次数", "inputType": "digit", "hint": "整数", "value": "20" },
+        { "type": "input", "name": "amount", "label": "金额", "inputType": "number", "hint": "可小数" },
+        { "type": "input", "name": "phone", "label": "手机", "inputType": "phone", "hint": "11 位" },
+        { "type": "input", "name": "email", "label": "邮箱", "inputType": "email", "hint": "name@example.com" },
+        { "type": "textarea", "name": "remark", "label": "备注", "hint": "补充说明", "minLines": 3 }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "区间、选择、开关", "style": { "fontWeight": "bold" } },
+        {
+          "type": "range",
+          "label": "关注数量",
+          "separator": "~",
+          "inputType": "number",
+          "start": { "name": "follow_min", "hint": "最小", "value": "10" },
+          "end": { "name": "follow_max", "hint": "最大", "value": "80" }
+        },
+        {
+          "type": "select",
+          "name": "platform",
+          "label": "平台",
+          "value": "xhs",
+          "options": [
+            { "label": "小红书", "value": "xhs" },
+            { "label": "抖音", "value": "dy" },
+            { "label": "快手", "value": "ks" }
+          ]
+        },
+        { "type": "switch", "name": "enable_comment", "label": "自动评论", "value": true },
+        { "type": "switch", "name": "enable_like", "label": "自动点赞", "value": false }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "进度", "style": { "fontWeight": "bold" } },
+        {
+          "type": "progress",
+          "name": "speed",
+          "label": "运行速度",
+          "value": 50,
+          "min": 0,
+          "max": 100,
+          "unit": "%",
+          "onChange": "onSpeedChange"
+        },
+        { "type": "notice", "text": "当前速度 {{speed}}%" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "button", "text": "保存", "onClick": "onSave", "action": { "type": "save", "toast": "已写入本地" } },
+        { "type": "button", "text": "提示", "size": "md", "action": { "type": "toast", "text": "任务名：{{task_name}}" } }
+      ]
+    }
+  ]
+}
