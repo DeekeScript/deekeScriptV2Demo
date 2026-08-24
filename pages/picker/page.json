@@ -1,0 +1,36 @@
+{
+  "title": {
+    "text": "时间选择",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/picker/page.js" },
+    { "type": "notice", "text": "date / time / datetime，或 type 为 picker 再用 mode。值为字符串。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "日期、时间", "style": { "fontWeight": "bold" } },
+        { "type": "date", "name": "day", "label": "日期", "value": "2026-08-24" },
+        { "type": "time", "name": "clock", "label": "时间", "value": "09:30" },
+        { "type": "datetime", "name": "when", "label": "日期时间", "value": "2026-08-24 09:30" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "picker 别名", "style": { "fontWeight": "bold" } },
+        { "type": "picker", "name": "alias", "label": "日期", "mode": "date", "hint": "请选择日期" },
+        { "type": "notice", "text": "{{day}}  {{clock}}" },
+        { "type": "notice", "text": "{{when}}" }
+      ]
+    }
+  ]
+}

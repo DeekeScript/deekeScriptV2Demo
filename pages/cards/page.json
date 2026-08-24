@@ -1,0 +1,103 @@
+{
+  "title": {
+    "text": "选择卡片",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/cards/page.js" },
+    { "type": "notice", "text": "pages/cards/page.js 里的 onSelectPlan / onToggleApp。点卡片后 setData，其他卡选中态跟着变。" },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "套餐", "style": { "fontWeight": "bold" } },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        {
+          "type": "card",
+          "name": "plan",
+          "value": "month",
+          "onClick": "onSelectPlan",
+          "style": { "weight": 1, "align": "center" },
+          "children": [
+            { "type": "text", "text": "月卡", "style": { "align": "center" } },
+            { "type": "title", "text": "¥29", "style": { "align": "center", "color": "#006A65" } },
+            { "type": "notice", "text": "按月续费", "style": { "align": "center" } }
+          ]
+        },
+        {
+          "type": "card",
+          "name": "plan",
+          "value": "year",
+          "onClick": "onSelectPlan",
+          "style": { "weight": 1, "align": "center" },
+          "children": [
+            { "type": "text", "text": "年卡", "style": { "align": "center" } },
+            { "type": "title", "text": "¥199", "style": { "align": "center", "color": "#006A65" } },
+            { "type": "notice", "text": "省 40%", "style": { "align": "center" } }
+          ]
+        },
+        {
+          "type": "card",
+          "name": "plan",
+          "value": "forever",
+          "onClick": "onSelectPlan",
+          "style": { "weight": 1, "align": "center" },
+          "children": [
+            { "type": "text", "text": "买断", "style": { "align": "center" } },
+            { "type": "title", "text": "¥399", "style": { "align": "center", "color": "#006A65" } },
+            { "type": "notice", "text": "一次买断", "style": { "align": "center" } }
+          ]
+        }
+      ]
+    },
+    { "type": "notice", "text": "当前套餐 {{plan}}" },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "同步平台（可多选）", "style": { "fontWeight": "bold" } },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        {
+          "type": "card",
+          "name": "apps",
+          "value": "xhs",
+          "multiple": true,
+          "onClick": "onToggleApp",
+          "style": { "weight": 1, "align": "center" },
+          "children": [
+            { "type": "text", "text": "小红书", "style": { "align": "center" } }
+          ]
+        },
+        {
+          "type": "card",
+          "name": "apps",
+          "value": "dy",
+          "multiple": true,
+          "onClick": "onToggleApp",
+          "style": { "weight": 1, "align": "center" },
+          "children": [
+            { "type": "text", "text": "抖音", "style": { "align": "center" } }
+          ]
+        },
+        {
+          "type": "card",
+          "name": "apps",
+          "value": "ks",
+          "multiple": true,
+          "onClick": "onToggleApp",
+          "style": { "weight": 1, "align": "center" },
+          "children": [
+            { "type": "text", "text": "快手", "style": { "align": "center" } }
+          ]
+        }
+      ]
+    },
+    { "type": "notice", "text": "已选 {{apps}}" }
+  ]
+}
