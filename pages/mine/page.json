@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/mine/page.js" },
     {
       "type": "card",
       "children": [

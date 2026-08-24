@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/text/page.js" },
     { "type": "notice", "text": "text / title / notice 三个层级，配合字号、颜色、对齐。" },
     { "type": "space", "height": 8 },
     {
@@ -59,7 +60,5 @@
         { "type": "notice", "text": "版本 {{version}}" }
       ]
     },
-    { "type": "space", "height": 8 },
-    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
   ]
 }

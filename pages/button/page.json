@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/button/page.js" },
     { "type": "notice", "text": "size 分 sm / md / lg，不写即为大按钮。" },
     { "type": "space", "height": 8 },
     {
@@ -52,13 +53,6 @@
       ]
     },
     { "type": "space", "height": 8 },
-    {
-      "type": "row",
-      "style": { "gap": 8 },
-      "children": [
-        { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } },
-        { "type": "button", "text": "打开官网", "size": "md", "action": { "type": "openUrl", "url": "https://deeke.cn" } }
-      ]
-    }
+    { "type": "button", "text": "打开官网", "size": "md", "action": { "type": "openUrl", "url": "https://deeke.cn" } }
   ]
 }

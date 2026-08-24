@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/layout/page.js" },
     {
       "type": "card",
       "style": { "sticky": "top", "padding": 10, "background": "#E6F2F0", "gap": 2 },
@@ -121,7 +122,6 @@
       "type": "row",
       "style": { "sticky": "bottom", "gap": 8 },
       "children": [
-        { "type": "button", "text": "返回", "size": "md", "style": { "weight": 1, "background": "#5F6D6B" }, "action": { "type": "back" } },
         { "type": "button", "text": "确定", "size": "md", "style": { "weight": 1 }, "action": { "type": "toast", "text": "已确定" } }
       ]
     }

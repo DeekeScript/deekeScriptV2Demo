@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/form/page.js" },
     { "type": "notice", "text": "输入会写回 this.data，点保存才持久化。" },
     { "type": "space", "height": 8 },
     {

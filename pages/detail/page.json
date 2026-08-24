@@ -40,8 +40,7 @@
       "style": { "gap": 8 },
       "children": [
         { "type": "button", "text": "运行", "showIf": "item.jsFile", "onClick": "onRun" },
-        { "type": "button", "text": "提示", "action": { "type": "toast", "text": "已加入队列" } },
-        { "type": "button", "text": "返回", "action": { "type": "back" } }
+        { "type": "button", "text": "提示", "action": { "type": "toast", "text": "已加入队列" } }
       ]
     }
   ]

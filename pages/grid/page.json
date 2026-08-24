@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/grid/page.js" },
     { "type": "text", "text": "一行两个", "style": { "fontWeight": "bold" } },
     {
       "type": "grid",
@@ -66,7 +67,5 @@
         "children": [{ "type": "text", "text": "{{item.name}}" }]
       }
     },
-    { "type": "space", "height": 8 },
-    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
   ]
 }

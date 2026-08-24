@@ -8,6 +8,7 @@
     "padding": 20
   },
   "body": [
+    { "type": "notice", "text": "pages/plain/page.js" },
     { "type": "title", "text": "无导航栏" },
     { "type": "notice", "text": "本页未写 title，所以不显示顶部导航栏。状态栏改成浅底深色图标。" },
     { "type": "space", "height": 12 },

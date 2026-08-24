@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/tabs/page.js" },
     { "type": "notice", "text": "tabs 是页内选项卡。底部 Tab 颜色写在 window.tabBar。" },
     { "type": "space", "height": 8 },
     {
@@ -72,8 +73,6 @@
       ]
     },
     { "type": "space", "height": 8 },
-    { "type": "notice", "text": "当前 tab：{{tab}}" },
-    { "type": "space", "height": 8 },
-    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
+    { "type": "notice", "text": "当前 tab：{{tab}}" }
   ]
 }

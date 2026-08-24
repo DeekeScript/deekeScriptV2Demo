@@ -11,6 +11,7 @@
     "padding": 24
   },
   "body": [
+    { "type": "notice", "text": "pages/center/page.js" },
     {
       "type": "column",
       "style": {
@@ -22,8 +23,7 @@
       "children": [
         { "type": "image", "src": "img/home.svg", "style": { "width": 64, "height": 64 } },
         { "type": "title", "text": "空状态", "style": { "align": "center" } },
-        { "type": "notice", "text": "column 设 height 100% 再 valign center，可以把内容摆在屏幕中间。", "style": { "align": "center" } },
-        { "type": "button", "text": "返回首页", "action": { "type": "back" } }
+        { "type": "notice", "text": "column 设 height 100% 再 valign center，可以把内容摆在屏幕中间。", "style": { "align": "center" } }
       ]
     }
   ]

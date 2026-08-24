@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/image/page.js" },
     { "type": "notice", "text": "src 可用项目内文件。fit 为 contain 或 cover。" },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "头图 cover", "style": { "fontWeight": "bold" } },
@@ -56,7 +57,5 @@
         { "type": "image", "src": "img/like.svg", "style": { "width": 32, "height": 32 } }
       ]
     },
-    { "type": "space", "height": 12 },
-    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
   ]
 }

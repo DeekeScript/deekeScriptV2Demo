@@ -1,25 +1,25 @@
 Page({
   data: {
     basics: [
-      { name: '文案', icon: 'img/dy.svg', page: 'pages/text' },
-      { name: '标签', icon: 'img/like.svg', page: 'pages/tag' },
-      { name: '选项卡', icon: 'img/home.svg', page: 'pages/tabs' },
-      { name: '图片', icon: 'img/xhs.svg', page: 'pages/image' },
-      { name: '按钮', icon: 'img/ks.svg', page: 'pages/button' },
-      { name: '进度', icon: 'img/records.svg', page: 'pages/progress' }
+      { name: '文案', desc: 'text / title / notice', page: 'pages/text' },
+      { name: '标签', desc: 'tag', page: 'pages/tag' },
+      { name: '选项卡', desc: 'tabs', page: 'pages/tabs' },
+      { name: '图片', desc: 'image', page: 'pages/image' },
+      { name: '按钮', desc: 'button', page: 'pages/button' },
+      { name: '进度', desc: 'progress / slider', page: 'pages/progress' }
     ],
     forms: [
-      { name: '表单', icon: 'img/setting.svg', page: 'pages/form' },
-      { name: '列表', icon: 'img/records.svg', page: 'pages/list' },
-      { name: '加载', icon: 'img/apps.svg', page: 'pages/loading' }
+      { name: '表单', desc: 'input / switch / select', page: 'pages/form' },
+      { name: '列表', desc: 'list', page: 'pages/list' },
+      { name: '加载', desc: 'loading / empty', page: 'pages/loading' }
     ],
     layouts: [
-      { name: '布局', icon: 'img/like.svg', page: 'pages/layout' },
-      { name: '宫格', icon: 'img/home.svg', page: 'pages/grid' },
-      { name: '居中页', icon: 'img/dy.svg', page: 'pages/center' },
-      { name: '无标题', icon: 'img/xhs.svg', page: 'pages/plain' },
-      { name: '深色顶栏', icon: 'img/ks.svg', page: 'pages/contrast' },
-      { name: '我的', icon: 'img/avatar-1.svg', page: 'pages/mine' }
+      { name: '布局', desc: 'row / column / card', page: 'pages/layout' },
+      { name: '宫格', desc: 'grid', page: 'pages/grid' },
+      { name: '居中页', desc: 'column valign', page: 'pages/center' },
+      { name: '无标题', desc: '隐藏顶栏', page: 'pages/plain' },
+      { name: '深色顶栏', desc: 'title 样式', page: 'pages/contrast' },
+      { name: '我的', desc: '个人页示例', page: 'pages/mine' }
     ]
   }
 });

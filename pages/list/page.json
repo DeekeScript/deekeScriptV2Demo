@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/list/page.js" },
     {
       "type": "search",
       "name": "keyword",
@@ -40,17 +41,11 @@
                 "type": "column",
                 "style": { "weight": 1, "gap": 2 },
                 "children": [
-                  {
-                    "type": "row",
-                    "style": { "gap": 6 },
-                    "children": [
-                      { "type": "text", "text": "{{item.title}}", "style": { "weight": 1, "fontWeight": "bold" } },
-                      { "type": "tag", "text": "{{item.status}}" }
-                    ]
-                  },
+                  { "type": "text", "text": "{{item.title}}", "style": { "fontWeight": "bold" } },
                   { "type": "notice", "text": "{{item.time}}" }
                 ]
               },
+              { "type": "tag", "text": "{{item.status}}" },
               {
                 "type": "button",
                 "text": "运行",

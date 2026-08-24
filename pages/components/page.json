@@ -10,52 +10,64 @@
     "background": "#F5F5F5"
   },
   "body": [
-    { "type": "notice", "text": "下面是各组件示例页。点卡片打开对应演示。" },
+    { "type": "notice", "text": "点一行打开对应示例页。" },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "基础组件", "style": { "fontWeight": "bold" } },
     {
-      "type": "grid",
+      "type": "list",
       "bind": "basics",
-      "columns": 3,
       "item": {
         "type": "card",
         "action": { "type": "navigate", "page": "{{item.page}}" },
-        "style": { "padding": 8, "gap": 8 },
         "children": [
-          { "type": "image", "src": "{{item.icon}}", "style": { "width": "50%" } },
-          { "type": "text", "text": "{{item.name}}", "style": { "fontSize": 11, "align": "center" } }
+          {
+            "type": "row",
+            "style": { "gap": 8 },
+            "children": [
+              { "type": "text", "text": "{{item.name}}", "style": { "weight": 1, "fontWeight": "bold" } },
+              { "type": "notice", "text": "{{item.desc}}" }
+            ]
+          }
         ]
       }
     },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "表单与列表", "style": { "fontWeight": "bold" } },
     {
-      "type": "grid",
+      "type": "list",
       "bind": "forms",
-      "columns": 3,
       "item": {
         "type": "card",
         "action": { "type": "navigate", "page": "{{item.page}}" },
-        "style": { "padding": 8, "gap": 8 },
         "children": [
-          { "type": "image", "src": "{{item.icon}}", "style": { "width": "50%" } },
-          { "type": "text", "text": "{{item.name}}", "style": { "fontSize": 11, "align": "center" } }
+          {
+            "type": "row",
+            "style": { "gap": 8 },
+            "children": [
+              { "type": "text", "text": "{{item.name}}", "style": { "weight": 1, "fontWeight": "bold" } },
+              { "type": "notice", "text": "{{item.desc}}" }
+            ]
+          }
         ]
       }
     },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "布局与页面", "style": { "fontWeight": "bold" } },
     {
-      "type": "grid",
+      "type": "list",
       "bind": "layouts",
-      "columns": 3,
       "item": {
         "type": "card",
         "action": { "type": "navigate", "page": "{{item.page}}" },
-        "style": { "padding": 8, "gap": 8 },
         "children": [
-          { "type": "image", "src": "{{item.icon}}", "style": { "width": "50%" } },
-          { "type": "text", "text": "{{item.name}}", "style": { "fontSize": 11, "align": "center" } }
+          {
+            "type": "row",
+            "style": { "gap": 8 },
+            "children": [
+              { "type": "text", "text": "{{item.name}}", "style": { "weight": 1, "fontWeight": "bold" } },
+              { "type": "notice", "text": "{{item.desc}}" }
+            ]
+          }
         ]
       }
     }

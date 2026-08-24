@@ -16,6 +16,7 @@
     "padding": 20
   },
   "body": [
+    { "type": "notice", "text": "pages/contrast/page.js" },
     {
       "type": "card",
       "style": { "background": "#FFFFFF", "radius": 12, "padding": 16 },
@@ -32,8 +33,6 @@
         { "type": "text", "text": "深色卡片", "style": { "color": "#F4EFE6", "fontWeight": "bold" } },
         { "type": "notice", "text": "内容区仍是浅暖色，卡片可以单独换色。", "style": { "color": "#C9C3B8" } }
       ]
-    },
-    { "type": "space", "height": 16 },
-    { "type": "button", "text": "返回", "style": { "background": "#191C1C", "width": "match", "radius": 20 }, "action": { "type": "back" } }
+    }
   ]
 }

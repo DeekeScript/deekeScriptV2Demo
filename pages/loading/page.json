@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/loading/page.js" },
     { "type": "notice", "text": "loading 配合 showIf。列表滑到底时才在 onReachBottom 里打开。" },
     { "type": "space", "height": 8 },
     {
@@ -41,8 +42,6 @@
         { "type": "button", "text": "开始加载", "size": "md", "onClick": "onStart" },
         { "type": "button", "text": "结束", "size": "md", "style": { "background": "#5F6D6B" }, "onClick": "onDone" }
       ]
-    },
-    { "type": "space", "height": 8 },
-    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
+    }
   ]
 }

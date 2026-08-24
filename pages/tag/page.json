@@ -10,6 +10,7 @@
     "padding": 12
   },
   "body": [
+    { "type": "notice", "text": "pages/tag/page.js" },
     { "type": "notice", "text": "tag 是短标签。默认浅绿底，可用 style 改颜色。多个标签用 row 或横向 list。" },
     { "type": "space", "height": 8 },
     {
@@ -57,7 +58,5 @@
         }
       ]
     },
-    { "type": "space", "height": 8 },
-    { "type": "button", "text": "返回", "size": "md", "action": { "type": "back" } }
   ]
 }
