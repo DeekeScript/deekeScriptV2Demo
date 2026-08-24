@@ -39,7 +39,11 @@
                   { "type": "notice", "text": "{{item.user}} · {{item.time}}" }
                 ]
               },
-              { "type": "notice", "text": "{{item.status}}" }
+              {
+                "type": "tag",
+                "text": "{{item.status}}",
+                "style": { "background": "#E6F4F1", "color": "#006A65" }
+              }
             ]
           },
           {

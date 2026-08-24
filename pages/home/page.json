@@ -22,34 +22,31 @@
         },
         {
           "type": "column",
-          "style": { "padding": 10, "gap": 4 },
+          "style": { "padding": 12, "gap": 8 },
           "children": [
-            { "type": "text", "text": "{{hello}}", "style": { "fontWeight": "bold" } },
-            { "type": "notice", "text": "今日任务已就绪" }
+            { "type": "text", "text": "{{hello}}", "style": { "fontWeight": "bold", "fontSize": 16 } },
+            { "type": "notice", "text": "今日任务已就绪，建议先完成养号" },
+            {
+              "type": "button",
+              "text": "开始养号",
+              "size": "中",
+              "action": { "type": "navigate", "page": "task", "params": { "id": "dy" } }
+            }
           ]
         }
       ]
     },
-    { "type": "space", "height": 4 },
-    {
-      "type": "row",
-      "style": { "gap": 8 },
-      "children": [
-        { "type": "button", "text": "提醒", "size": "中", "action": { "type": "toast", "text": "今日任务已就绪" } },
-        { "type": "button", "text": "详情", "size": "中", "action": { "type": "navigate", "page": "detail", "params": { "id": 1 } } },
-        { "type": "button", "text": "官网", "size": "中", "action": { "type": "openUrl", "url": "https://deeke.cn" } }
-      ]
-    },
-    { "type": "divider" },
+    { "type": "space", "height": 8 },
     {
       "type": "grid",
       "bind": "metrics",
       "columns": 2,
       "item": {
         "type": "card",
+        "style": { "padding": 12, "gap": 4 },
         "children": [
           { "type": "notice", "text": "{{item.label}}" },
-          { "type": "title", "text": "{{item.value}}" }
+          { "type": "title", "text": "{{item.value}}", "style": { "color": "#006A65" } }
         ]
       }
     },
@@ -60,7 +57,7 @@
       "columns": 3,
       "item": {
         "type": "card",
-        "action": { "type": "navigate", "page": "detail", "params": { "id": "{{item.id}}" } },
+        "action": { "type": "navigate", "page": "task", "params": { "id": "{{item.id}}" } },
         "style": { "padding": 8, "gap": 8 },
         "children": [
           { "type": "image", "src": "{{item.icon}}", "style": { "width": "50%" } },
@@ -100,8 +97,26 @@
         "type": "card",
         "action": { "type": "navigate", "page": "detail", "params": { "id": "{{item.id}}" } },
         "children": [
-          { "type": "text", "text": "{{item.title}}", "style": { "fontWeight": "bold" } },
-          { "type": "notice", "text": "{{item.time}} · {{item.status}}" }
+          {
+            "type": "row",
+            "style": { "gap": 10 },
+            "children": [
+              { "type": "image", "src": "{{item.icon}}", "style": { "width": 36, "height": 36, "radius": 8 } },
+              {
+                "type": "column",
+                "style": { "weight": 1, "gap": 4 },
+                "children": [
+                  { "type": "text", "text": "{{item.title}}", "style": { "fontWeight": "bold" } },
+                  { "type": "notice", "text": "{{item.time}}" }
+                ]
+              },
+              {
+                "type": "tag",
+                "text": "{{item.status}}",
+                "style": { "background": "#E6F4F1", "color": "#006A65" }
+              }
+            ]
+          }
         ]
       }
     },

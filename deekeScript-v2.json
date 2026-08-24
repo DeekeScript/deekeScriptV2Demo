@@ -49,7 +49,8 @@
     { "id": "center", "file": "pages/center", "title": "居中" },
     { "id": "plain", "file": "pages/plain" },
     { "id": "contrast", "file": "pages/contrast", "title": "对比" },
-    { "id": "detail", "file": "pages/detail", "title": "详情" }
+    { "id": "detail", "file": "pages/detail", "title": "详情" },
+    { "id": "task", "file": "pages/task", "title": "任务设置" }
   ],
   "bottomMenus": [
     { "title": "首页", "icon": "img/home.svg", "page": "pages/home" },

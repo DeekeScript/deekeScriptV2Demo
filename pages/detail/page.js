@@ -6,7 +6,13 @@ Page({
   },
   onLoad(params) {
     var item = catalog.find(params && params.id) || {};
-    this.setData({ item: item });
+    if (!item.title && item.name) {
+      item = Object.assign({}, item, { title: item.name });
+    }
+    var sub = [];
+    if (item.user) sub.push(item.user);
+    if (item.time) sub.push(item.time);
+    this.setData({ item: Object.assign({}, item, { sub: sub.join(' · ') }) });
     // let data = JSON.parse(Http.get('https://example.com/dke/task?id=' + params.id));
     // this.setData({ item: data.item });
   },

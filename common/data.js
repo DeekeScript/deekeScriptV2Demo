@@ -6,9 +6,9 @@ module.exports = {
     { label: '失败', value: '2' }
   ],
   apps: [
-    { id: 'dy', name: '抖音养号', title: '抖音养号', status: '入口', user: '工作台', time: '—', icon: 'img/dy.svg', jsFile: 'tasks/follow.js' },
-    { id: 'xhs', name: '小红书', title: '小红书', status: '入口', user: '工作台', time: '—', icon: 'img/xhs.svg', jsFile: 'tasks/sample.js' },
-    { id: 'ks', name: '快手评论', title: '快手评论', status: '入口', user: '工作台', time: '—', icon: 'img/ks.svg', jsFile: 'tasks/sample.js' }
+    { id: 'dy', name: '抖音养号', title: '抖音养号', desc: '模拟浏览、点赞、评论，逐步养号', tag: '推荐', task_name: '早间养号', keyword: '美食\n探店\n生活vlog', jsFile: 'tasks/follow.js', icon: 'img/dy.svg' },
+    { id: 'xhs', name: '小红书', title: '小红书', desc: '笔记互动、点赞和评论', tag: '笔记', task_name: '笔记互动', keyword: '穿搭\n护肤', jsFile: 'tasks/sample.js', icon: 'img/xhs.svg' },
+    { id: 'ks', name: '快手评论', title: '快手评论', desc: '评论区互动，提高账号活跃', tag: '评论', task_name: '评论互动', keyword: '搞笑\n生活', jsFile: 'tasks/sample.js', icon: 'img/ks.svg' }
   ],
   tags: [
     { label: '养号' },

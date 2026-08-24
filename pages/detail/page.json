@@ -10,28 +10,39 @@
     "background": "#F5F5F5"
   },
   "body": [
-    { "type": "title", "text": "{{item.title}}" },
-    { "type": "notice", "text": "编号 {{params.id}}" },
-    { "type": "divider" },
     {
       "type": "card",
       "children": [
         {
           "type": "row",
-          "style": { "gap": 10 },
+          "style": { "gap": 12 },
           "children": [
-            { "type": "image", "src": "{{item.icon}}", "style": { "width": 40, "height": 40, "radius": 8 } },
+            { "type": "image", "src": "{{item.icon}}", "showIf": "item.icon", "style": { "width": 44, "height": 44, "radius": 10 } },
             {
               "type": "column",
               "style": { "weight": 1, "gap": 4 },
               "children": [
-                { "type": "text", "text": "状态：{{item.status}}", "showIf": "item.status" },
-                { "type": "text", "text": "运营：{{item.user}}", "showIf": "item.user" }
+                { "type": "text", "text": "{{item.title}}", "style": { "fontWeight": "bold", "fontSize": 16 } },
+                { "type": "notice", "text": "{{item.sub}}", "showIf": "item.sub" }
               ]
+            },
+            {
+              "type": "tag",
+              "text": "{{item.status}}",
+              "showIf": "item.status",
+              "style": { "background": "#E6F4F1", "color": "#006A65" }
             }
           ]
-        },
-        { "type": "notice", "text": "{{item.time}}" }
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "showIf": "item.jsFile",
+      "children": [
+        { "type": "text", "text": "脚本", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{item.jsFile}}" }
       ]
     },
     { "type": "space", "height": 8 },
@@ -39,8 +50,13 @@
       "type": "row",
       "style": { "gap": 8 },
       "children": [
-        { "type": "button", "text": "运行", "showIf": "item.jsFile", "onClick": "onRun" },
-        { "type": "button", "text": "提示", "action": { "type": "toast", "text": "已加入队列" } }
+        { "type": "button", "text": "运行", "showIf": "item.jsFile", "onClick": "onRun", "style": { "weight": 1 } },
+        {
+          "type": "button",
+          "text": "返回",
+          "action": { "type": "back" },
+          "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" }
+        }
       ]
     }
   ]

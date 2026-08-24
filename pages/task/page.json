@@ -1,0 +1,89 @@
+{
+  "title": {
+    "text": "任务设置",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "padding": 10,
+    "background": "#F5F5F5"
+  },
+  "body": [
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "row",
+          "style": { "gap": 12 },
+          "children": [
+            { "type": "image", "src": "{{item.icon}}", "style": { "width": 48, "height": 48, "radius": 12 } },
+            {
+              "type": "column",
+              "style": { "weight": 1, "gap": 4 },
+              "children": [
+                { "type": "text", "text": "{{item.name}}", "style": { "fontWeight": "bold", "fontSize": 16 } },
+                { "type": "notice", "text": "{{item.desc}}" }
+              ]
+            },
+            {
+              "type": "tag",
+              "text": "{{item.tag}}",
+              "style": { "background": "#E6F4F1", "color": "#006A65" }
+            }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "运行参数", "style": { "fontWeight": "bold" } },
+        { "type": "input", "name": "task_name", "label": "任务名", "hint": "例如：早间养号" },
+        { "type": "textarea", "name": "keyword", "label": "关键词", "hint": "每行一个，用于搜索视频", "minLines": 3 },
+        {
+          "type": "range",
+          "label": "观看时长（秒）",
+          "separator": "~",
+          "inputType": "number",
+          "start": { "name": "watch_min", "hint": "最小" },
+          "end": { "name": "watch_max", "hint": "最大" }
+        },
+        {
+          "type": "range",
+          "label": "刷视频数量",
+          "separator": "~",
+          "inputType": "number",
+          "start": { "name": "count_min", "hint": "最小" },
+          "end": { "name": "count_max", "hint": "最大" }
+        },
+        {
+          "type": "progress",
+          "name": "like_rate",
+          "label": "点赞概率",
+          "min": 0,
+          "max": 100,
+          "unit": "%"
+        },
+        { "type": "switch", "name": "auto_comment", "label": "自动评论" },
+        { "type": "switch", "name": "notify", "label": "完成通知" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        {
+          "type": "button",
+          "text": "保存",
+          "onClick": "onSave",
+          "action": { "type": "save", "toast": "已保存" },
+          "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" }
+        },
+        { "type": "button", "text": "立即运行", "onClick": "onRun", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}
