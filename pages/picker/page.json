@@ -11,7 +11,7 @@
   },
   "body": [
     { "type": "notice", "text": "pages/picker/page.js" },
-    { "type": "notice", "text": "date / time / datetime，或 type 为 picker 再用 mode。值为字符串。" },
+    { "type": "notice", "text": "日期是年/月/日，时间是时/分。日期时间先选日期，下一步再选时间。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",

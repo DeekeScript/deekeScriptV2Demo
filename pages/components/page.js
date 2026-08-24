@@ -11,7 +11,7 @@ Page({
     forms: [
       { name: '表单', desc: 'input / switch / select', page: 'pages/form' },
       { name: '选择卡片', desc: 'card 单选 / 多选', page: 'pages/cards' },
-      { name: '多级菜单', desc: 'menu 省市区', page: 'pages/menu' },
+      { name: '省市区', desc: 'menu 多列选择器', page: 'pages/menu' },
       { name: '时间选择', desc: 'date / time / datetime', page: 'pages/picker' },
       { name: '列表', desc: 'list', page: 'pages/list' },
       { name: '加载', desc: 'loading / empty', page: 'pages/loading' }

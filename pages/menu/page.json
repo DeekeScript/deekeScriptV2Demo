@@ -11,7 +11,7 @@
   },
   "body": [
     { "type": "notice", "text": "pages/menu/page.js" },
-    { "type": "notice", "text": "三级：省 / 市 / 区。选到区才写入，值为路径，如 gd/sz/ns。" },
+    { "type": "notice", "text": "三级同时显示。改省后，市 / 区自动回到该省第一项。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",
