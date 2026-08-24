@@ -1,0 +1,63 @@
+{
+  "title": {
+    "text": "组件",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "padding": 10,
+    "background": "#F5F5F5"
+  },
+  "body": [
+    { "type": "notice", "text": "下面是各组件示例页。点卡片打开对应演示。" },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "基础组件", "style": { "fontWeight": "bold" } },
+    {
+      "type": "grid",
+      "bind": "basics",
+      "columns": 3,
+      "item": {
+        "type": "card",
+        "action": { "type": "navigate", "page": "{{item.page}}" },
+        "style": { "padding": 8, "gap": 8 },
+        "children": [
+          { "type": "image", "src": "{{item.icon}}", "style": { "width": "50%" } },
+          { "type": "text", "text": "{{item.name}}", "style": { "fontSize": 11, "align": "center" } }
+        ]
+      }
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "表单与列表", "style": { "fontWeight": "bold" } },
+    {
+      "type": "grid",
+      "bind": "forms",
+      "columns": 3,
+      "item": {
+        "type": "card",
+        "action": { "type": "navigate", "page": "{{item.page}}" },
+        "style": { "padding": 8, "gap": 8 },
+        "children": [
+          { "type": "image", "src": "{{item.icon}}", "style": { "width": "50%" } },
+          { "type": "text", "text": "{{item.name}}", "style": { "fontSize": 11, "align": "center" } }
+        ]
+      }
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "布局与页面", "style": { "fontWeight": "bold" } },
+    {
+      "type": "grid",
+      "bind": "layouts",
+      "columns": 3,
+      "item": {
+        "type": "card",
+        "action": { "type": "navigate", "page": "{{item.page}}" },
+        "style": { "padding": 8, "gap": 8 },
+        "children": [
+          { "type": "image", "src": "{{item.icon}}", "style": { "width": "50%" } },
+          { "type": "text", "text": "{{item.name}}", "style": { "fontSize": 11, "align": "center" } }
+        ]
+      }
+    }
+  ]
+}

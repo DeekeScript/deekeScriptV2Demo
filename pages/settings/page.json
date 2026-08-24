@@ -1,0 +1,56 @@
+{
+  "title": {
+    "text": "设置",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "padding": 10,
+    "background": "#F5F5F5"
+  },
+  "body": [
+    { "type": "title", "text": "任务配置" },
+    { "type": "input", "id": "task_name", "name": "task_name", "label": "任务名", "hint": "请输入" },
+    {
+      "type": "select",
+      "id": "platform",
+      "name": "platform",
+      "label": "平台",
+      "options": [
+        { "label": "抖音", "value": "dy" },
+        { "label": "小红书", "value": "xhs" },
+        { "label": "快手", "value": "ks" }
+      ]
+    },
+    { "type": "switch", "id": "notify", "name": "notify", "label": "完成通知", "value": true },
+    {
+      "type": "range",
+      "label": "关注数量",
+      "separator": "~",
+      "inputType": "number",
+      "start": { "name": "follow_min", "hint": "最小" },
+      "end": { "name": "follow_max", "hint": "最大" }
+    },
+    {
+      "type": "progress",
+      "name": "speed",
+      "label": "运行速度",
+      "value": 50,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    },
+    { "type": "textarea", "id": "remark", "name": "remark", "label": "备注", "minLines": 3 },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "button", "text": "保存", "onClick": "onSave", "action": { "type": "save", "toast": "已保存" } },
+        { "type": "button", "text": "提示", "action": { "type": "toast", "text": "配置未改动" } },
+        { "type": "button", "text": "官网", "action": { "type": "openUrl", "url": "https://deeke.cn" } }
+      ]
+    }
+  ]
+}

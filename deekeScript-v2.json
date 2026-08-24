@@ -8,7 +8,7 @@
   "window": {
     "style": {
       "background": "#F5F5F5",
-      "padding": 12
+      "padding": 10
     },
     "title": {
       "fontSize": 18,
@@ -27,6 +27,9 @@
     }
   },
   "pages": [
+    { "id": "components", "file": "pages/components", "title": "组件" },
+    { "id": "records", "file": "pages/records", "title": "记录" },
+    { "id": "settings", "file": "pages/settings", "title": "设置" },
     { "id": "form", "file": "pages/form", "title": "表单" },
     { "id": "list", "file": "pages/list", "title": "列表" },
     { "id": "mine", "file": "pages/mine", "title": "我的" },
@@ -46,8 +49,8 @@
   ],
   "bottomMenus": [
     { "title": "首页", "icon": "img/home.svg", "page": "pages/home" },
-    { "title": "表单", "icon": "img/setting.svg", "page": "pages/form" },
-    { "title": "列表", "icon": "img/records.svg", "page": "pages/list", "badge": 8 },
-    { "title": "我的", "icon": "img/like.svg", "page": "pages/mine" }
+    { "title": "组件", "icon": "img/apps.svg", "page": "pages/components" },
+    { "title": "记录", "icon": "img/records.svg", "page": "pages/records", "badge": 3 },
+    { "title": "设置", "icon": "img/setting.svg", "page": "pages/settings" }
   ]
 }

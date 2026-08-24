@@ -6,34 +6,42 @@
     "background": "#006A65"
   },
   "style": {
-    "background": "#F5F5F5",
-    "padding": 12
+    "padding": 10,
+    "background": "#F5F5F5"
   },
   "body": [
+    { "type": "title", "text": "{{item.title}}" },
+    { "type": "notice", "text": "编号 {{params.id}}" },
+    { "type": "divider" },
     {
       "type": "card",
       "children": [
         {
           "type": "row",
-          "style": { "gap": 8 },
+          "style": { "gap": 10 },
           "children": [
-            { "type": "title", "text": "{{item.title}}", "style": { "weight": 1 } },
-            { "type": "tag", "text": "{{item.status}}" }
+            { "type": "image", "src": "{{item.icon}}", "style": { "width": 40, "height": 40, "radius": 8 } },
+            {
+              "type": "column",
+              "style": { "weight": 1, "gap": 4 },
+              "children": [
+                { "type": "text", "text": "状态：{{item.status}}", "showIf": "item.status" },
+                { "type": "text", "text": "运营：{{item.user}}", "showIf": "item.user" }
+              ]
+            }
           ]
         },
-        { "type": "notice", "text": "编号 {{params.id}}" },
-        { "type": "divider" },
-        { "type": "text", "text": "{{item.time}}" },
-        { "type": "notice", "text": "{{item.desc}}" }
+        { "type": "notice", "text": "{{item.time}}" }
       ]
     },
-    { "type": "space", "height": 12 },
+    { "type": "space", "height": 8 },
     {
       "type": "row",
       "style": { "gap": 8 },
       "children": [
-        { "type": "button", "text": "运行脚本", "onClick": "onRun" },
-        { "type": "button", "text": "返回", "size": "md", "style": { "background": "#5F6D6B" }, "action": { "type": "back" } }
+        { "type": "button", "text": "运行", "showIf": "item.jsFile", "onClick": "onRun" },
+        { "type": "button", "text": "提示", "action": { "type": "toast", "text": "已加入队列" } },
+        { "type": "button", "text": "返回", "action": { "type": "back" } }
       ]
     }
   ]

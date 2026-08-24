@@ -6,10 +6,10 @@
 
 ## 底部 Tab
 
-- 首页：工作台、运行脚本、各样式页入口
-- 表单：输入、区间、选择、开关、进度
-- 列表：卡片列表、触底加载、运行脚本、进详情
-- 我的：静态信息、运行示例脚本
+- 首页：对照文档「概述」的工作台，点卡片进详情，滑到底会加载
+- 组件：各组件示例页入口（文案、表单、列表、布局等）
+- 记录：任务列表、查询、运行脚本、进详情
+- 设置：任务配置表单，保存到本地 Storage
 
 ## 运行脚本
 
@@ -26,4 +26,5 @@ Engines.executeScript('tasks/sample.js');
 
 `page.js` 和任务脚本都可以 `require`。`./`、`../` 相对当前文件；否则相对项目根目录。
 
-首页：`require('common/hello.js')` 与 `require('./helper.js')`。
+首页：`require('common/data.js')`、`require('common/line.js')` 与 `require('./helper.js')`。
+`tasks/follow.js` 和「我的」页还会 `require('common/hello.js')`。

@@ -27,7 +27,7 @@
         "type": "card",
         "action": {
           "type": "navigate",
-          "page": "pages/detail",
+          "page": "detail",
           "params": { "id": "{{item.id}}" }
         },
         "children": [
