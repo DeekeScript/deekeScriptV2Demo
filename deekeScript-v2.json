@@ -34,6 +34,7 @@
     { "id": "cards", "file": "pages/cards", "title": "选择卡片" },
     { "id": "menu", "file": "pages/menu", "title": "省市区" },
     { "id": "picker", "file": "pages/picker", "title": "时间选择" },
+    { "id": "popup", "file": "pages/popup", "title": "弹层" },
     { "id": "list", "file": "pages/list", "title": "列表" },
     { "id": "mine", "file": "pages/mine", "title": "我的" },
     { "id": "text", "file": "pages/text", "title": "文案" },

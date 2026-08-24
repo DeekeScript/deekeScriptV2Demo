@@ -14,6 +14,7 @@ Page({
       { name: '省市区', desc: 'menu 多列选择器', page: 'pages/menu' },
       { name: '时间选择', desc: 'date / time / datetime', page: 'pages/picker' },
       { name: '列表', desc: 'list', page: 'pages/list' },
+      { name: '弹层', desc: '底部 / 顶部 / 侧边 / 居中', page: 'pages/popup' },
       { name: '加载', desc: 'loading / empty', page: 'pages/loading' }
     ],
     layouts: [
@@ -22,7 +23,7 @@ Page({
       { name: '居中页', desc: 'column valign', page: 'pages/center' },
       { name: '无标题', desc: '隐藏顶栏', page: 'pages/plain' },
       { name: '深色顶栏', desc: 'title 样式', page: 'pages/contrast' },
-      { name: '我的', desc: '个人页示例', page: 'pages/mine' }
+      { name: '我的', desc: '个人页示例', page: 'pages/mine' },   
     ]
   }
 });
