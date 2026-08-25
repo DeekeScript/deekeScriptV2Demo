@@ -29,8 +29,8 @@ Page({
       { name: '列表', desc: 'list', page: 'pages/list' },
       { name: '宫格', desc: 'grid', page: 'pages/grid' },
       { name: '选项卡', desc: 'tabs', page: 'pages/tabs' },
-      { name: '弹层', desc: '底部 / 顶部 / 侧边 / 居中', page: 'pages/popup' },
-      { name: '页面嵌套', desc: 'include / popup.src', page: 'pages/include' },
+      { name: '弹层', desc: '底部 / 顶部 / 侧边 / 居中；body 里可嵌自定义组件', page: 'pages/popup' },
+      { name: '自定义组件', desc: 'Component / 生命周期 / 父页交互', page: 'pages/include' },
       { name: '加载', desc: 'loading', page: 'pages/loading' }
     ],
     pages: [
@@ -38,7 +38,6 @@ Page({
       { name: '无标题', desc: '隐藏顶栏', page: 'pages/plain' },
       { name: '深色顶栏', desc: 'title 样式', page: 'pages/contrast' },
       { name: '登录', desc: '账号密码登录', page: 'pages/login' },
-      { name: '选关键词', desc: '给 include / popup 嵌', page: 'pages/choose' },
       { name: '我的', desc: '个人页示例', page: 'pages/mine' }
     ]
   }

@@ -5,7 +5,9 @@ Page({
     confirmOpen: false,
     leftOpen: false,
     remark: '',
-    platform: 'dy'
+    platform: 'dy',
+    chooseOpen: false,
+    picked: '未选'
   },
   onOpenForm() {
     this.setData({ formOpen: true });
@@ -30,5 +32,12 @@ Page({
   },
   onCloseLeft() {
     this.setData({ leftOpen: false });
+  },
+  onOpenChoose() {
+    this.setData({ chooseOpen: true });
+  },
+  onPicked(e) {
+    var keyword = e && e.detail ? e.detail.keyword : '';
+    this.setData({ chooseOpen: false, picked: keyword || '未选' });
   }
 });

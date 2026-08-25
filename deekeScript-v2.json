@@ -53,8 +53,7 @@
     { "id": "grid", "file": "pages/grid", "title": "宫格" },
     { "id": "tabs", "file": "pages/tabs", "title": "选项卡" },
     { "id": "popup", "file": "pages/popup", "title": "弹层" },
-    { "id": "choose", "file": "pages/choose", "title": "选关键词" },
-    { "id": "include", "file": "pages/include", "title": "页面嵌套" },
+    { "id": "include", "file": "pages/include", "title": "自定义组件" },
     { "id": "loading", "file": "pages/loading", "title": "加载" },
     { "id": "center", "file": "pages/center", "title": "居中" },
     { "id": "plain", "file": "pages/plain" },
@@ -65,6 +64,10 @@
     { "id": "settings", "file": "pages/settings", "title": "设置" },
     { "id": "detail", "file": "pages/detail", "title": "详情" },
     { "id": "task", "file": "pages/task", "title": "任务设置" }
+  ],
+  "components": [
+    { "id": "choose", "file": "components/choose" },
+    { "id": "filter", "file": "components/filter" }
   ],
   "bottomMenus": [
     { "title": "首页", "icon": "img/home.svg", "page": "pages/home" },

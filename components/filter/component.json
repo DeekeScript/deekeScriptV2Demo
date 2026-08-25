@@ -1,0 +1,17 @@
+{
+  "component": true,
+  "id": "filter",
+  "body": [
+    { "type": "search", "name": "q", "hint": "搜任务名", "onChange": "onInput" },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "tag", "text": "全部", "onClick": "pickAll" },
+        { "type": "tag", "text": "进行中", "onClick": "pickRun" },
+        { "type": "tag", "text": "已完成", "onClick": "pickDone" }
+      ]
+    },
+    { "type": "notice", "text": "当前筛选：{{label}}" }
+  ]
+}

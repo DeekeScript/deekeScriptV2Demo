@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "id": "choose",
+  "body": [
+    { "type": "notice", "text": "点快捷标签，或自己输入后再确定。" },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "tag", "text": "美食", "onClick": "pickFood" },
+        { "type": "tag", "text": "探店", "onClick": "pickShop" },
+        { "type": "tag", "text": "直播", "onClick": "pickLive" }
+      ]
+    },
+    { "type": "input", "name": "keyword", "label": "关键词", "hint": "例如：美食" },
+    { "type": "button", "text": "确定选用", "onClick": "onOk" }
+  ]
+}
