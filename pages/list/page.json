@@ -23,7 +23,6 @@
     {
       "type": "list",
       "bind": "tasks",
-      "empty": "暂无任务",
       "item": {
         "type": "card",
         "action": {

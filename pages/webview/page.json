@@ -1,0 +1,39 @@
+{
+  "title": {
+    "text": "网页",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/webview/page.js" },
+    { "type": "notice", "text": "html 内联优先。远程写 http(s)，项目文件写相对路径。高度写在 style.height。" },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "内联 HTML", "style": { "fontWeight": "bold" } },
+    {
+      "type": "webview",
+      "html": "<div style=\"font-family:sans-serif;padding:12px;color:#191C1C\"><h3 style=\"margin:0 0 8px;font-size:16px\">说明</h3><p style=\"margin:0;color:#6F7978;font-size:13px;line-height:1.5\">{{intro}}</p></div>",
+      "javascript": false,
+      "style": { "height": 120, "radius": 8, "background": "#FFFFFF" }
+    },
+    { "type": "space", "height": 12 },
+    { "type": "text", "text": "项目文件 html/help.html", "style": { "fontWeight": "bold" } },
+    {
+      "type": "webview",
+      "src": "html/help.html",
+      "javascript": false,
+      "style": { "height": 160, "radius": 8, "background": "#FFFFFF" }
+    },
+    { "type": "space", "height": 12 },
+    { "type": "text", "text": "远程页面", "style": { "fontWeight": "bold" } },
+    {
+      "type": "webview",
+      "src": "https://doc.deeke.cn",
+      "style": { "height": 280, "radius": 8 }
+    }
+  ]
+}

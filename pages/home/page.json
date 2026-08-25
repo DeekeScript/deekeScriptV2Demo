@@ -92,7 +92,6 @@
     {
       "type": "list",
       "bind": "logs",
-      "empty": "暂无记录",
       "item": {
         "type": "card",
         "action": { "type": "navigate", "page": "detail", "params": { "id": "{{item.id}}" } },

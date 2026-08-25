@@ -65,7 +65,7 @@
               "text": "记录",
               "value": "log",
               "children": [
-                { "type": "empty", "text": "暂无记录" }
+                { "type": "empty", "icon": "img/like.svg", "text": "暂无记录" }
               ]
             }
           ]
