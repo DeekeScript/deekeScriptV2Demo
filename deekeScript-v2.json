@@ -53,6 +53,8 @@
     { "id": "grid", "file": "pages/grid", "title": "宫格" },
     { "id": "tabs", "file": "pages/tabs", "title": "选项卡" },
     { "id": "popup", "file": "pages/popup", "title": "弹层" },
+    { "id": "choose", "file": "pages/choose", "title": "选关键词" },
+    { "id": "include", "file": "pages/include", "title": "页面嵌套" },
     { "id": "loading", "file": "pages/loading", "title": "加载" },
     { "id": "center", "file": "pages/center", "title": "居中" },
     { "id": "plain", "file": "pages/plain" },

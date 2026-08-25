@@ -1,0 +1,35 @@
+{
+  "title": {
+    "text": "页面嵌套",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "弹窗和正文都可以嵌同一页。子页只用 body，data 与父页隔离。" },
+    { "type": "notice", "text": "已选：{{picked}}" },
+    { "type": "button", "text": "弹窗选择", "onClick": "onOpen" },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "正文嵌套", "style": { "fontWeight": "bold" } },
+    {
+      "type": "include",
+      "src": "pages/choose",
+      "id": "inline",
+      "onConfirm": "onPicked"
+    }
+  ],
+  "popups": [
+    {
+      "id": "picker",
+      "title": "选关键词",
+      "position": "bottom",
+      "showIf": "open",
+      "src": "pages/choose",
+      "onConfirm": "onPicked"
+    }
+  ]
+}
