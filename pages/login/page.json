@@ -44,6 +44,7 @@
           "hint": "手机号 / 账号",
           "variant": "box",
           "inputType": "phone",
+          "icon": "img/user.svg",
           "style": { "radius": 12 }
         },
         { "type": "space", "height": 12 },
@@ -53,6 +54,7 @@
           "hint": "密码",
           "variant": "box",
           "password": true,
+          "passwordToggle": true,
           "style": { "radius": 12 }
         },
         { "type": "space", "height": 8 },

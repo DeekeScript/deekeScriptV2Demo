@@ -8,6 +8,8 @@ Page({
     custom: '',
     phone: '',
     count: '20',
-    amount: ''
+    amount: '',
+    user: '',
+    pwd: ''
   }
 });

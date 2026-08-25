@@ -48,6 +48,23 @@
         { "type": "input", "name": "count", "label": "数量", "hint": "整数", "inputType": "digit", "variant": "box", "value": "20" },
         { "type": "input", "name": "amount", "label": "金额", "hint": "可小数", "inputType": "number", "variant": "box" }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "密码明文", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "passwordToggle 为 true 时，右侧眼睛由引擎绘制，点一下切换明文。" },
+        { "type": "input", "name": "pwd", "label": "登录密码", "hint": "请输入密码", "variant": "box", "password": true, "passwordToggle": true, "value": "123456" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "带图标", "style": { "fontWeight": "bold" } },
+        { "type": "input", "name": "user", "label": "用户", "hint": "请输入账号", "variant": "box", "icon": "img/user.svg" }
+      ]
     }
   ]
 }
