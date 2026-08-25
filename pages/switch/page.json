@@ -1,0 +1,25 @@
+{
+  "title": {
+    "text": "开关",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/switch/page.js" },
+    { "type": "notice", "text": "左侧文案、右侧胶囊开关。值为 true / false。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "switch", "name": "auto_start", "label": "自动开始", "value": false },
+        { "type": "switch", "name": "notify", "label": "完成通知", "value": true },
+        { "type": "switch", "name": "night", "label": "夜间模式", "value": false }
+      ]
+    }
+  ]
+}

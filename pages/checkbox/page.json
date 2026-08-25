@@ -1,0 +1,35 @@
+{
+  "title": {
+    "text": "复选",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/checkbox/page.js" },
+    { "type": "notice", "text": "单独一项值为 true / false；带 options 时值为选中项组成的数组。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "checkbox", "name": "agree", "label": "已阅读并同意协议", "value": true },
+        {
+          "type": "checkbox",
+          "name": "platforms",
+          "label": "平台",
+          "options": [
+            { "label": "小红书", "value": "xhs" },
+            { "label": "抖音", "value": "dy" },
+            { "label": "快手", "value": "ks" }
+          ],
+          "value": ["xhs"]
+        },
+        { "type": "notice", "text": "协议 {{agree}} · 平台 {{platforms}}" }
+      ]
+    }
+  ]
+}

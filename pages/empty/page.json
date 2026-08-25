@@ -1,0 +1,37 @@
+{
+  "title": {
+    "text": "空状态",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/empty/page.js" },
+    { "type": "notice", "text": "图标在文字上方。列表为空时不会自动提示，把 Empty 写在列表旁即可。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "empty", "icon": "img/like.svg", "text": "暂无记录" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "empty", "icon": "img/xhs.svg", "iconSize": 40 }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "empty", "text": "没有匹配的任务" }
+      ]
+    }
+  ]
+}

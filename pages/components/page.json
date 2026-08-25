@@ -13,7 +13,7 @@
     { "type": "notice", "text": "按用途分组。点一行打开对应示例页。" },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "展示", "style": { "fontWeight": "bold" } },
-    { "type": "notice", "text": "文案、图片、网页、空状态" },
+    { "type": "notice", "text": "文案、标签、角标、图片、网页、空状态" },
     {
       "type": "list",
       "bind": "display",
@@ -34,7 +34,7 @@
     },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "表单", "style": { "fontWeight": "bold" } },
-    { "type": "notice", "text": "按钮、输入、选择、进度" },
+    { "type": "notice", "text": "每个组件单独一页，综合拼装见最后一项" },
     {
       "type": "list",
       "bind": "forms",

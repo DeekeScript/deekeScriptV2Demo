@@ -8,6 +8,7 @@ Page({
     tasks: catalog.stats,
     loading: false,
     noMore: false,
+    empty: false,
     footer: ''
   },
   onLoad() {
@@ -24,7 +25,7 @@ Page({
         next.push(t);
       }
     }
-    this.setData({ keyword: e.value, tasks: next });
+    this.setData({ keyword: e.value, tasks: next, empty: next.length === 0 });
   },
   onRun(e) {
     Engines.executeScript(e.item.jsFile);

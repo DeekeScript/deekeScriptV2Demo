@@ -14,7 +14,7 @@
       "type": "card",
       "children": [
         { "type": "text", "text": "任务配置", "style": { "fontWeight": "bold" } },
-        { "type": "input", "id": "task_name", "name": "task_name", "label": "任务名", "hint": "请输入" },
+        { "type": "input", "id": "task_name", "name": "task_name", "label": "任务名", "hint": "请输入", "variant": "box" },
         {
           "type": "select",
           "id": "platform",
@@ -31,6 +31,7 @@
           "type": "range",
           "label": "关注数量",
           "separator": "~",
+          "variant": "box",
           "inputType": "number",
           "start": { "name": "follow_min", "hint": "最小" },
           "end": { "name": "follow_max", "hint": "最大" }
@@ -44,7 +45,7 @@
           "max": 100,
           "unit": "%"
         },
-        { "type": "textarea", "id": "remark", "name": "remark", "label": "备注", "minLines": 3 }
+        { "type": "textarea", "id": "remark", "name": "remark", "label": "备注", "minLines": 3, "variant": "box" }
       ]
     },
     { "type": "space", "height": 8 },

@@ -1,0 +1,40 @@
+{
+  "title": {
+    "text": "区间",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/range/page.js" },
+    { "type": "notice", "text": "一行两个输入。variant 和 Input 相同，可写 box。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "range",
+          "label": "关注数量",
+          "separator": "~",
+          "inputType": "number",
+          "start": { "name": "follow_min", "hint": "最小", "value": "10" },
+          "end": { "name": "follow_max", "hint": "最大", "value": "80" }
+        },
+        {
+          "type": "range",
+          "label": "边框区间",
+          "separator": "~",
+          "variant": "box",
+          "inputType": "digit",
+          "start": { "name": "age_min", "hint": "从" },
+          "end": { "name": "age_max", "hint": "到" }
+        },
+        { "type": "notice", "text": "{{follow_min}} ~ {{follow_max}}" }
+      ]
+    }
+  ]
+}

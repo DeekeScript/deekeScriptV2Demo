@@ -1,0 +1,24 @@
+{
+  "title": {
+    "text": "多行输入",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/textarea/page.js" },
+    { "type": "notice", "text": "和 Input 一样：默认下划线，variant: box 为圆角边框。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "textarea", "name": "remark", "label": "下划线", "hint": "请输入备注", "minLines": 3, "value": "每天上午执行养号任务" },
+        { "type": "textarea", "name": "bio", "label": "边框", "hint": "个人简介", "minLines": 4, "variant": "box", "style": { "radius": 8 } }
+      ]
+    }
+  ]
+}

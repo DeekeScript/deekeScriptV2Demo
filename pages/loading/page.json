@@ -11,7 +11,7 @@
   },
   "body": [
     { "type": "notice", "text": "pages/loading/page.js" },
-    { "type": "notice", "text": "loading 配合 showIf。列表滑到底时才在 onReachBottom 里打开。空状态用 empty，图标在文字上面，文字可省略。" },
+    { "type": "notice", "text": "loading 配合 showIf。列表滑到底时才在 onReachBottom 里打开。空状态见独立示例页。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",
@@ -32,21 +32,6 @@
       "children": [
         { "type": "text", "text": "仅转圈", "style": { "fontWeight": "bold" } },
         { "type": "loading", "showIf": "spinOnly" }
-      ]
-    },
-    { "type": "space", "height": 8 },
-    {
-      "type": "card",
-      "children": [
-        { "type": "text", "text": "空状态", "style": { "fontWeight": "bold" } },
-        { "type": "empty", "icon": "img/like.svg", "text": "暂无记录" }
-      ]
-    },
-    { "type": "space", "height": 8 },
-    {
-      "type": "card",
-      "children": [
-        { "type": "empty", "icon": "img/xhs.svg", "iconSize": 40 }
       ]
     },
     { "type": "space", "height": 8 },

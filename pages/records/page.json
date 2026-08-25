@@ -14,7 +14,7 @@
       "type": "row",
       "style": { "gap": 8, "sticky": "top" },
       "children": [
-        { "type": "input", "name": "keyword", "hint": "任务名 / 状态 / 运营", "style": { "weight": 1 } },
+        { "type": "input", "name": "keyword", "hint": "任务名 / 状态 / 运营", "variant": "box", "style": { "weight": 1 } },
         { "type": "button", "text": "查询", "onClick": "onSearch" }
       ]
     },

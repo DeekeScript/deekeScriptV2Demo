@@ -1,0 +1,46 @@
+{
+  "title": {
+    "text": "角标",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/badge/page.js" },
+    { "type": "notice", "text": "红色角标，常和 row 并排。不写 text 则显示红点。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            { "type": "text", "text": "未读消息", "style": { "weight": 1 } },
+            { "type": "badge", "text": "12" }
+          ]
+        },
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            { "type": "text", "text": "超过 99", "style": { "weight": 1 } },
+            { "type": "badge", "text": "99+" }
+          ]
+        },
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            { "type": "text", "text": "红点", "style": { "weight": 1 } },
+            { "type": "badge" }
+          ]
+        }
+      ]
+    }
+  ]
+}

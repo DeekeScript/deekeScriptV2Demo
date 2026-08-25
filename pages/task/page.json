@@ -40,12 +40,13 @@
       "type": "card",
       "children": [
         { "type": "text", "text": "运行参数", "style": { "fontWeight": "bold" } },
-        { "type": "input", "name": "task_name", "label": "任务名", "hint": "例如：早间养号" },
-        { "type": "textarea", "name": "keyword", "label": "关键词", "hint": "每行一个，用于搜索视频", "minLines": 3 },
+        { "type": "input", "name": "task_name", "label": "任务名", "hint": "例如：早间养号", "variant": "box" },
+        { "type": "textarea", "name": "keyword", "label": "关键词", "hint": "每行一个，用于搜索视频", "minLines": 3, "variant": "box" },
         {
           "type": "range",
           "label": "观看时长（秒）",
           "separator": "~",
+          "variant": "box",
           "inputType": "number",
           "start": { "name": "watch_min", "hint": "最小" },
           "end": { "name": "watch_max", "hint": "最大" }
@@ -54,6 +55,7 @@
           "type": "range",
           "label": "刷视频数量",
           "separator": "~",
+          "variant": "box",
           "inputType": "number",
           "start": { "name": "count_min", "hint": "最小" },
           "end": { "name": "count_max", "hint": "最大" }

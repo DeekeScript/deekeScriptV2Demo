@@ -1,0 +1,53 @@
+{
+  "title": {
+    "text": "输入框",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/input/page.js" },
+    { "type": "notice", "text": "默认下划线。网页式圆角框写 variant: box，或在 style 里写 radius / borderColor。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "下划线（默认）", "style": { "fontWeight": "bold" } },
+        { "type": "input", "name": "account", "label": "账号", "hint": "请输入账号", "value": "运营A" },
+        { "type": "input", "name": "secret", "label": "密码", "hint": "请输入密码", "password": true }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "边框输入框", "style": { "fontWeight": "bold" } },
+        { "type": "input", "name": "task_name", "label": "默认圆角", "hint": "请输入任务名", "variant": "box", "value": "早间养号" },
+        { "type": "input", "name": "small", "label": "小尺寸", "hint": "size: sm", "variant": "box", "size": "sm" },
+        { "type": "input", "name": "large", "label": "大尺寸", "hint": "size: lg", "variant": "box", "size": "lg" },
+        {
+          "type": "input",
+          "name": "custom",
+          "label": "自定义圆角和描边",
+          "hint": "radius / borderColor",
+          "variant": "box",
+          "style": { "radius": 16, "borderColor": "#006A65", "borderWidth": 1.5 }
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "键盘类型", "style": { "fontWeight": "bold" } },
+        { "type": "input", "name": "phone", "label": "手机", "hint": "11 位手机号", "inputType": "phone", "variant": "box" },
+        { "type": "input", "name": "count", "label": "数量", "hint": "整数", "inputType": "digit", "variant": "box", "value": "20" },
+        { "type": "input", "name": "amount", "label": "金额", "hint": "可小数", "inputType": "number", "variant": "box" }
+      ]
+    }
+  ]
+}
