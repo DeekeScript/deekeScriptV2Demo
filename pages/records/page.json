@@ -15,7 +15,7 @@
       "style": { "gap": 8, "sticky": "top" },
       "children": [
         { "type": "input", "name": "keyword", "hint": "任务名 / 状态 / 运营", "variant": "box", "style": { "weight": 1 } },
-        { "type": "button", "text": "查询", "onTap": "onSearch" }
+        { "type": "button", "text": "查询", "onClick": "onSearch" }
       ]
     },
     {
@@ -56,7 +56,7 @@
                 "style": { "background": "#EEF2F1", "color": "#006A65" },
                 "action": { "type": "navigate", "page": "detail", "params": { "id": "{{item.id}}" } }
               },
-              { "type": "button", "text": "运行", "size": "中", "onTap": "onRun" }
+              { "type": "button", "text": "运行", "size": "中", "onClick": "onRun" }
             ]
           }
         ]

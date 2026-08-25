@@ -63,7 +63,7 @@
         {
           "type": "button",
           "text": "登录",
-          "onTap": "onLogin",
+          "onClick": "onLogin",
           "style": { "radius": 12 }
         },
         { "type": "space", "height": 16 },

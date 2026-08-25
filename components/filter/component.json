@@ -7,9 +7,9 @@
       "type": "row",
       "style": { "gap": 8 },
       "children": [
-        { "type": "tag", "text": "全部", "onTap": "pickAll" },
-        { "type": "tag", "text": "进行中", "onTap": "pickRun" },
-        { "type": "tag", "text": "已完成", "onTap": "pickDone" }
+        { "type": "tag", "text": "全部", "onClick": "pickAll" },
+        { "type": "tag", "text": "进行中", "onClick": "pickRun" },
+        { "type": "tag", "text": "已完成", "onClick": "pickDone" }
       ]
     },
     { "type": "notice", "text": "当前筛选：{{label}}" }

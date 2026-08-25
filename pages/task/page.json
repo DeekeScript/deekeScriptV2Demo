@@ -80,11 +80,11 @@
         {
           "type": "button",
           "text": "保存",
-          "onTap": "onSave",
+          "onClick": "onSave",
           "action": { "type": "save", "toast": "已保存" },
           "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" }
         },
-        { "type": "button", "text": "立即运行", "onTap": "onRun", "style": { "weight": 1 } }
+        { "type": "button", "text": "立即运行", "onClick": "onRun", "style": { "weight": 1 } }
       ]
     }
   ]
