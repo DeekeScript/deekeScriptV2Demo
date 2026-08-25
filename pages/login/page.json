@@ -1,0 +1,77 @@
+{
+  "title": {
+    "text": "登录",
+    "hidden": true
+  },
+  "statusBar": {
+    "background": "#F7F8F8",
+    "color": "dark"
+  },
+  "style": {
+    "background": "#F7F8F8",
+    "padding": 28
+  },
+  "body": [
+    {
+      "type": "column",
+      "style": {
+        "height": "100%",
+        "valign": "center",
+        "gap": 0
+      },
+      "children": [
+        {
+          "type": "image",
+          "src": "img/home.svg",
+          "style": { "width": 56, "height": 56, "align": "center" }
+        },
+        { "type": "space", "height": 16 },
+        {
+          "type": "title",
+          "text": "欢迎回来",
+          "style": { "align": "center", "fontSize": 26, "fontWeight": "bold", "color": "#191C1C" }
+        },
+        { "type": "space", "height": 6 },
+        {
+          "type": "notice",
+          "text": "登录后继续使用工作台",
+          "style": { "align": "center" }
+        },
+        { "type": "space", "height": 32 },
+        {
+          "type": "input",
+          "name": "account",
+          "hint": "手机号 / 账号",
+          "variant": "box",
+          "inputType": "phone",
+          "style": { "radius": 12 }
+        },
+        { "type": "space", "height": 12 },
+        {
+          "type": "input",
+          "name": "password",
+          "hint": "密码",
+          "variant": "box",
+          "password": true,
+          "style": { "radius": 12 }
+        },
+        { "type": "space", "height": 8 },
+        { "type": "switch", "name": "remember", "label": "记住登录", "value": true },
+        { "type": "space", "height": 24 },
+        {
+          "type": "button",
+          "text": "登录",
+          "onClick": "onLogin",
+          "style": { "radius": 12 }
+        },
+        { "type": "space", "height": 16 },
+        {
+          "type": "text",
+          "text": "暂不登录",
+          "style": { "align": "center", "color": "#6F7978", "fontSize": 13 },
+          "action": { "type": "back" }
+        }
+      ]
+    }
+  ]
+}

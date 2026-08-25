@@ -36,6 +36,7 @@ Page({
       { name: '居中页', desc: 'column valign', page: 'pages/center' },
       { name: '无标题', desc: '隐藏顶栏', page: 'pages/plain' },
       { name: '深色顶栏', desc: 'title 样式', page: 'pages/contrast' },
+      { name: '登录', desc: '账号密码登录', page: 'pages/login' },
       { name: '我的', desc: '个人页示例', page: 'pages/mine' }
     ]
   }

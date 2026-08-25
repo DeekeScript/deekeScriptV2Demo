@@ -57,6 +57,7 @@
     { "id": "center", "file": "pages/center", "title": "居中" },
     { "id": "plain", "file": "pages/plain" },
     { "id": "contrast", "file": "pages/contrast", "title": "对比" },
+    { "id": "login", "file": "pages/login", "title": "登录" },
     { "id": "mine", "file": "pages/mine", "title": "我的" },
     { "id": "records", "file": "pages/records", "title": "记录" },
     { "id": "settings", "file": "pages/settings", "title": "设置" },
