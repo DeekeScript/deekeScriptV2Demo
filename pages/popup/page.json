@@ -10,13 +10,13 @@
     "padding": 12
   },
   "body": [
-    { "type": "notice", "text": "打开关闭都走 setData + showIf。点遮罩会把对应字段写成 false。嵌自定义组件写在弹层 body 里，不要写 src。" },
+    { "type": "notice", "text": "打开关闭可用 this.setData，也可用 this.showPopup / this.hidePopup。点遮罩会把对应字段写成 false。嵌自定义组件写在弹层 body 里。" },
     { "type": "space", "height": 8 },
-    { "type": "button", "text": "底部表单", "onClick": "onOpenForm" },
-    { "type": "button", "text": "顶部提示", "onClick": "onOpenTop" },
-    { "type": "button", "text": "居中确认", "onClick": "onOpenConfirm" },
-    { "type": "button", "text": "左侧筛选", "onClick": "onOpenLeft" },
-    { "type": "button", "text": "组件选择", "onClick": "onOpenChoose" },
+    { "type": "button", "text": "底部表单", "onTap": "onOpenForm" },
+    { "type": "button", "text": "顶部提示", "onTap": "onOpenTop" },
+    { "type": "button", "text": "居中确认", "onTap": "onOpenConfirm" },
+    { "type": "button", "text": "左侧筛选", "onTap": "onOpenLeft" },
+    { "type": "button", "text": "组件选择", "onTap": "onOpenChoose" },
     { "type": "notice", "text": "备注 {{remark}}" },
     { "type": "notice", "text": "平台 {{platform}}" },
     { "type": "notice", "text": "选用 {{picked}}" }
@@ -29,7 +29,7 @@
       "style": { "radius": 16 },
       "body": [
         { "type": "textarea", "name": "remark", "label": "备注", "hint": "请输入", "minLines": 3 },
-        { "type": "button", "text": "保存", "onClick": "onSaveForm" }
+        { "type": "button", "text": "保存", "onTap": "onSaveForm" }
       ]
     },
     {
@@ -39,7 +39,7 @@
       "style": { "radius": 20 },
       "body": [
         { "type": "notice", "text": "从顶部滑下来的内容。" },
-        { "type": "button", "text": "知道了", "onClick": "onCloseTop" }
+        { "type": "button", "text": "知道了", "onTap": "onCloseTop" }
       ]
     },
     {
@@ -54,8 +54,8 @@
           "type": "row",
           "style": { "gap": 8 },
           "children": [
-            { "type": "button", "text": "取消", "onClick": "onCloseConfirm" },
-            { "type": "button", "text": "删除", "onClick": "onCloseConfirm" }
+            { "type": "button", "text": "取消", "onTap": "onCloseConfirm" },
+            { "type": "button", "text": "删除", "onTap": "onCloseConfirm" }
           ]
         }
       ]
@@ -76,7 +76,7 @@
             { "label": "快手", "value": "ks" }
           ]
         },
-        { "type": "button", "text": "确定", "onClick": "onCloseLeft" }
+        { "type": "button", "text": "确定", "onTap": "onCloseLeft" }
       ]
     },
     {

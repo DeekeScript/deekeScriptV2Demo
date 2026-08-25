@@ -32,6 +32,8 @@
       ]
     },
     { "type": "space", "height": 8 },
+    { "type": "button", "text": "弹窗选择", "onTap": "onOpen" },
+    { "type": "space", "height": 8 },
     {
       "type": "filter",
       "id": "bar",
@@ -56,6 +58,16 @@
           }
         ]
       }
+    }
+  ],
+  "popups": [
+    {
+      "title": "选关键词",
+      "position": "bottom",
+      "showIf": "open",
+      "body": [
+        { "type": "choose", "id": "picker", "onConfirm": "onPicked" }
+      ]
     }
   ]
 }

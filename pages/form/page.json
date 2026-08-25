@@ -44,8 +44,8 @@
           "type": "row",
           "style": { "gap": 8 },
           "children": [
-            { "type": "button", "text": "增加一项", "size": "md", "onClick": "onAddExtra" },
-            { "type": "button", "text": "去掉最后一项", "size": "md", "style": { "background": "#5F6D6B" }, "onClick": "onRemoveExtra" }
+            { "type": "button", "text": "增加一项", "size": "md", "onTap": "onAddExtra" },
+            { "type": "button", "text": "去掉最后一项", "size": "md", "style": { "background": "#5F6D6B" }, "onTap": "onRemoveExtra" }
           ]
         }
       ]
@@ -55,7 +55,7 @@
       "type": "row",
       "style": { "gap": 8 },
       "children": [
-        { "type": "button", "text": "保存", "onClick": "onSave", "action": { "type": "save", "toast": "已写入本地" } },
+        { "type": "button", "text": "保存", "onTap": "onSave", "action": { "type": "save", "toast": "已写入本地" } },
         { "type": "button", "text": "提示", "size": "md", "action": { "type": "toast", "text": "任务名：{{task_name}}" } }
       ]
     }

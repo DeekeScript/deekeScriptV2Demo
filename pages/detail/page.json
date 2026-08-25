@@ -50,7 +50,7 @@
       "type": "row",
       "style": { "gap": 8 },
       "children": [
-        { "type": "button", "text": "运行", "showIf": "item.jsFile", "onClick": "onRun", "style": { "weight": 1 } },
+        { "type": "button", "text": "运行", "showIf": "item.jsFile", "onTap": "onRun", "style": { "weight": 1 } },
         {
           "type": "button",
           "text": "返回",

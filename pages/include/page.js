@@ -1,5 +1,6 @@
 Page({
   data: {
+    open: false,
     picked: '未选',
     all: [
       { title: '关注达人', user: '运营A', status: '进行中', tab: 'run' },
@@ -18,9 +19,12 @@ Page({
   onLoad() {
     this.apply('', 'all');
   },
+  onOpen() {
+    this.setData({ open: true });
+  },
   onPicked(e) {
     var keyword = e && e.detail ? e.detail.keyword : '';
-    this.setData({ picked: keyword || '未选' });
+    this.setData({ open: false, picked: keyword || '未选' });
   },
   onFilter(e) {
     var d = e && e.detail ? e.detail : {};

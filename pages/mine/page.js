@@ -1,4 +1,5 @@
 let hello = require('common/hello.js');
+let permission = require('common/permission.js');
 
 Page({
   data: {
@@ -8,6 +9,6 @@ Page({
     version: '1.0.0'
   },
   onRunSample() {
-    Engines.executeScript('tasks/sample.js');
+    permission.runScript('tasks/sample.js');
   }
 });

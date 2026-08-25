@@ -10,31 +10,31 @@ Page({
     picked: '未选'
   },
   onOpenForm() {
-    this.setData({ formOpen: true });
+    this.showPopup('formOpen');
   },
   onSaveForm() {
-    this.setData({ formOpen: false });
+    this.hidePopup('formOpen');
   },
   onOpenTop() {
-    this.setData({ topOpen: true });
+    this.showPopup('topOpen');
   },
   onCloseTop() {
-    this.setData({ topOpen: false });
+    this.hidePopup('topOpen');
   },
   onOpenConfirm() {
-    this.setData({ confirmOpen: true });
+    this.showPopup('confirmOpen');
   },
   onCloseConfirm() {
-    this.setData({ confirmOpen: false });
+    this.hidePopup('confirmOpen');
   },
   onOpenLeft() {
-    this.setData({ leftOpen: true });
+    this.showPopup('leftOpen');
   },
   onCloseLeft() {
-    this.setData({ leftOpen: false });
+    this.hidePopup('leftOpen');
   },
   onOpenChoose() {
-    this.setData({ chooseOpen: true });
+    this.showPopup('chooseOpen');
   },
   onPicked(e) {
     var keyword = e && e.detail ? e.detail.keyword : '';

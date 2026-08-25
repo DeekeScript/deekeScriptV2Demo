@@ -1,4 +1,7 @@
-console.log('V2 demo task started');
-System.toast('示例脚本已开始执行');
-System.sleep(800);
-System.toast('示例脚本执行完成');
+let permission = require('common/permission.js');
+
+if (!permission.ensureRun()) {
+  // 无障碍 / 悬浮窗未开启，已弹窗引导
+} else {
+  permission.hint('tasks/sample.js');
+}

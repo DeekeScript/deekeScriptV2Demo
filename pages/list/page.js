@@ -1,5 +1,6 @@
 let line = require('common/line.js');
 let catalog = require('common/data.js');
+let permission = require('common/permission.js');
 
 Page({
   data: {
@@ -28,7 +29,7 @@ Page({
     this.setData({ keyword: e.value, tasks: next, empty: next.length === 0 });
   },
   onRun(e) {
-    Engines.executeScript(e.item.jsFile);
+    permission.runScript(e.item.jsFile);
   },
   onReachBottom() {
     if (this.data.loading || this.data.noMore) {

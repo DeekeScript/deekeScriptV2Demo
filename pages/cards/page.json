@@ -22,7 +22,7 @@
           "type": "card",
           "name": "plan",
           "value": "month",
-          "onClick": "onSelectPlan",
+          "onTap": "onSelectPlan",
           "style": { "weight": 1, "align": "center" },
           "children": [
             { "type": "text", "text": "月卡", "style": { "align": "center" } },
@@ -34,7 +34,7 @@
           "type": "card",
           "name": "plan",
           "value": "year",
-          "onClick": "onSelectPlan",
+          "onTap": "onSelectPlan",
           "style": { "weight": 1, "align": "center" },
           "children": [
             { "type": "text", "text": "年卡", "style": { "align": "center" } },
@@ -46,7 +46,7 @@
           "type": "card",
           "name": "plan",
           "value": "forever",
-          "onClick": "onSelectPlan",
+          "onTap": "onSelectPlan",
           "style": { "weight": 1, "align": "center" },
           "children": [
             { "type": "text", "text": "买断", "style": { "align": "center" } },
@@ -68,7 +68,7 @@
           "name": "apps",
           "value": "xhs",
           "multiple": true,
-          "onClick": "onToggleApp",
+          "onTap": "onToggleApp",
           "style": { "weight": 1, "align": "center" },
           "children": [
             { "type": "text", "text": "小红书", "style": { "align": "center" } }
@@ -79,7 +79,7 @@
           "name": "apps",
           "value": "dy",
           "multiple": true,
-          "onClick": "onToggleApp",
+          "onTap": "onToggleApp",
           "style": { "weight": 1, "align": "center" },
           "children": [
             { "type": "text", "text": "抖音", "style": { "align": "center" } }
@@ -90,7 +90,7 @@
           "name": "apps",
           "value": "ks",
           "multiple": true,
-          "onClick": "onToggleApp",
+          "onTap": "onToggleApp",
           "style": { "weight": 1, "align": "center" },
           "children": [
             { "type": "text", "text": "快手", "style": { "align": "center" } }

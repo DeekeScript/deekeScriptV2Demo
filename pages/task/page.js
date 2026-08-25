@@ -1,4 +1,5 @@
 let catalog = require('common/data.js');
+let permission = require('common/permission.js');
 
 Page({
   data: {
@@ -48,6 +49,6 @@ Page({
     Storage.put('v2demo.notify', this.data.notify);
   },
   onRun() {
-    Engines.executeScript(this.data.item.jsFile);
+    permission.runScript(this.data.item.jsFile);
   }
 });

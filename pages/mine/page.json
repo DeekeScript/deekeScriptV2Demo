@@ -53,7 +53,7 @@
     {
       "type": "button",
       "text": "运行示例脚本",
-      "onClick": "onRunSample"
+      "onTap": "onRunSample"
     },
     { "type": "space", "height": 8 },
     {

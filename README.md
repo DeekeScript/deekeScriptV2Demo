@@ -13,14 +13,17 @@
 
 ## 运行脚本
 
-不要写在 JSON 的 `action` 里。在 `page.js` 的 `onClick` 里调用：
+不要写在 JSON 的 `action` 里。在 `page.js` 的 `onTap` 里调用（会先检查无障碍、悬浮窗）：
 
 ```javascript
-Engines.executeScript('tasks/sample.js');
+let permission = require('common/permission.js');
+permission.runScript('tasks/sample.js');
 ```
 
-- `tasks/sample.js`：基础执行
-- `tasks/follow.js`：脚本内再用 `require('common/hello.js')`
+权限判断都在 `common/permission.js`。运行起来后会弹窗提示到对应任务文件里写业务。
+
+- `tasks/sample.js`
+- `tasks/follow.js`
 
 ## require
 

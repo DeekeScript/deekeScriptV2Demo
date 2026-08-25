@@ -1,5 +1,6 @@
 let data = require('common/data.js');
 let line = require('common/line.js');
+let permission = require('common/permission.js');
 
 Page({
   data: {
@@ -24,7 +25,7 @@ Page({
     });
   },
   onRun(e) {
-    Engines.executeScript(e.item.jsFile);
+    permission.runScript(e.item.jsFile);
   },
   onReachBottom() {
     if (this.data.loading || this.data.noMore) {

@@ -1,4 +1,5 @@
 let catalog = require('common/data.js');
+let permission = require('common/permission.js');
 
 Page({
   data: {
@@ -17,6 +18,6 @@ Page({
     // this.setData({ item: data.item });
   },
   onRun() {
-    Engines.executeScript(this.data.item.jsFile);
+    permission.runScript(this.data.item.jsFile);
   }
 });
