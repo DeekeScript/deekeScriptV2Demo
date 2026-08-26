@@ -10,10 +10,10 @@
 
 function catalog() {
   return [
-    { id: 'stop', icon: 'close', label: '停止', action: 'stop', show: 'running' },
-    { id: 'hide', icon: 'hide', label: '隐藏', action: 'hide' },
+    { id: 'stop', icon: 'img/stop.svg', label: '停止', action: 'stop', show: 'running' },
+    { id: 'hide', icon: 'img/hide.svg', label: '隐藏', action: 'hide' },
     { id: 'skip', icon: 'img/skip.svg', label: '跳过', onTap: 'onSkip', show: 'running' },
-    { id: 'log', icon: 'img/setting.svg', label: '日志', onTap: 'onLog' },
+    { id: 'log', icon: 'img/log.svg', label: '日志', onTap: 'onLog' },
     { id: 'setting', icon: 'img/setting.svg', label: '设置', onTap: 'onSetting' }
   ];
 }
@@ -41,7 +41,7 @@ function menusForCount(count) {
   for (i = 0; i < body.length; i++) {
     var item = body[i];
     if (item.id === 'stop' && body.length < 5) {
-      items.push({ id: 'start', icon: 'play', label: '开始', action: 'start', show: 'idle' });
+      items.push({ id: 'start', icon: 'img/play.svg', label: '开始', action: 'start', show: 'idle' });
     }
     items.push(item);
   }
