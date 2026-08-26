@@ -54,12 +54,14 @@
     { "id": "tabs", "file": "pages/tabs", "title": "选项卡" },
     { "id": "popup", "file": "pages/popup", "title": "弹层" },
     { "id": "floatWindow", "file": "pages/floatWindow", "title": "悬浮球" },
+    { "id": "ability", "file": "pages/ability", "title": "能力" },
+    { "id": "refresh", "file": "pages/refresh", "title": "下拉刷新" },
     { "id": "include", "file": "pages/include", "title": "自定义组件" },
     { "id": "loading", "file": "pages/loading", "title": "加载" },
     { "id": "center", "file": "pages/center", "title": "居中" },
     { "id": "plain", "file": "pages/plain" },
     { "id": "contrast", "file": "pages/contrast", "title": "对比" },
-    { "id": "login", "file": "pages/login", "title": "登录" },
+    { "id": "login", "file": "pages/login", "title": "登录页" },
     { "id": "mine", "file": "pages/mine", "title": "我的" },
     { "id": "detail", "file": "pages/detail", "title": "详情" },
     { "id": "task", "file": "pages/task", "title": "任务设置" }
@@ -70,7 +72,8 @@
   ],
   "bottomMenus": [
     { "title": "首页", "icon": "img/home.svg", "page": "pages/home" },
-    { "title": "组件", "icon": "img/apps.svg", "page": "pages/components", "badge": 3 }
+    { "title": "组件", "icon": "img/apps.svg", "page": "pages/components", "badge": 3 },
+    { "title": "能力", "icon": "img/setting.svg", "page": "pages/ability" }
   ],
   "floatWindow": {
     "menus": [

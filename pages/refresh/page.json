@@ -1,0 +1,53 @@
+{
+  "enablePullDownRefresh": true,
+  "title": {
+    "text": "下拉刷新",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "在顶部下拉。引擎只回调 onPullDownRefresh，不会再走 onLoad。数据在 loadLogs 里自己拉，结束后 this.stopPullDownRefresh()。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "grid",
+      "bind": "metrics",
+      "columns": 2,
+      "item": {
+        "type": "card",
+        "style": { "padding": 12, "gap": 4 },
+        "children": [
+          { "type": "notice", "text": "{{item.label}}" },
+          { "type": "title", "text": "{{item.value}}", "style": { "color": "#006A65" } }
+        ]
+      }
+    },
+    { "type": "text", "text": "最近记录", "style": { "fontWeight": "bold" } },
+    {
+      "type": "list",
+      "bind": "logs",
+      "item": {
+        "type": "card",
+        "children": [
+          {
+            "type": "row",
+            "style": { "gap": 8 },
+            "children": [
+              { "type": "text", "text": "{{item.title}}", "style": { "weight": 1, "fontWeight": "bold" } },
+              {
+                "type": "tag",
+                "text": "{{item.status}}",
+                "style": { "background": "#E6F4F1", "color": "#006A65" }
+              }
+            ]
+          },
+          { "type": "notice", "text": "{{item.time}}" }
+        ]
+      }
+    }
+  ]
+}

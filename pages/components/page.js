@@ -30,7 +30,6 @@ Page({
       { name: '宫格', desc: 'grid', page: 'pages/grid' },
       { name: '选项卡', desc: 'tabs', page: 'pages/tabs' },
       { name: '弹层', desc: '底部 / 顶部 / 侧边 / 居中；嵌入自定义组件', page: 'pages/popup' },
-      { name: '悬浮球', desc: '权限 / 显示隐藏 / 展开菜单 / 启停', page: 'pages/floatWindow' },
       { name: '自定义组件', desc: '页面嵌入 / 弹窗嵌入', page: 'pages/include' },
       { name: '加载', desc: 'loading', page: 'pages/loading' }
     ],
@@ -38,7 +37,7 @@ Page({
       { name: '居中页', desc: 'column valign', page: 'pages/center' },
       { name: '无标题', desc: '隐藏顶栏', page: 'pages/plain' },
       { name: '深色顶栏', desc: 'title 样式', page: 'pages/contrast' },
-      { name: '登录', desc: '账号密码登录', page: 'pages/login' },
+      { name: '登录页', desc: '账号密码整页示例', page: 'pages/login' },
       { name: '我的', desc: '个人页示例', page: 'pages/mine' }
     ]
   }
