@@ -6,13 +6,14 @@
  *
  * 启动脚本请用 Engines.executeScript；JSON 里配了 action: "start"
  * 且当前已有任务文件时由框架执行；否则走这里的 start 回调。
+ *
+ * 图标个数：开始/停止算 1 个（按是否运行切换），其余始终显示，所以点 N 展开就是 N 个。
  */
 
-function catalog() {
+function extras() {
   return [
-    { id: 'stop', icon: 'img/stop.svg', label: '停止', action: 'stop', show: 'running' },
     { id: 'hide', icon: 'img/hide.svg', label: '隐藏', action: 'hide' },
-    { id: 'skip', icon: 'img/skip.svg', label: '跳过', onTap: 'onSkip', show: 'running' },
+    { id: 'skip', icon: 'img/skip.svg', label: '跳过', onTap: 'onSkip' },
     { id: 'log', icon: 'img/log.svg', label: '日志', onTap: 'onLog' },
     { id: 'setting', icon: 'img/setting.svg', label: '设置', onTap: 'onSetting' }
   ];
@@ -30,20 +31,19 @@ function extraMenus() {
   return menusForCount(5);
 }
 
-/** 和文档演示同一套：1–5 个图标，未满 5 时自动补 idle 的「开始」。 */
+/** 1–5 个图标。开始/停止成对，展开时只出现其中一个。 */
 function menusForCount(count) {
   var n = count;
   if (n < 1) n = 1;
   if (n > 5) n = 5;
-  var body = catalog().slice(0, n);
-  var items = [];
+  var items = [
+    { id: 'start', icon: 'img/play.svg', label: '开始', action: 'start', show: 'idle' },
+    { id: 'stop', icon: 'img/stop.svg', label: '停止', action: 'stop', show: 'running' }
+  ];
+  var rest = extras();
   var i;
-  for (i = 0; i < body.length; i++) {
-    var item = body[i];
-    if (item.id === 'stop' && body.length < 5) {
-      items.push({ id: 'start', icon: 'img/play.svg', label: '开始', action: 'start', show: 'idle' });
-    }
-    items.push(item);
+  for (i = 0; i < n - 1 && i < rest.length; i++) {
+    items.push(rest[i]);
   }
   return items;
 }

@@ -82,17 +82,17 @@
         { "type": "notice", "text": "上次操作 {{lastEvent}}" },
         { "type": "space", "height": 8 },
         { "type": "text", "text": "图标个数", "style": { "fontWeight": "bold" } },
-        { "type": "notice", "text": "和文档演示一样，点 1–5 切换展开图标数量。" },
+        { "type": "notice", "text": "点 1–5 切换展开图标数量，当前选中为绿底。" },
         { "type": "space", "height": 8 },
         {
           "type": "row",
           "style": { "gap": 6 },
           "children": [
-            { "type": "button", "text": "1", "size": "sm", "onTap": "onCount1", "style": { "weight": 1 } },
-            { "type": "button", "text": "2", "size": "sm", "onTap": "onCount2", "style": { "weight": 1 } },
-            { "type": "button", "text": "3", "size": "sm", "onTap": "onCount3", "style": { "weight": 1 } },
-            { "type": "button", "text": "4", "size": "sm", "onTap": "onCount4", "style": { "weight": 1 } },
-            { "type": "button", "text": "5", "size": "sm", "onTap": "onCount5", "style": { "weight": 1 } }
+            { "type": "button", "text": "1", "size": "sm", "onTap": "onCount1", "style": { "weight": 1, "background": "{{count1Bg}}", "color": "{{count1Color}}" } },
+            { "type": "button", "text": "2", "size": "sm", "onTap": "onCount2", "style": { "weight": 1, "background": "{{count2Bg}}", "color": "{{count2Color}}" } },
+            { "type": "button", "text": "3", "size": "sm", "onTap": "onCount3", "style": { "weight": 1, "background": "{{count3Bg}}", "color": "{{count3Color}}" } },
+            { "type": "button", "text": "4", "size": "sm", "onTap": "onCount4", "style": { "weight": 1, "background": "{{count4Bg}}", "color": "{{count4Color}}" } },
+            { "type": "button", "text": "5", "size": "sm", "onTap": "onCount5", "style": { "weight": 1, "background": "{{count5Bg}}", "color": "{{count5Color}}" } }
           ]
         },
         { "type": "space", "height": 8 },

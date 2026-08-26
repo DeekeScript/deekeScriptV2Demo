@@ -7,18 +7,61 @@ function statusText(ok) {
   return ok ? '已开启' : '未开启';
 }
 
+function countState(n, extra) {
+  n = (n - 0) | 0;
+  if (n < 1 || n > 5) {
+    n = 3;
+  }
+  var onBg = '#006A65';
+  var offBg = '#EEF2F1';
+  var onColor = '#FFFFFF';
+  var offColor = '#006A65';
+  var data = {
+    count1Bg: n === 1 ? onBg : offBg,
+    count1Color: n === 1 ? onColor : offColor,
+    count2Bg: n === 2 ? onBg : offBg,
+    count2Color: n === 2 ? onColor : offColor,
+    count3Bg: n === 3 ? onBg : offBg,
+    count3Color: n === 3 ? onColor : offColor,
+    count4Bg: n === 4 ? onBg : offBg,
+    count4Color: n === 4 ? onColor : offColor,
+    count5Bg: n === 5 ? onBg : offBg,
+    count5Color: n === 5 ? onColor : offColor,
+    menuCount: n,
+    menuStatus: n + ' 个图标'
+  };
+  if (extra && extra.menuStatus) {
+    data.menuStatus = extra.menuStatus;
+  }
+  if (extra && extra.lastEvent) {
+    data.lastEvent = extra.lastEvent;
+  }
+  return data;
+}
+
 Page({
   data: {
     floatStatus: '检测中',
     accessStatus: '检测中',
     ballStatus: '未知',
-    menuStatus: '入口 JSON',
+    menuStatus: '3 个图标',
     lastEvent: '无',
-    menuCount: 3
+    menuCount: 3,
+    count1Bg: '#EEF2F1',
+    count1Color: '#006A65',
+    count2Bg: '#EEF2F1',
+    count2Color: '#006A65',
+    count3Bg: '#006A65',
+    count3Color: '#FFFFFF',
+    count4Bg: '#EEF2F1',
+    count4Color: '#006A65',
+    count5Bg: '#EEF2F1',
+    count5Color: '#006A65'
   },
   onLoad() {
     this.refreshPerm();
     this.bindMenu();
+    floatMenu.applyCount(3);
   },
   onShow() {
     this.refreshPerm();
@@ -123,16 +166,13 @@ Page({
     this.setData({ lastEvent: 'collapse' });
   },
   applyCount(n) {
+    n = (n - 0) | 0;
+    this.setData(countState(n, { lastEvent: 'setMenus' }));
     if (!this.ensureFloatPerm()) {
       return;
     }
     floatMenu.applyCount(n);
     this.bindMenu();
-    this.setData({
-      menuCount: n,
-      menuStatus: n + ' 个图标',
-      lastEvent: 'setMenus'
-    });
     System.toast('已换成 ' + n + ' 个图标');
   },
   onCount1() {
@@ -151,12 +191,12 @@ Page({
     this.applyCount(5);
   },
   onMenusDefault() {
+    this.setData(countState(3, { menuStatus: '入口 JSON', lastEvent: 'setMenus' }));
     if (!this.ensureFloatPerm()) {
       return;
     }
     floatMenu.applyMenus(floatMenu.defaultMenus());
     this.bindMenu();
-    this.setData({ menuStatus: '入口 JSON', lastEvent: 'setMenus' });
     System.toast('已恢复 JSON 菜单');
   },
   onMarkSkip() {

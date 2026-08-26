@@ -77,7 +77,7 @@
       { "id": "start", "icon": "img/play.svg", "label": "开始", "action": "start", "show": "idle" },
       { "id": "stop", "icon": "img/stop.svg", "label": "停止", "action": "stop", "show": "running" },
       { "id": "hide", "icon": "img/hide.svg", "label": "隐藏", "action": "hide" },
-      { "id": "skip", "icon": "img/skip.svg", "label": "跳过", "onTap": "onSkip", "show": "running" }
+      { "id": "skip", "icon": "img/skip.svg", "label": "跳过", "onTap": "onSkip" }
     ]
   }
 }
