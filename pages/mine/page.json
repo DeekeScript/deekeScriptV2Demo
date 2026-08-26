@@ -43,7 +43,7 @@
       "type": "card",
       "children": [
         { "type": "text", "text": "关于本示例", "style": { "fontWeight": "bold" } },
-        { "type": "notice", "text": "用 JSON 描述页面，JS 填充数据。底部 Tab：首页、组件、记录、设置。" },
+        { "type": "notice", "text": "用 JSON 描述页面，JS 填充数据。底部 Tab：首页、组件。" },
         { "type": "divider" },
         { "type": "text", "text": "版本 {{version}}" },
         { "type": "notice", "text": "入口文件 deekeScript-v2.json" }

@@ -61,8 +61,6 @@
     { "id": "contrast", "file": "pages/contrast", "title": "对比" },
     { "id": "login", "file": "pages/login", "title": "登录" },
     { "id": "mine", "file": "pages/mine", "title": "我的" },
-    { "id": "records", "file": "pages/records", "title": "记录" },
-    { "id": "settings", "file": "pages/settings", "title": "设置" },
     { "id": "detail", "file": "pages/detail", "title": "详情" },
     { "id": "task", "file": "pages/task", "title": "任务设置" }
   ],
@@ -72,9 +70,7 @@
   ],
   "bottomMenus": [
     { "title": "首页", "icon": "img/home.svg", "page": "pages/home" },
-    { "title": "组件", "icon": "img/apps.svg", "page": "pages/components" },
-    { "title": "记录", "icon": "img/records.svg", "page": "pages/records", "badge": 3 },
-    { "title": "设置", "icon": "img/setting.svg", "page": "pages/settings" }
+    { "title": "组件", "icon": "img/apps.svg", "page": "pages/components", "badge": 3 }
   ],
   "floatWindow": {
     "menus": [
