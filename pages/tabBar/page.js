@@ -30,6 +30,19 @@ Page({
   onShowComponents() {
     this.setTabBarItem({ page: 'pages/components', hidden: false });
   },
+  onRename() {
+    this.setTabBarItem({ page: 'pages/components', title: '控件' });
+  },
+  onRestoreName() {
+    this.setTabBarItem({ page: 'pages/components', title: '组件' });
+  },
+  onOrangeBar() {
+    this.setTabBarStyle({
+      color: '#C2410C',
+      selectedColor: '#EA580C',
+      hidden: false
+    });
+  },
   onDarkBar() {
     this.setTabBarStyle({
       background: '#1A1A1A',
