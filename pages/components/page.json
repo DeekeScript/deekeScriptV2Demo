@@ -55,7 +55,7 @@
     },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "结构", "style": { "fontWeight": "bold" } },
-    { "type": "notice", "text": "列表、宫格、选项卡、弹层、加载" },
+    { "type": "notice", "text": "列表、宫格、选项卡、弹层、悬浮球、加载" },
     {
       "type": "list",
       "bind": "structure",

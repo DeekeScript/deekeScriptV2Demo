@@ -53,6 +53,7 @@
     { "id": "grid", "file": "pages/grid", "title": "宫格" },
     { "id": "tabs", "file": "pages/tabs", "title": "选项卡" },
     { "id": "popup", "file": "pages/popup", "title": "弹层" },
+    { "id": "floatWindow", "file": "pages/floatWindow", "title": "悬浮球" },
     { "id": "include", "file": "pages/include", "title": "自定义组件" },
     { "id": "loading", "file": "pages/loading", "title": "加载" },
     { "id": "center", "file": "pages/center", "title": "居中" },
@@ -74,5 +75,13 @@
     { "title": "组件", "icon": "img/apps.svg", "page": "pages/components" },
     { "title": "记录", "icon": "img/records.svg", "page": "pages/records", "badge": 3 },
     { "title": "设置", "icon": "img/setting.svg", "page": "pages/settings" }
-  ]
+  ],
+  "floatWindow": {
+    "menus": [
+      { "id": "start", "icon": "play", "label": "开始", "action": "start", "show": "idle" },
+      { "id": "stop", "icon": "close", "label": "停止", "action": "stop", "show": "running" },
+      { "id": "hide", "icon": "hide", "label": "隐藏", "action": "hide" },
+      { "id": "skip", "icon": "img/skip.svg", "label": "跳过", "onTap": "onSkip", "show": "running" }
+    ]
+  }
 }

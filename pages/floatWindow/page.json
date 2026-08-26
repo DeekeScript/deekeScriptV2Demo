@@ -1,0 +1,103 @@
+{
+  "title": {
+    "text": "悬浮球",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "悬浮球是系统 overlay，不是页面 JSON 控件。Android 未授予悬浮窗权限时球无法展示；是否去授权由本页 JS 决定，框架不会替你弹系统设置。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "权限", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "悬浮窗 {{floatStatus}}" },
+        { "type": "notice", "text": "无障碍 {{accessStatus}}" },
+        { "type": "space", "height": 8 },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "button", "text": "刷新状态", "onTap": "onRefreshPerm", "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" } },
+            { "type": "button", "text": "去授权悬浮窗", "onTap": "onOpenFloatSetting", "style": { "weight": 1 } }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "显示 / 隐藏", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "当前 {{ballStatus}}" },
+        { "type": "notice", "text": "授权后请返回本页，再点显示。隐藏后可用本页按钮重新显示。" },
+        { "type": "space", "height": 8 },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "button", "text": "显示悬浮球", "onTap": "onShowBall", "style": { "weight": 1 } },
+            { "type": "button", "text": "隐藏悬浮球", "onTap": "onHideBall", "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" } }
+          ]
+        },
+        { "type": "space", "height": 8 },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "button", "text": "允许点击", "onTap": "onEnableClick", "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" } },
+            { "type": "button", "text": "禁止点击", "onTap": "onDisableClick", "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" } }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "任务", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "启动后点悬浮球可停止、隐藏、跳过。停止走 Engines.closeAll()。" },
+        { "type": "space", "height": 8 },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "button", "text": "启动示例任务", "onTap": "onStartSample", "style": { "weight": 1 } },
+            { "type": "button", "text": "停止全部脚本", "onTap": "onStopAll", "style": { "weight": 1, "background": "#FDECEC", "color": "#B42318" } }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "FloatWindow API", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "菜单 {{menuStatus}}" },
+        { "type": "notice", "text": "上次操作 {{lastEvent}}" },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "绑定菜单回调", "onTap": "onBindMenu" },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "收起菜单 collapse", "onTap": "onCollapse" },
+        { "type": "space", "height": 8 },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "button", "text": "换成 3 项", "onTap": "onMenusCompact", "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" } },
+            { "type": "button", "text": "换成 5 项", "onTap": "onMenusExtra", "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" } }
+          ]
+        },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "恢复 JSON 菜单", "onTap": "onMenusDefault" },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "把「跳过」改成已跳过", "onTap": "onMarkSkip" }
+      ]
+    }
+  ]
+}
