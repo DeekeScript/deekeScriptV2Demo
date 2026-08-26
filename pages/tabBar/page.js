@@ -36,29 +36,16 @@ Page({
   onRestoreName() {
     this.setTabBarItem({ page: 'pages/components', title: '组件' });
   },
-  onOrangeBar() {
-    this.setTabBarStyle({
-      color: '#C2410C',
-      selectedColor: '#EA580C',
-      hidden: false
-    });
+  onOrangeText() {
+    this.setTabBarStyle({ color: '#C2410C', selectedColor: '#EA580C' });
+  },
+  onOrangeIcon() {
+    this.setTabBarStyle({ iconColor: '#C2410C', selectedIconColor: '#EA580C' });
   },
   onDarkBar() {
-    this.setTabBarStyle({
-      background: '#1A1A1A',
-      color: '#9AA8A6',
-      selectedColor: '#5EEAD4',
-      borderColor: '#333333',
-      hidden: false
-    });
+    this.setTabBarStyle({ background: '#1A1A1A', borderColor: '#333333' });
   },
   onLightBar() {
-    this.setTabBarStyle({
-      background: '#FFFFFF',
-      color: '#6F7978',
-      selectedColor: '#006A65',
-      borderColor: '#EEEEEE',
-      hidden: false
-    });
+    this.setTabBarStyle({ background: '#FFFFFF', borderColor: '#EEEEEE' });
   }
 });

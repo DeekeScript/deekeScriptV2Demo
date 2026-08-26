@@ -10,7 +10,7 @@
     "background": "#F5F5F5"
   },
   "body": [
-    { "type": "notice", "text": "文字用 setTabBarItem 的 title。图标色和文字色是整栏的，用 setTabBarStyle 的 color / selectedColor。点首页 / 能力会提示。返回后恢复默认。" },
+    { "type": "notice", "text": "文字色 color / selectedColor，图标色 iconColor / selectedIconColor，只传要改的字段。点首页 / 能力会提示。返回后恢复默认。" },
     { "type": "space", "height": 8 },
     {
       "type": "row",
@@ -38,11 +38,18 @@
     },
     {
       "type": "row",
-      "style": { "gap": 6 },
+      "style": { "gap": 8 },
       "children": [
-        { "type": "button", "text": "橙色配色", "onTap": "onOrangeBar", "size": "sm", "style": { "weight": 1 } },
-        { "type": "button", "text": "深色底栏", "onTap": "onDarkBar", "size": "sm", "style": { "weight": 1 } },
-        { "type": "button", "text": "浅色底栏", "onTap": "onLightBar", "size": "sm", "style": { "weight": 1 } }
+        { "type": "button", "text": "橙色文字", "onTap": "onOrangeText", "style": { "weight": 1 } },
+        { "type": "button", "text": "橙色图标", "onTap": "onOrangeIcon", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "button", "text": "深色背景", "onTap": "onDarkBar", "style": { "weight": 1 } },
+        { "type": "button", "text": "浅色背景", "onTap": "onLightBar", "style": { "weight": 1 } }
       ]
     }
   ]
