@@ -55,6 +55,7 @@
     { "id": "popup", "file": "pages/popup", "title": "弹层" },
     { "id": "floatWindow", "file": "pages/floatWindow", "title": "悬浮球" },
     { "id": "ability", "file": "pages/ability", "title": "能力" },
+    { "id": "tabBar", "file": "pages/tabBar", "title": "底部菜单" },
     { "id": "refresh", "file": "pages/refresh", "title": "下拉刷新" },
     { "id": "include", "file": "pages/include", "title": "自定义组件" },
     { "id": "loading", "file": "pages/loading", "title": "加载" },

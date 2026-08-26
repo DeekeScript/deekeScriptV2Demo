@@ -17,7 +17,7 @@
       "bind": "items",
       "item": {
         "type": "card",
-        "action": { "type": "navigate", "page": "{{item.page}}" },
+        "action": { "type": "{{item.mode}}", "page": "{{item.page}}" },
         "children": [
           {
             "type": "row",
@@ -29,34 +29,6 @@
           }
         ]
       }
-    },
-    { "type": "space", "height": 12 },
-    { "type": "text", "text": "底部菜单", "style": { "fontWeight": "bold" } },
-    { "type": "notice", "text": "改的是当前 App 底栏。离开本页（切 Tab、打开上面的页面、返回）会恢复默认：首页 / 组件(角标 3) / 能力。" },
-    { "type": "space", "height": 8 },
-    {
-      "type": "row",
-      "style": { "gap": 8 },
-      "children": [
-        { "type": "button", "text": "角标 9", "onTap": "onBadge", "style": { "weight": 1 } },
-        { "type": "button", "text": "清角标", "onTap": "onClearBadge", "style": { "weight": 1 } }
-      ]
-    },
-    {
-      "type": "row",
-      "style": { "gap": 8 },
-      "children": [
-        { "type": "button", "text": "隐藏组件", "onTap": "onHideComponents", "style": { "weight": 1 } },
-        { "type": "button", "text": "显示组件", "onTap": "onShowComponents", "style": { "weight": 1 } }
-      ]
-    },
-    {
-      "type": "row",
-      "style": { "gap": 8 },
-      "children": [
-        { "type": "button", "text": "深色底栏", "onTap": "onDarkBar", "style": { "weight": 1 } },
-        { "type": "button", "text": "浅色底栏", "onTap": "onLightBar", "style": { "weight": 1 } }
-      ]
     }
   ]
 }

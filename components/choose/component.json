@@ -7,9 +7,9 @@
       "type": "row",
       "style": { "gap": 8 },
       "children": [
-        { "type": "tag", "text": "美食", "onTap": "pickFood" },
-        { "type": "tag", "text": "探店", "onTap": "pickShop" },
-        { "type": "tag", "text": "直播", "onTap": "pickLive" }
+        { "type": "tag", "text": "美食", "onTap": "pickFood", "style": { "background": "{{foodBg}}", "color": "{{foodColor}}" } },
+        { "type": "tag", "text": "探店", "onTap": "pickShop", "style": { "background": "{{shopBg}}", "color": "{{shopColor}}" } },
+        { "type": "tag", "text": "直播", "onTap": "pickLive", "style": { "background": "{{liveBg}}", "color": "{{liveColor}}" } }
       ]
     },
     { "type": "input", "name": "keyword", "label": "关键词", "hint": "例如：美食" },
