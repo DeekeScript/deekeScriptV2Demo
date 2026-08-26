@@ -81,18 +81,24 @@
         { "type": "notice", "text": "菜单 {{menuStatus}}" },
         { "type": "notice", "text": "上次操作 {{lastEvent}}" },
         { "type": "space", "height": 8 },
-        { "type": "button", "text": "绑定菜单回调", "onTap": "onBindMenu" },
-        { "type": "space", "height": 8 },
-        { "type": "button", "text": "收起菜单 collapse", "onTap": "onCollapse" },
+        { "type": "text", "text": "图标个数", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "和文档演示一样，点 1–5 切换展开图标数量。" },
         { "type": "space", "height": 8 },
         {
           "type": "row",
-          "style": { "gap": 8 },
+          "style": { "gap": 6 },
           "children": [
-            { "type": "button", "text": "换成 3 项", "onTap": "onMenusCompact", "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" } },
-            { "type": "button", "text": "换成 5 项", "onTap": "onMenusExtra", "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" } }
+            { "type": "button", "text": "1", "size": "sm", "onTap": "onCount1", "style": { "weight": 1 } },
+            { "type": "button", "text": "2", "size": "sm", "onTap": "onCount2", "style": { "weight": 1 } },
+            { "type": "button", "text": "3", "size": "sm", "onTap": "onCount3", "style": { "weight": 1 } },
+            { "type": "button", "text": "4", "size": "sm", "onTap": "onCount4", "style": { "weight": 1 } },
+            { "type": "button", "text": "5", "size": "sm", "onTap": "onCount5", "style": { "weight": 1 } }
           ]
         },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "绑定菜单回调", "onTap": "onBindMenu" },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "收起菜单 collapse", "onTap": "onCollapse" },
         { "type": "space", "height": 8 },
         { "type": "button", "text": "恢复 JSON 菜单", "onTap": "onMenusDefault" },
         { "type": "space", "height": 8 },

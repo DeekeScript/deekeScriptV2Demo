@@ -13,7 +13,8 @@ Page({
     accessStatus: '检测中',
     ballStatus: '未知',
     menuStatus: '入口 JSON',
-    lastEvent: '无'
+    lastEvent: '无',
+    menuCount: 3
   },
   onLoad() {
     this.refreshPerm();
@@ -121,23 +122,33 @@ Page({
     FloatWindow.collapse();
     this.setData({ lastEvent: 'collapse' });
   },
-  onMenusCompact() {
+  applyCount(n) {
     if (!this.ensureFloatPerm()) {
       return;
     }
-    floatMenu.applyMenus(floatMenu.compactMenus());
+    floatMenu.applyCount(n);
     this.bindMenu();
-    this.setData({ menuStatus: '运行时 3 项', lastEvent: 'setMenus' });
-    System.toast('已换成 3 个图标');
+    this.setData({
+      menuCount: n,
+      menuStatus: n + ' 个图标',
+      lastEvent: 'setMenus'
+    });
+    System.toast('已换成 ' + n + ' 个图标');
   },
-  onMenusExtra() {
-    if (!this.ensureFloatPerm()) {
-      return;
-    }
-    floatMenu.applyMenus(floatMenu.extraMenus());
-    this.bindMenu();
-    this.setData({ menuStatus: '运行时 5 项', lastEvent: 'setMenus' });
-    System.toast('已换成 5 个图标');
+  onCount1() {
+    this.applyCount(1);
+  },
+  onCount2() {
+    this.applyCount(2);
+  },
+  onCount3() {
+    this.applyCount(3);
+  },
+  onCount4() {
+    this.applyCount(4);
+  },
+  onCount5() {
+    this.applyCount(5);
   },
   onMenusDefault() {
     if (!this.ensureFloatPerm()) {

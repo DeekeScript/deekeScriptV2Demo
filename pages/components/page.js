@@ -29,7 +29,7 @@ Page({
       { name: '列表', desc: 'list', page: 'pages/list' },
       { name: '宫格', desc: 'grid', page: 'pages/grid' },
       { name: '选项卡', desc: 'tabs', page: 'pages/tabs' },
-      { name: '弹层', desc: '底部 / 顶部 / 侧边 / 居中；body 里可嵌自定义组件', page: 'pages/popup' },
+      { name: '弹层', desc: '底部 / 顶部 / 侧边 / 居中；嵌入自定义组件', page: 'pages/popup' },
       { name: '悬浮球', desc: '权限 / 显示隐藏 / 展开菜单 / 启停', page: 'pages/floatWindow' },
       { name: '自定义组件', desc: '页面嵌入 / 弹窗嵌入', page: 'pages/include' },
       { name: '加载', desc: 'loading', page: 'pages/loading' }
