@@ -4,7 +4,7 @@ let line = require('common/line.js');
 
 Page({
   data: {
-    hello: helper.greet('张三'),
+    hello: helper.greet('DeekeScript'),
     metrics: data.metrics,
     apps: data.apps,
     tags: data.tags,

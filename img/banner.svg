@@ -9,6 +9,6 @@
   <circle cx="330" cy="10" r="80" fill="#fff" opacity=".14"/>
   <circle cx="380" cy="140" r="56" fill="#fff" opacity=".1"/>
   <rect x="28" y="48" width="8" height="64" rx="4" fill="#fff"/>
-  <text x="48" y="78" fill="#fff" font-size="26" font-family="system-ui,sans-serif" font-weight="700">春季冲刺</text>
-  <text x="48" y="106" fill="#E6FFFC" font-size="13" font-family="system-ui,sans-serif">完成任务领取积分</text>
+  <text x="48" y="78" fill="#fff" font-size="24" font-family="system-ui,sans-serif" font-weight="700">DeekeScript</text>
+  <text x="48" y="106" fill="#E6FFFC" font-size="13" font-family="system-ui,sans-serif">用脚本驱动 Android 自动化</text>
 </svg>

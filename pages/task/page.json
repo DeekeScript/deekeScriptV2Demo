@@ -40,7 +40,7 @@
       "type": "card",
       "children": [
         { "type": "text", "text": "运行参数", "style": { "fontWeight": "bold" } },
-        { "type": "input", "name": "task_name", "label": "任务名", "hint": "例如：早间养号", "variant": "box" },
+        { "type": "input", "name": "task_name", "label": "任务名", "hint": "例如：点击控件", "variant": "box" },
         { "type": "textarea", "name": "keyword", "label": "关键词", "hint": "每行一个，用于搜索视频", "minLines": 3, "variant": "box" },
         {
           "type": "range",

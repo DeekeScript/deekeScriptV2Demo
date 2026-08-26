@@ -25,10 +25,10 @@
           "style": { "padding": 12, "gap": 8 },
           "children": [
             { "type": "text", "text": "{{hello}}", "style": { "fontWeight": "bold", "fontSize": 16 } },
-            { "type": "notice", "text": "今日任务已就绪，建议先完成养号" },
+            { "type": "notice", "text": "今日脚本已就绪，可以开始运行" },
             {
               "type": "button",
-              "text": "开始养号",
+              "text": "开始运行",
               "size": "中",
               "action": { "type": "navigate", "page": "task", "params": { "id": "dy" } }
             }
@@ -73,7 +73,7 @@
           "style": { "gap": 6 },
           "children": [
             { "type": "text", "text": "今日安排", "style": { "fontWeight": "bold" } },
-            { "type": "notice", "text": "先完成养号，再处理私信和评论" }
+            { "type": "notice", "text": "先跑主任务，再处理子脚本" }
           ]
         },
         {

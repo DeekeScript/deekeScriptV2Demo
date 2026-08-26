@@ -10,7 +10,6 @@
     "background": "#F5F5F5"
   },
   "body": [
-    { "type": "notice", "text": "按用途分组。点一行打开对应示例页。" },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "展示", "style": { "fontWeight": "bold" } },
     { "type": "notice", "text": "文案、标签、角标、图片、网页、空状态" },
