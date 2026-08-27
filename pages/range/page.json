@@ -11,7 +11,7 @@
   },
   "body": [
     { "type": "notice", "text": "pages/range/page.js" },
-    { "type": "notice", "text": "一行两个输入。variant 和 Input 相同，可写 box。" },
+    { "type": "notice", "text": "一行两个输入。失焦后后面的数不会小于前面的。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",

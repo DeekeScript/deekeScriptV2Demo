@@ -1,0 +1,62 @@
+{
+  "title": {
+    "text": "头像",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/avatar/page.js" },
+    { "type": "notice", "text": "有图用 src，没图显示文字首字。shape：circle / square / rounded。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "图片头像", "style": { "fontWeight": "bold" } },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "avatar", "src": "img/avatar-1.svg", "size": 40 },
+            { "type": "avatar", "src": "img/avatar-2.svg", "size": 40 },
+            { "type": "avatar", "src": "img/avatar-3.svg", "size": 40 },
+            { "type": "avatar", "src": "img/avatar-4.svg", "size": 40 }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "圆角边框", "style": { "fontWeight": "bold" } },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "avatar", "src": "img/avatar-1.svg", "size": 48, "shape": "rounded", "style": { "borderWidth": 2, "borderColor": "#006A65" } },
+            { "type": "avatar", "text": "运", "size": 48, "shape": "rounded", "style": { "borderWidth": 2, "borderColor": "#C2410C" } },
+            { "type": "avatar", "src": "img/avatar-2.svg", "size": 48, "shape": "square" }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "文字头像", "style": { "fontWeight": "bold" } },
+        {
+          "type": "row",
+          "style": { "gap": 12 },
+          "children": [
+            { "type": "avatar", "text": "运", "size": 40 },
+            { "type": "avatar", "text": "A", "size": 48 },
+            { "type": "avatar", "text": "{{name}}", "size": 56 }
+          ]
+        }
+      ]
+    }
+  ]
+}

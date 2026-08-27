@@ -11,7 +11,7 @@
   },
   "body": [
     { "type": "notice", "text": "pages/input/page.js" },
-    { "type": "notice", "text": "默认下划线。网页式圆角框写 variant: box，或在 style 里写 radius / borderColor。" },
+    { "type": "notice", "text": "默认下划线。圆角框写 variant: box。无边框白底写 variant: plain，hint 如「请输入」。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",
@@ -39,6 +39,9 @@
         }
       ]
     },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "无边框纯背景", "style": { "fontWeight": "bold", "paddingLeft": 12 } },
+    { "type": "input", "name": "plain", "hint": "请输入", "variant": "plain" },
     { "type": "space", "height": 8 },
     {
       "type": "card",

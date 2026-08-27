@@ -1,0 +1,17 @@
+{
+  "title": {
+    "text": "通告栏",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/noticeBar/page.js" },
+    { "type": "notice", "text": "顶部提示条。scroll 为 true 时文字会滚动。" },
+    { "type": "space", "height": 8 },
+    { "type": "noticeBar", "text": "系统将于今晚 23:00 维护，预计 30 分钟。维护期间任务会暂停。" },
+    { "type": "space", "height": 8 },
+    { "type": "noticeBar", "text": "短文本不滚动也可以", "scroll": false }
+  ]
+}

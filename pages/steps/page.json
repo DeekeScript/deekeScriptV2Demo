@@ -1,0 +1,40 @@
+{
+  "title": {
+    "text": "步骤条",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/steps/page.js" },
+    { "type": "notice", "text": "value 为当前步骤下标，从 0 开始。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "steps",
+          "name": "step",
+          "value": 1,
+          "items": [
+            { "text": "提交" },
+            { "text": "审核" },
+            { "text": "完成" }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "button", "text": "上一步", "size": "md", "onTap": "onPrev", "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" } },
+        { "type": "button", "text": "下一步", "size": "md", "onTap": "onNext", "style": { "weight": 1 } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "notice", "text": "当前步骤 {{step}}" }
+  ]
+}

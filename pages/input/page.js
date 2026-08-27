@@ -10,6 +10,7 @@ Page({
     count: '20',
     amount: '',
     user: '',
-    pwd: ''
+    pwd: '',
+    plain: ''
   }
 });

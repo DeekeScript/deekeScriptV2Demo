@@ -1,5 +1,5 @@
 Page({
-  data: { keyword: '' },
+  data: { keyword: '', noIcon: '' },
   onKeyword(e) {
     this.setData({ keyword: e.value });
   }

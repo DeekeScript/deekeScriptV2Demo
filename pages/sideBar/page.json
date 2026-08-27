@@ -1,0 +1,37 @@
+{
+  "title": {
+    "text": "侧边导航",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 0 },
+  "body": [
+    {
+      "type": "row",
+          "style": { "height": "100%", "width": "match" },
+      "children": [
+        {
+          "type": "sideBar",
+          "name": "cat",
+          "value": "follow",
+          "onChange": "onCat",
+          "items": [
+            { "text": "关注", "value": "follow" },
+            { "text": "点赞", "value": "like" },
+            { "text": "评论", "value": "comment" },
+            { "text": "私信", "value": "msg" }
+          ]
+        },
+        {
+          "type": "column",
+          "style": { "weight": 1, "padding": 16, "gap": 8 },
+          "children": [
+            { "type": "text", "text": "{{title}}", "style": { "fontWeight": "bold" } },
+            { "type": "notice", "text": "{{desc}}" }
+          ]
+        }
+      ]
+    }
+  ]
+}

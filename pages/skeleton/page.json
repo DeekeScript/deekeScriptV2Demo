@@ -1,0 +1,38 @@
+{
+  "title": {
+    "text": "骨架屏",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/skeleton/page.js" },
+    { "type": "notice", "text": "数据还没到时的占位，骨架会闪动。配合 showIf 使用。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "skeleton", "avatar": true, "rows": 3, "showIf": "loading" },
+        {
+          "type": "column",
+          "showIf": "ready",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "text", "text": "运营A", "style": { "fontWeight": "bold" } },
+            { "type": "notice", "text": "今日关注 12 人，点赞 36 次。" }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "button", "text": "加载中", "size": "md", "onTap": "onLoadMore" },
+        { "type": "button", "text": "完成", "size": "md", "style": { "background": "#5F6D6B" }, "onTap": "onDone" }
+      ]
+    }
+  ]
+}

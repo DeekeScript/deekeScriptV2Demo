@@ -1,0 +1,22 @@
+{
+  "title": {
+    "text": "序列",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 0 },
+  "body": [
+    { "type": "notice", "text": "右侧字母可跳到对应分组。", "style": { "padding": 12 } },
+    {
+      "type": "indexBar",
+      "bind": "contacts",
+      "indexKey": "letter",
+      "item": {
+        "type": "text",
+        "text": "{{item.name}}",
+        "style": { "padding": 12 }
+      }
+    }
+  ]
+}

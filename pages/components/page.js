@@ -1,37 +1,59 @@
 Page({
   data: {
-    display: [
+    basic: [
       { name: '文案', desc: 'text / title / notice', page: 'pages/text' },
       { name: '标签', desc: 'tag', page: 'pages/tag' },
       { name: '角标', desc: 'badge', page: 'pages/badge' },
       { name: '图片', desc: 'image', page: 'pages/image' },
-      { name: '网页', desc: 'webview', page: 'pages/webview' },
-      { name: '空状态', desc: 'empty', page: 'pages/empty' }
+      { name: '头像', desc: 'avatar', page: 'pages/avatar' },
+      { name: '按钮', desc: 'button', page: 'pages/button' },
+      { name: '文本省略', desc: 'ellipsis', page: 'pages/ellipsis' }
     ],
     forms: [
-      { name: '按钮', desc: 'button', page: 'pages/button' },
-      { name: '输入框', desc: 'input 下划线 / 边框', page: 'pages/input' },
+      { name: '输入框', desc: 'input', page: 'pages/input' },
       { name: '多行', desc: 'textarea', page: 'pages/textarea' },
       { name: '搜索', desc: 'search', page: 'pages/search' },
       { name: '区间', desc: 'range', page: 'pages/range' },
+      { name: '步进器', desc: 'stepper', page: 'pages/stepper' },
       { name: '开关', desc: 'switch', page: 'pages/switch' },
       { name: '下拉', desc: 'select', page: 'pages/select' },
       { name: '复选', desc: 'checkbox', page: 'pages/checkbox' },
       { name: '单选', desc: 'radio', page: 'pages/radio' },
+      { name: '评分', desc: 'rate', page: 'pages/rate' },
       { name: '进度', desc: 'progress / slider', page: 'pages/progress' },
+      { name: '进度圈', desc: 'progressCircle', page: 'pages/progressCircle' },
+      { name: '图片上传', desc: 'imageUploader', page: 'pages/imageUploader' },
       { name: '选择卡片', desc: 'card 单选 / 多选', page: 'pages/cards' },
-      { name: '省市区', desc: 'menu 多列选择器', page: 'pages/menu' },
+      { name: '省市区', desc: 'menu', page: 'pages/menu' },
       { name: '时间选择', desc: 'date / time / datetime', page: 'pages/picker' },
-      { name: '综合表单', desc: '多字段拼一页 + 持久化', page: 'pages/form' }
+      { name: '综合表单', desc: '多字段 + 持久化', page: 'pages/form' }
     ],
-    structure: [
+    nav: [
+      { name: '选项卡', desc: 'tabs', page: 'pages/tabs' },
+      { name: '分段', desc: 'segmented', page: 'pages/segmented' },
+      { name: '导航栏', desc: 'navBar', page: 'pages/navBar' },
+      { name: '侧边导航', desc: 'sideBar', page: 'pages/sideBar' },
+      { name: '序列', desc: 'indexBar', page: 'pages/indexBar' },
+      { name: '步骤条', desc: 'steps', page: 'pages/steps' }
+    ],
+    display: [
+      { name: '走马灯', desc: 'swiper', page: 'pages/swiper' },
+      { name: '图片查看器', desc: 'imageViewer', page: 'pages/imageViewer' },
+      { name: '通告栏', desc: 'noticeBar', page: 'pages/noticeBar' },
+      { name: '空状态', desc: 'empty', page: 'pages/empty' },
+      { name: '加载', desc: 'loading', page: 'pages/loading' },
+      { name: '骨架屏', desc: 'skeleton', page: 'pages/skeleton' },
+      { name: '网页', desc: 'webview', page: 'pages/webview' }
+    ],
+    feedback: [
+      { name: '弹层', desc: 'popup', page: 'pages/popup' },
+      { name: '动作面板', desc: 'actionSheet', page: 'pages/actionSheet' }
+    ],
+    layout: [
       { name: '布局', desc: 'row / column / card', page: 'pages/layout' },
       { name: '列表', desc: 'list', page: 'pages/list' },
       { name: '宫格', desc: 'grid', page: 'pages/grid' },
-      { name: '选项卡', desc: 'tabs', page: 'pages/tabs' },
-      { name: '弹层', desc: '底部 / 顶部 / 侧边 / 居中；嵌入自定义组件', page: 'pages/popup' },
-      { name: '自定义组件', desc: '页面嵌入 / 弹窗嵌入', page: 'pages/include' },
-      { name: '加载', desc: 'loading', page: 'pages/loading' }
+      { name: '自定义组件', desc: 'include', page: 'pages/include' }
     ],
     pages: [
       { name: '居中页', desc: 'column valign', page: 'pages/center' },

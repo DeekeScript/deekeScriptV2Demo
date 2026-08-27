@@ -1,0 +1,23 @@
+{
+  "title": {
+    "text": "步进器",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/stepper/page.js" },
+    { "type": "notice", "text": "加减数字，中间可直接输入。min / max / step 控制范围。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "stepper", "name": "count", "label": "关注数量", "value": 3, "min": 1, "max": 20 },
+        { "type": "stepper", "name": "delay", "label": "间隔（秒）", "value": 2, "min": 0.5, "max": 10, "step": 0.5 }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "notice", "text": "数量 {{count}} · 间隔 {{delay}} 秒" }
+  ]
+}

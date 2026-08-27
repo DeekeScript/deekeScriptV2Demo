@@ -46,6 +46,16 @@
     {
       "type": "card",
       "children": [
+        { "type": "text", "text": "描边按钮", "style": { "fontWeight": "bold" } },
+        { "type": "button", "text": "主色描边", "variant": "outline", "action": { "type": "toast", "text": "描边" } },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "橙色描边", "variant": "outline", "style": { "color": "#C45C26" }, "action": { "type": "toast", "text": "橙色" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
         { "type": "text", "text": "通栏与圆角", "style": { "fontWeight": "bold" } },
         { "type": "button", "text": "通栏主按钮", "style": { "width": "match", "radius": 8 } },
         { "type": "space", "height": 8 },

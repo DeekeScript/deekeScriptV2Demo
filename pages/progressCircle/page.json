@@ -1,0 +1,29 @@
+{
+  "title": {
+    "text": "进度圈",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/progressCircle/page.js" },
+    { "type": "notice", "text": "圆环只展示。默认环比较粗，70% 能一眼看出来。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "row",
+          "style": { "gap": 16 },
+          "children": [
+            { "type": "progressCircle", "name": "done", "value": 70, "unit": "%", "size": 88, "strokeWidth": 10, "label": "完成" },
+            { "type": "progressCircle", "name": "cpu", "value": 36, "unit": "%", "size": 88, "strokeWidth": 10, "style": { "color": "#C2410C" }, "label": "占用" }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "notice", "text": "完成 {{done}}% · 占用 {{cpu}}%" }
+  ]
+}

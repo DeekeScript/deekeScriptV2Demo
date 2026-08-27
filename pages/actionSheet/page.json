@@ -1,0 +1,30 @@
+{
+  "title": {
+    "text": "动作面板",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/actionSheet/page.js" },
+    { "type": "notice", "text": "从底部弹出一组操作。点遮罩或取消关闭。" },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "打开动作面板", "onTap": "onOpen" },
+    { "type": "space", "height": 8 },
+    { "type": "notice", "text": "已选：{{picked}}" },
+    {
+      "type": "actionSheet",
+      "showIf": "open",
+      "title": "选择来源",
+      "name": "picked",
+      "cancelText": "取消",
+      "onChange": "onPick",
+      "items": [
+        { "text": "拍照", "value": "camera" },
+        { "text": "从相册选择", "value": "album" },
+        { "text": "使用默认图", "value": "default" }
+      ]
+    }
+  ]
+}

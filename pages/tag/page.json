@@ -11,7 +11,7 @@
   },
   "body": [
     { "type": "notice", "text": "pages/tag/page.js" },
-    { "type": "notice", "text": "tag 是短标签。默认浅绿底，可用 style 改颜色。多个标签用 row 或横向 list。" },
+    { "type": "notice", "text": "tag 是短标签。默认浅绿底；纯色底白字写 variant: solid，再用 style.background 换颜色。多个标签用 row 或横向 list。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",
@@ -40,6 +40,23 @@
             { "type": "tag", "text": "完成", "style": { "background": "#E6F4F1", "color": "#006A65" } },
             { "type": "tag", "text": "进行中", "style": { "background": "#FFF4E5", "color": "#B25E09" } },
             { "type": "tag", "text": "失败", "style": { "background": "#FDECEC", "color": "#B42318" } }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "纯色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            { "type": "tag", "text": "进行中", "variant": "solid" },
+            { "type": "tag", "text": "完成", "variant": "solid", "style": { "background": "#006A65" } },
+            { "type": "tag", "text": "警告", "variant": "solid", "style": { "background": "#C45C26" } },
+            { "type": "tag", "text": "失败", "variant": "solid", "style": { "background": "#B42318" } }
           ]
         }
       ]

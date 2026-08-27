@@ -1,0 +1,32 @@
+{
+  "title": {
+    "text": "走马灯",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 0 },
+  "body": [
+    {
+      "type": "swiper",
+      "bind": "banners",
+      "height": 160,
+      "autoplay": true,
+      "interval": 2800,
+      "item": {
+        "type": "image",
+        "src": "{{item.src}}",
+        "fit": "cover",
+        "style": { "width": "match", "height": "match", "radius": 0 }
+      }
+    },
+    {
+      "type": "column",
+      "style": { "padding": 12, "gap": 8 },
+      "children": [
+        { "type": "notice", "text": "pages/swiper/page.js" },
+        { "type": "notice", "text": "贴顶贴边。左右滑切换，autoplay 默认开启。" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": {
+    "text": "文本省略",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/ellipsis/page.js" },
+    { "type": "notice", "text": "超过 rows 行显示省略。expand 为 true 时可展开收起。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "ellipsis",
+          "rows": 2,
+          "expand": true,
+          "text": "这是一段比较长的说明文字，用来演示超出两行之后如何省略。点「展开」可以看到全文，再点「收起」会回到两行。"
+        }
+      ]
+    }
+  ]
+}

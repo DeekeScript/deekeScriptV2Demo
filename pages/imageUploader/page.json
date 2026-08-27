@@ -1,0 +1,21 @@
+{
+  "title": {
+    "text": "图片上传",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/imageUploader/page.js" },
+    { "type": "notice", "text": "点加号选图，点角上 × 删除。下面已预选两张。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "imageUploader", "name": "photos", "label": "凭证图", "max": 6, "columns": 3, "onChange": "onPhotos", "value": ["img/avatar-1.svg", "img/avatar-2.svg"] },
+        { "type": "notice", "text": "已选 {{count}} 张" }
+      ]
+    }
+  ]
+}

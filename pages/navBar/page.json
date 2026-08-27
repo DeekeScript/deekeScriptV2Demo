@@ -1,0 +1,28 @@
+{
+  "title": { "hidden": true },
+  "statusBar": { "background": "#FFFFFF", "color": "dark" },
+  "style": { "background": "#F5F5F5", "padding": 0 },
+  "body": [
+    {
+      "type": "navBar",
+      "title": "详情",
+      "leftText": "返回",
+      "rightText": "更多",
+      "onRight": "onMore"
+    },
+    {
+      "type": "column",
+      "style": { "padding": 12, "gap": 8 },
+      "children": [
+        { "type": "notice", "text": "pages/navBar/page.js" },
+        { "type": "notice", "text": "页内导航栏。左侧默认返回上一页，右侧走 onRight。" },
+        {
+          "type": "card",
+          "children": [
+            { "type": "text", "text": "适合隐藏系统顶栏时，自己画返回和标题。" }
+          ]
+        }
+      ]
+    }
+  ]
+}
