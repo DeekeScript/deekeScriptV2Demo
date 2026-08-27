@@ -1,3 +1,87 @@
 {
-    "说明": "用来调试使用的，暂时不要删除"
+  "name": "DeekeV2Demo",
+  "packageName": "cn.deeke.v2demo",
+  "versionCode": "100",
+  "versionName": "1.0.0",
+  "host": "https://doc.deeke.cn",
+  "homePage": "pages/home",
+  "window": {
+    "style": {
+      "background": "#F5F5F5",
+      "padding": 10
+    },
+    "title": {
+      "fontSize": 18,
+      "color": "#FFFFFF",
+      "background": "#006A65"
+    },
+    "statusBar": {
+      "background": "#006A65",
+      "color": "light"
+    },
+    "tabBar": {
+      "color": "#6F7978",
+      "selectedColor": "#006A65",
+      "background": "#FFFFFF",
+      "borderColor": "#EEEEEE"
+    }
+  },
+  "pages": [
+    { "id": "components", "file": "pages/components", "title": "组件" },
+    { "id": "text", "file": "pages/text", "title": "文案" },
+    { "id": "tag", "file": "pages/tag", "title": "标签" },
+    { "id": "badge", "file": "pages/badge", "title": "角标" },
+    { "id": "image", "file": "pages/image", "title": "图片" },
+    { "id": "webview", "file": "pages/webview", "title": "网页" },
+    { "id": "empty", "file": "pages/empty", "title": "空状态" },
+    { "id": "button", "file": "pages/button", "title": "按钮" },
+    { "id": "input", "file": "pages/input", "title": "输入框" },
+    { "id": "textarea", "file": "pages/textarea", "title": "多行" },
+    { "id": "search", "file": "pages/search", "title": "搜索" },
+    { "id": "range", "file": "pages/range", "title": "区间" },
+    { "id": "switch", "file": "pages/switch", "title": "开关" },
+    { "id": "select", "file": "pages/select", "title": "下拉" },
+    { "id": "checkbox", "file": "pages/checkbox", "title": "复选" },
+    { "id": "radio", "file": "pages/radio", "title": "单选" },
+    { "id": "form", "file": "pages/form", "title": "综合表单" },
+    { "id": "cards", "file": "pages/cards", "title": "选择卡片" },
+    { "id": "menu", "file": "pages/menu", "title": "省市区" },
+    { "id": "picker", "file": "pages/picker", "title": "时间选择" },
+    { "id": "progress", "file": "pages/progress", "title": "进度" },
+    { "id": "layout", "file": "pages/layout", "title": "布局" },
+    { "id": "list", "file": "pages/list", "title": "列表" },
+    { "id": "grid", "file": "pages/grid", "title": "宫格" },
+    { "id": "tabs", "file": "pages/tabs", "title": "选项卡" },
+    { "id": "popup", "file": "pages/popup", "title": "弹层" },
+    { "id": "floatWindow", "file": "pages/floatWindow", "title": "悬浮球" },
+    { "id": "ability", "file": "pages/ability", "title": "能力" },
+    { "id": "tabBar", "file": "pages/tabBar", "title": "底部菜单" },
+    { "id": "refresh", "file": "pages/refresh", "title": "下拉刷新" },
+    { "id": "include", "file": "pages/include", "title": "自定义组件" },
+    { "id": "loading", "file": "pages/loading", "title": "加载" },
+    { "id": "center", "file": "pages/center", "title": "居中" },
+    { "id": "plain", "file": "pages/plain" },
+    { "id": "contrast", "file": "pages/contrast", "title": "对比" },
+    { "id": "login", "file": "pages/login", "title": "登录页" },
+    { "id": "mine", "file": "pages/mine", "title": "我的" },
+    { "id": "detail", "file": "pages/detail", "title": "详情" },
+    { "id": "task", "file": "pages/task", "title": "任务设置" }
+  ],
+  "components": [
+    { "id": "choose", "file": "components/choose" },
+    { "id": "filter", "file": "components/filter" }
+  ],
+  "bottomMenus": [
+    { "title": "首页", "icon": "img/home.svg", "page": "pages/home" },
+    { "title": "组件", "icon": "img/apps.svg", "page": "pages/components", "badge": 3 },
+    { "title": "能力", "icon": "img/setting.svg", "page": "pages/ability" }
+  ],
+  "floatWindow": {
+    "menus": [
+      { "id": "start", "icon": "img/play.svg", "label": "开始", "action": "start", "show": "idle" },
+      { "id": "stop", "icon": "img/stop.svg", "label": "停止", "action": "stop", "show": "running" },
+      { "id": "hide", "icon": "img/hide.svg", "label": "隐藏", "action": "hide" },
+      { "id": "skip", "icon": "img/skip.svg", "label": "跳过", "onTap": "onSkip" }
+    ]
+  }
 }
