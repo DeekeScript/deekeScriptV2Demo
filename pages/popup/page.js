@@ -13,7 +13,7 @@ Page({
     this.showPopup('formOpen');
   },
   onSaveForm() {
-    this.hidePopup('formOpen');
+    this.setData({ formOpen: false, remark: this.data.remark || '' });
   },
   onOpenTop() {
     this.showPopup('topOpen');
@@ -31,7 +31,7 @@ Page({
     this.showPopup('leftOpen');
   },
   onCloseLeft() {
-    this.hidePopup('leftOpen');
+    this.setData({ leftOpen: false, platform: this.data.platform || 'dy' });
   },
   onOpenChoose() {
     this.showPopup('chooseOpen');

@@ -9,23 +9,47 @@ Page({
     ]
   },
   onLoad() {
-    let task_name = Storage.get('v2demo.task_name');
-    if (task_name) {
-      this.setData({ task_name: task_name });
+    var patch = {};
+    readStored(patch, 'task_name');
+    readStored(patch, 'nickname');
+    readStored(patch, 'count');
+    readStored(patch, 'remark');
+    var extraRaw = Storage.get('v2demo.extras');
+    if (extraRaw) {
+      try {
+        var parsed = JSON.parse(extraRaw);
+        if (parsed && parsed.list) {
+          patch.extras = parsed.list;
+        }
+        if (parsed && parsed.values) {
+          for (var k in parsed.values) {
+            patch[k] = parsed.values[k];
+          }
+        }
+      } catch (e) {
+      }
     }
-    let nickname = Storage.get('v2demo.nickname');
-    if (nickname) {
-      this.setData({ nickname: nickname });
+    var has = false;
+    for (var key in patch) {
+      has = true;
+      break;
     }
-    let remark = Storage.get('v2demo.remark');
-    if (remark) {
-      this.setData({ remark: remark });
+    if (has) {
+      this.setData(patch);
     }
   },
   onSave() {
-    Storage.put('v2demo.task_name', this.data.task_name);
-    Storage.put('v2demo.nickname', this.data.nickname);
-    Storage.put('v2demo.remark', this.data.remark);
+    Storage.put('v2demo.task_name', this.data.task_name || '');
+    Storage.put('v2demo.nickname', this.data.nickname || '');
+    Storage.put('v2demo.count', this.data.count || '');
+    Storage.put('v2demo.remark', this.data.remark || '');
+    var extras = this.data.extras || [];
+    var values = {};
+    for (var i = 0; i < extras.length; i++) {
+      var key = extras[i].key;
+      values[key] = this.data[key] || '';
+    }
+    Storage.put('v2demo.extras', JSON.stringify({ list: extras, values: values }));
   },
   onAddExtra() {
     var n = this.data.extras.length + 1;
@@ -43,3 +67,10 @@ Page({
     this.setData({ extras: next });
   }
 });
+
+function readStored(patch, name) {
+  if (!Storage.exist('v2demo.' + name)) {
+    return;
+  }
+  patch[name] = Storage.get('v2demo.' + name) || '';
+}

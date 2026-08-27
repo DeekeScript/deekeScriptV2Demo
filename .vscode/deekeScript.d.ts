@@ -414,27 +414,6 @@ interface FloatDialogs {
 }
 declare var FloatDialogs: FloatDialogs;
 
-interface FloatWindowMenu {
-    id?: string;
-    icon?: string;
-    label?: string;
-    action?: string;
-    file?: string;
-    onTap?: string | Function;
-    show?: string;
-    background?: string;
-    visible?: boolean;
-}
-
-interface FloatWindow {
-    setMenus(menus: FloatWindowMenu[]): void;
-    on(id: string, fn: Function): void;
-    on(handlers: { [id: string]: Function }): void;
-    update(id: string, patch: FloatWindowMenu): void;
-    collapse(): void;
-}
-declare var FloatWindow: FloatWindow;
-
 interface ForegroundServiceBridge {
     startService(): void;
     register(func: Function): void;
