@@ -3,15 +3,58 @@
   "style": { "background": "#F5F5F5", "padding": 12 },
   "body": [
     { "type": "notice", "text": "pages/popover/page.js" },
-    { "type": "notice", "text": "气泡贴在按钮旁边。点遮罩关闭。" },
-    { "type": "space", "height": 8 },
-    { "type": "button", "id": "tip", "text": "显示说明", "onTap": "onOpen" },
+    { "type": "notice", "text": "贴在按钮旁边，带箭头，四个角都是圆角。" },
+    { "type": "space", "height": 40 },
+    { "type": "button", "id": "above", "text": "上方弹出", "onTap": "onAbove" },
+    { "type": "space", "height": 12 },
+    { "type": "button", "id": "below", "text": "下方弹出", "onTap": "onBelow" },
+    { "type": "space", "height": 12 },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        { "type": "button", "id": "aside", "text": "右侧弹出", "onTap": "onRight" },
+        { "type": "button", "id": "light", "text": "浅色气泡", "onTap": "onLight" }
+      ]
+    },
+    { "type": "space", "height": 12 },
+    { "type": "button", "id": "nomask", "text": "无遮罩", "onTap": "onNomask" },
     {
       "type": "popover",
-      "for": "tip",
-      "showIf": "open",
+      "for": "below",
+      "showIf": "below",
       "position": "bottom",
-      "text": "点这里可以筛选平台和日期。"
+      "text": "默认深色气泡，出现在按钮下方。"
+    },
+    {
+      "type": "popover",
+      "for": "above",
+      "showIf": "above",
+      "position": "top",
+      "text": "出现在按钮上方。"
+    },
+    {
+      "type": "popover",
+      "for": "aside",
+      "showIf": "aside",
+      "position": "right",
+      "text": "出现在按钮右侧。"
+    },
+    {
+      "type": "popover",
+      "for": "light",
+      "showIf": "light",
+      "position": "bottom",
+      "text": "浅色气泡，白底深字。",
+      "style": { "background": "#FFFFFF", "color": "#191C1C" }
+    },
+    {
+      "type": "popover",
+      "for": "nomask",
+      "showIf": "nomask",
+      "position": "bottom",
+      "mask": false,
+      "text": "不盖遮罩，可继续点页面。再点一次按钮关闭。"
     }
   ]
 }
