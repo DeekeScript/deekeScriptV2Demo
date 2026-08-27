@@ -1,0 +1,40 @@
+{
+  "title": { "text": "背景蒙层", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/mask/page.js" },
+    { "type": "notice", "text": "盖住整页。点空白关闭；也可以在蒙层上叠内容。" },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "打开蒙层", "onTap": "onOpen" },
+    { "type": "button", "text": "白色半透明", "onTap": "onWhite" },
+    { "type": "button", "text": "蒙层上放加载", "onTap": "onBusy" },
+    {
+      "type": "mask",
+      "showIf": "open",
+      "opacity": 0.45,
+      "onTap": "onDim"
+    },
+    {
+      "type": "mask",
+      "showIf": "white",
+      "color": "white",
+      "opacity": 0.7
+    },
+    {
+      "type": "mask",
+      "showIf": "busy",
+      "opacity": 0.45,
+      "closeOnTap": false,
+      "children": [
+        {
+          "type": "card",
+          "children": [
+            { "type": "loading", "text": "正在同步…" },
+            { "type": "space", "height": 8 },
+            { "type": "button", "text": "关闭", "onTap": "onCloseBusy" }
+          ]
+        }
+      ]
+    }
+  ]
+}

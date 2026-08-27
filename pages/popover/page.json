@@ -1,0 +1,17 @@
+{
+  "title": { "text": "气泡弹出框", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/popover/page.js" },
+    { "type": "notice", "text": "气泡贴在按钮旁边。点遮罩关闭。" },
+    { "type": "space", "height": 8 },
+    { "type": "button", "id": "tip", "text": "显示说明", "onTap": "onOpen" },
+    {
+      "type": "popover",
+      "for": "tip",
+      "showIf": "open",
+      "position": "bottom",
+      "text": "点这里可以筛选平台和日期。"
+    }
+  ]
+}

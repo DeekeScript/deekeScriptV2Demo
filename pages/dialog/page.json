@@ -1,0 +1,22 @@
+{
+  "title": { "text": "对话框", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/dialog/page.js" },
+    { "type": "notice", "text": "居中确认。点确定 / 取消会关掉并回调。" },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "删除确认", "onTap": "onOpen" },
+    { "type": "space", "height": 8 },
+    { "type": "notice", "text": "结果 {{result}}" },
+    {
+      "type": "dialog",
+      "showIf": "open",
+      "title": "确认删除",
+      "text": "删除后无法恢复，是否继续？",
+      "cancelText": "取消",
+      "confirmText": "删除",
+      "onConfirm": "onOk",
+      "onCancel": "onNo"
+    }
+  ]
+}

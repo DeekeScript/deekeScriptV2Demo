@@ -1,0 +1,18 @@
+{
+  "title": { "text": "分页符", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/pageIndicator/page.js" },
+    { "type": "notice", "text": "点圆点切换当前页。variant: line 为短条。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "pageIndicator", "name": "page", "count": 5, "value": 1 },
+        { "type": "space", "height": 12 },
+        { "type": "pageIndicator", "name": "line", "count": 4, "value": 0, "variant": "line" },
+        { "type": "notice", "text": "当前第 {{page}} 页" }
+      ]
+    }
+  ]
+}

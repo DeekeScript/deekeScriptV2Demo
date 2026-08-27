@@ -1,0 +1,32 @@
+{
+  "title": { "text": "选择组", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/selector/page.js" },
+    { "type": "notice", "text": "胶囊选项。multiple 为多选，值为数组。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "selector",
+          "name": "platform",
+          "label": "平台",
+          "options": [
+            { "label": "抖音", "value": "dy" },
+            { "label": "小红书", "value": "xhs" },
+            { "label": "快手", "value": "ks" }
+          ]
+        },
+        {
+          "type": "selector",
+          "name": "tags",
+          "label": "标签（多选）",
+          "multiple": true,
+          "options": ["获客", "养号", "评论", "私信"]
+        },
+        { "type": "notice", "text": "平台 {{platform}}" }
+      ]
+    }
+  ]
+}

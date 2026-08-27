@@ -1,0 +1,39 @@
+{
+  "title": { "text": "级联选择", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/cascader/page.js" },
+    { "type": "notice", "text": "和 Menu 一样多列同时显示，值为路径 zj/hz。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "cascader",
+          "name": "address",
+          "label": "地区",
+          "hint": "请选择省 / 市",
+          "options": [
+            {
+              "label": "浙江",
+              "value": "zj",
+              "children": [
+                { "label": "杭州", "value": "hz" },
+                { "label": "宁波", "value": "nb" }
+              ]
+            },
+            {
+              "label": "江苏",
+              "value": "js",
+              "children": [
+                { "label": "南京", "value": "nj" },
+                { "label": "苏州", "value": "sz" }
+              ]
+            }
+          ]
+        },
+        { "type": "notice", "text": "已选 {{address}}" }
+      ]
+    }
+  ]
+}

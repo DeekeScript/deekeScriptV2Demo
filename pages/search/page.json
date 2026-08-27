@@ -1,6 +1,6 @@
 {
   "title": {
-    "text": "搜索",
+    "text": "搜索框",
     "fontSize": 18,
     "color": "#FFFFFF",
     "background": "#006A65"
@@ -11,15 +11,19 @@
   },
   "body": [
     { "type": "notice", "text": "pages/search/page.js" },
-    { "type": "notice", "text": "默认左侧有放大镜。写 icon 可换成项目内图片；icon: false 则隐藏。" },
+    { "type": "notice", "text": "type 写 searchBar 或 search。可换图标、方形、取消按钮；键盘搜索走 onSearch。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",
       "children": [
-        { "type": "search", "name": "keyword", "hint": "搜索任务", "onChange": "onKeyword" },
+        { "type": "searchBar", "name": "keyword", "hint": "搜索任务", "onChange": "onKeyword", "onSearch": "onSearch" },
         { "type": "notice", "text": "当前：{{keyword}}" },
         { "type": "space", "height": 8 },
-        { "type": "search", "name": "noIcon", "hint": "不显示图标", "icon": false }
+        { "type": "searchBar", "name": "noIcon", "hint": "不显示图标", "icon": false },
+        { "type": "space", "height": 8 },
+        { "type": "searchBar", "name": "squareQ", "hint": "方形搜索", "shape": "square" },
+        { "type": "space", "height": 8 },
+        { "type": "searchBar", "name": "cancelQ", "hint": "带取消", "showCancel": true, "cancelText": "取消", "onCancel": "onCancelSearch" }
       ]
     }
   ]

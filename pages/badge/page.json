@@ -1,6 +1,6 @@
 {
   "title": {
-    "text": "角标",
+    "text": "徽标",
     "fontSize": 18,
     "color": "#FFFFFF",
     "background": "#006A65"
@@ -11,35 +11,66 @@
   },
   "body": [
     { "type": "notice", "text": "pages/badge/page.js" },
-    { "type": "notice", "text": "红色角标，常和 row 并排。不写 text 则显示红点。" },
+    { "type": "notice", "text": "未读数字、红点、文字状态、叠在头像上、飘带。超过 max 显示 N+。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",
       "children": [
+        { "type": "text", "text": "未读数字", "style": { "fontWeight": "bold" } },
+        { "type": "space", "height": 8 },
         {
           "type": "row",
-          "style": { "gap": 6 },
+          "style": { "gap": 8 },
           "children": [
-            { "type": "text", "text": "未读消息", "style": { "weight": 1 } },
+            { "type": "text", "text": "消息", "style": { "weight": 1 } },
             { "type": "badge", "text": "12" }
           ]
         },
         {
           "type": "row",
-          "style": { "gap": 6 },
+          "style": { "gap": 8 },
           "children": [
-            { "type": "text", "text": "超过 99", "style": { "weight": 1 } },
-            { "type": "badge", "text": "99+" }
+            { "type": "text", "text": "超过 99 显示 99+", "style": { "weight": 1 } },
+            { "type": "badge", "text": "128", "max": 99 }
           ]
         },
+        { "type": "space", "height": 8 },
+        { "type": "text", "text": "红点提醒", "style": { "fontWeight": "bold" } },
+        { "type": "space", "height": 8 },
         {
           "type": "row",
-          "style": { "gap": 6 },
+          "style": { "gap": 8 },
           "children": [
-            { "type": "text", "text": "红点", "style": { "weight": 1 } },
-            { "type": "badge" }
+            { "type": "text", "text": "有更新", "style": { "weight": 1 } },
+            { "type": "badge", "variant": "dot" }
           ]
-        }
+        },
+        { "type": "space", "height": 8 },
+        { "type": "text", "text": "文字状态", "style": { "fontWeight": "bold" } },
+        { "type": "space", "height": 8 },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "badge", "text": "NEW" },
+            { "type": "badge", "text": "HOT", "color": "warning" },
+            { "type": "badge", "text": "官方", "color": "primary" },
+            { "type": "badge", "text": "Beta", "color": "info" }
+          ]
+        },
+        { "type": "space", "height": 8 },
+        { "type": "text", "text": "叠在头像上", "style": { "fontWeight": "bold" } },
+        { "type": "space", "height": 8 },
+        {
+          "type": "row",
+          "style": { "gap": 16 },
+          "children": [
+            { "type": "badge", "text": "8", "children": [{ "type": "avatar", "src": "img/avatar-1.svg", "size": 40 }] },
+            { "type": "badge", "variant": "dot", "children": [{ "type": "avatar", "text": "客", "size": 40 }] }
+          ]
+        },
+        { "type": "space", "height": 8 },
+        { "type": "badge", "text": "推荐", "variant": "ribbon", "color": "warning" }
       ]
     }
   ]

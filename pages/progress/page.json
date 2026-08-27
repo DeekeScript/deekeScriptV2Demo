@@ -11,13 +11,13 @@
   },
   "body": [
     { "type": "notice", "text": "pages/progress/page.js" },
-    { "type": "notice", "text": "progress 别名 slider。min / max / step / unit 自定义刻度，不一定是百分比。" },
+    { "type": "notice", "text": "progressBar 只展示进度，不能拖动。可拖动的刻度见滑动输入条。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",
       "children": [
         {
-          "type": "progress",
+          "type": "progressBar",
           "name": "speed",
           "label": "运行速度",
           "value": 50,
@@ -26,45 +26,22 @@
           "unit": "%"
         },
         {
-          "type": "progress",
-          "name": "level",
-          "label": "强度档位",
-          "value": 3,
-          "min": 1,
-          "max": 5,
-          "step": 1,
-          "unit": "档"
-        },
-        {
-          "type": "slider",
-          "name": "delay",
-          "label": "间隔（slider 别名）",
-          "value": 1500,
-          "min": 500,
-          "max": 3000,
-          "step": 500,
-          "unit": "ms"
-        },
-        {
-          "type": "progress",
-          "name": "volume",
-          "label": "只读展示",
+          "type": "progressBar",
+          "name": "upload",
+          "label": "上传进度",
           "value": 70,
-          "min": 0,
-          "max": 100,
-          "unit": "%",
-          "disabled": true
+          "unit": "%"
         },
         {
-          "type": "progress",
-          "name": "hiddenValue",
-          "label": "不显示当前值",
-          "value": 40,
-          "showValue": false
+          "type": "progressBar",
+          "name": "done",
+          "label": "已完成",
+          "value": 100,
+          "unit": "%"
         }
       ]
     },
     { "type": "space", "height": 8 },
-    { "type": "notice", "text": "速度 {{speed}}% · 档位 {{level}} · 间隔 {{delay}}ms" }
+    { "type": "notice", "text": "速度 {{speed}}% · 上传 {{upload}}%" }
   ]
 }

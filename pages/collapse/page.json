@@ -1,0 +1,24 @@
+{
+  "title": { "text": "折叠面板", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/collapse/page.js" },
+    { "type": "notice", "text": "accordion 为 true 时同时只开一项。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "collapse",
+          "name": "open",
+          "accordion": true,
+          "items": [
+            { "name": "a", "title": "什么是动态页面？", "text": "用 JSON 描述界面，page.js 填数据和事件。" },
+            { "name": "b", "title": "如何刷新数据？", "text": "调用 this.setData，对应节点会跟着变。" },
+            { "name": "c", "title": "可以嵌组件吗？", "children": [{ "type": "notice", "text": "折叠内容里可以继续放按钮、列表。" }] }
+          ]
+        }
+      ]
+    }
+  ]
+}

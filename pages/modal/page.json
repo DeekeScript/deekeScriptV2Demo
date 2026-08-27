@@ -1,0 +1,20 @@
+{
+  "title": { "text": "弹窗", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "pages/modal/page.js" },
+    { "type": "notice", "text": "居中内容容器，里面可以放表单。" },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "打开弹窗", "onTap": "onOpen" },
+    { "type": "notice", "text": "备注 {{remark}}" },
+    {
+      "type": "modal",
+      "showIf": "open",
+      "title": "编辑备注",
+      "body": [
+        { "type": "textarea", "name": "remark", "hint": "请输入备注", "minLines": 3 },
+        { "type": "button", "text": "保存", "onTap": "onSave" }
+      ]
+    }
+  ]
+}

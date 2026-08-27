@@ -1,6 +1,13 @@
 Page({
-  data: { keyword: '', noIcon: '' },
+  data: { keyword: '', noIcon: '', squareQ: '', cancelQ: '' },
   onKeyword(e) {
     this.setData({ keyword: e.value });
+  },
+  onSearch(e) {
+    this.toast('搜索：' + (e && e.value ? e.value : ''));
+  },
+  onCancelSearch() {
+    this.setData({ cancelQ: '' });
+    this.toast('已取消');
   }
 });
