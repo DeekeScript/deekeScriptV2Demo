@@ -57,7 +57,7 @@
       "type": "card",
       "children": [
         { "type": "text", "text": "密码明文", "style": { "fontWeight": "bold" } },
-        { "type": "notice", "text": "passwordToggle 为 true 时，右侧眼睛由引擎绘制，点一下切换明文。" },
+        { "type": "notice", "text": "密文为闭眼，点一下变为睁眼并显示明文。" },
         { "type": "input", "name": "pwd", "label": "登录密码", "hint": "请输入密码", "variant": "box", "password": true, "passwordToggle": true, "value": "123456" }
       ]
     },
