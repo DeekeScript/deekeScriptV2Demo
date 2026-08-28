@@ -1,0 +1,28 @@
+{
+  "title": {
+    "text": "日期时间选择器",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/datetime/page.js" },
+    { "type": "notice", "text": "日期是年/月/日，时间是时/分。日期时间先选日期，下一步再选时间。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "date", "name": "day", "label": "日期", "value": "2026-08-24" },
+        { "type": "time", "name": "clock", "label": "时间", "value": "09:30" },
+        { "type": "datetime", "name": "when", "label": "开始", "value": "2026-08-24 09:30" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "notice", "text": "{{day}}  {{clock}}" },
+    { "type": "notice", "text": "{{when}}" }
+  ]
+}

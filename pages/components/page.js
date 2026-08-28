@@ -21,15 +21,13 @@ Page({
       { name: '单选', desc: 'radio', page: 'pages/radio' },
       { name: '评分', desc: 'rate', page: 'pages/rate' },
       { name: '滑动输入条', desc: 'slider', page: 'pages/slider' },
-      { name: '进度条', desc: 'progressBar', page: 'pages/progress' },
-      { name: '进度圈', desc: 'progressCircle', page: 'pages/progressCircle' },
       { name: '图片上传', desc: 'imageUploader', page: 'pages/imageUploader' },
       { name: '选择卡片', desc: 'card 单选 / 多选', page: 'pages/cards' },
       { name: '省市区', desc: 'menu', page: 'pages/menu' },
       { name: '级联选择', desc: 'cascader', page: 'pages/cascader' },
       { name: '选择组', desc: 'selector', page: 'pages/selector' },
-      { name: '时间选择', desc: 'date / time / datetime', page: 'pages/picker' },
-      { name: '综合表单', desc: '多字段 + 持久化', page: 'pages/form' }
+      { name: '日期时间选择器', desc: 'date / time / datetime', page: 'pages/datetime' },
+      { name: '选择器', desc: 'picker', page: 'pages/picker' }
     ],
     nav: [
       { name: '选项卡', desc: 'tabs', page: 'pages/tabs' },
@@ -47,6 +45,8 @@ Page({
       { name: '空状态', desc: 'empty', page: 'pages/empty' },
       { name: '加载', desc: 'loading', page: 'pages/loading' },
       { name: '骨架屏', desc: 'skeleton', page: 'pages/skeleton' },
+      { name: '进度条', desc: 'progressBar', page: 'pages/progress' },
+      { name: '进度圈', desc: 'progressCircle', page: 'pages/progressCircle' },
       { name: '折叠面板', desc: 'collapse', page: 'pages/collapse' },
       { name: '网页', desc: 'webview', page: 'pages/webview' }
     ],

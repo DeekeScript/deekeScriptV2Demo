@@ -3,7 +3,7 @@
   "style": { "background": "#F5F5F5", "padding": 12 },
   "body": [
     { "type": "notice", "text": "pages/slider/page.js" },
-    { "type": "notice", "text": "拖动选择数值。写 marks 后轨道上有浅色圆点，拖动会吸到最近点。" },
+    { "type": "notice", "text": "拖动选择数值。写 marks 后轨道上有浅色圆点作为刻度，档位只是刻度，可停在任意位置。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",

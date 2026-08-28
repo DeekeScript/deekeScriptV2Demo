@@ -34,6 +34,15 @@
         },
         {
           "type": "progressBar",
+          "name": "cpu",
+          "label": "占用",
+          "value": 36,
+          "unit": "%",
+          "strokeWidth": 3,
+          "style": { "color": "#C2410C" }
+        },
+        {
+          "type": "progressBar",
           "name": "done",
           "label": "已完成",
           "value": 100,
@@ -42,6 +51,6 @@
       ]
     },
     { "type": "space", "height": 8 },
-    { "type": "notice", "text": "速度 {{speed}}% · 上传 {{upload}}%" }
+    { "type": "notice", "text": "速度 {{speed}}% · 上传 {{upload}}% · 占用 {{cpu}}%" }
   ]
 }

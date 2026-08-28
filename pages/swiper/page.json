@@ -17,6 +17,7 @@
         "type": "image",
         "src": "{{item.src}}",
         "fit": "cover",
+        "onTap": "onBanner",
         "style": { "width": "match", "height": "match", "radius": 0 }
       }
     },
@@ -25,7 +26,7 @@
       "style": { "padding": 12, "gap": 8 },
       "children": [
         { "type": "notice", "text": "pages/swiper/page.js" },
-        { "type": "notice", "text": "贴顶贴边。左右滑切换，autoplay 默认开启。" }
+        { "type": "notice", "text": "贴顶贴边。点当前图会提示，左右滑切换。autoplay 默认开启。" }
       ]
     }
   ]

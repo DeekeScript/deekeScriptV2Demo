@@ -33,7 +33,7 @@
     },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "表单", "style": { "fontWeight": "bold" } },
-    { "type": "notice", "text": "输入、选择、步进器、评分、进度" },
+    { "type": "notice", "text": "输入、选择、步进器、评分、滑动条" },
     {
       "type": "list",
       "bind": "forms",
@@ -75,7 +75,7 @@
     },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "展示", "style": { "fontWeight": "bold" } },
-    { "type": "notice", "text": "走马灯、查看器、通告栏、空状态、加载、骨架屏" },
+    { "type": "notice", "text": "走马灯、查看器、通告栏、空状态、加载、骨架屏、进度" },
     {
       "type": "list",
       "bind": "display",

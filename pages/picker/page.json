@@ -1,6 +1,6 @@
 {
   "title": {
-    "text": "时间选择",
+    "text": "选择器",
     "fontSize": 18,
     "color": "#FFFFFF",
     "background": "#006A65"
@@ -11,26 +11,40 @@
   },
   "body": [
     { "type": "notice", "text": "pages/picker/page.js" },
-    { "type": "notice", "text": "日期是年/月/日，时间是时/分。日期时间先选日期，下一步再选时间。" },
+    { "type": "notice", "text": "周几和上下午两列一起选。日期和时间见日期时间选择器。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",
       "children": [
-        { "type": "text", "text": "日期、时间", "style": { "fontWeight": "bold" } },
-        { "type": "date", "name": "day", "label": "日期", "value": "2026-08-24" },
-        { "type": "time", "name": "clock", "label": "时间", "value": "09:30" },
-        { "type": "datetime", "name": "when", "label": "日期时间", "value": "2026-08-24 09:30" }
+        {
+          "type": "picker",
+          "name": "slot",
+          "label": "星期时段",
+          "value": "周一/上午",
+          "options": [
+            { "text": "周一", "children": ["上午", "下午"] },
+            { "text": "周二", "children": ["上午", "下午"] },
+            { "text": "周三", "children": ["上午", "下午"] },
+            { "text": "周四", "children": ["上午", "下午"] },
+            { "text": "周五", "children": ["上午", "下午"] },
+            { "text": "周六", "children": ["上午", "下午"] },
+            { "text": "周日", "children": ["上午", "下午"] }
+          ]
+        }
       ]
     },
     { "type": "space", "height": 8 },
+    { "type": "notice", "text": "{{slot}}" },
+    { "type": "space", "height": 8 },
+    { "type": "notice", "text": "底部滚轮选一项；适合只要上午/下午这种两项。" },
+    { "type": "space", "height": 8 },
     {
       "type": "card",
       "children": [
-        { "type": "text", "text": "picker 别名", "style": { "fontWeight": "bold" } },
-        { "type": "picker", "name": "alias", "label": "日期", "mode": "date", "hint": "请选择日期" },
-        { "type": "notice", "text": "{{day}}  {{clock}}" },
-        { "type": "notice", "text": "{{when}}" }
+        { "type": "picker", "name": "ampm", "label": "时段", "value": "上午", "options": ["上午", "下午"] }
       ]
-    }
+    },
+    { "type": "space", "height": 8 },
+    { "type": "notice", "text": "{{ampm}}" }
   ]
 }
