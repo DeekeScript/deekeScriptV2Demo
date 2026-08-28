@@ -4,6 +4,7 @@
   "versionCode": "100",
   "versionName": "1.0.0",
   "host": "https://doc.deeke.cn",
+  "icon": "img/xhs.svg",
   "homePage": "pages/home",
   "window": {
     "style": {
