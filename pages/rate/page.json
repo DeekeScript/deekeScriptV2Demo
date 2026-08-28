@@ -8,16 +8,17 @@
   "style": { "background": "#F5F5F5", "padding": 12 },
   "body": [
     { "type": "notice", "text": "pages/rate/page.js" },
-    { "type": "notice", "text": "点星星打分。count 为星星个数。" },
+    { "type": "notice", "text": "默认整星。allowHalf: true 时点左半为 0.5、右半为整星。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",
       "children": [
         { "type": "rate", "name": "score", "label": "任务完成度", "value": 4, "count": 5 },
+        { "type": "rate", "name": "half", "label": "允许半星", "value": 3.5, "count": 5, "allowHalf": true },
         { "type": "rate", "name": "star", "label": "三星评价", "value": 2, "count": 3 }
       ]
     },
     { "type": "space", "height": 8 },
-    { "type": "notice", "text": "完成度 {{score}} 星 · 评价 {{star}} 星" }
+    { "type": "notice", "text": "完成度 {{score}} 星 · 半星 {{half}} 星 · 评价 {{star}} 星" }
   ]
 }

@@ -18,8 +18,8 @@
       "children": [
         {
           "type": "progressBar",
-          "name": "speed",
-          "label": "运行速度",
+          "name": "task",
+          "label": "任务进度",
           "value": 50,
           "min": 0,
           "max": 100,
@@ -51,6 +51,6 @@
       ]
     },
     { "type": "space", "height": 8 },
-    { "type": "notice", "text": "速度 {{speed}}% · 上传 {{upload}}% · 占用 {{cpu}}%" }
+    { "type": "notice", "text": "任务 {{task}}% · 上传 {{upload}}% · 占用 {{cpu}}%" }
   ]
 }

@@ -11,7 +11,7 @@
   },
   "body": [
     { "type": "notice", "text": "pages/button/page.js" },
-    { "type": "notice", "text": "size 分 sm / md / lg，不写即为大按钮。" },
+    { "type": "notice", "text": "size 分 sm / md / lg，不写即为大按钮。高度分别是 32 / 40 / 48dp。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",
@@ -60,6 +60,36 @@
         { "type": "button", "text": "通栏主按钮", "style": { "width": "match", "radius": 8 } },
         { "type": "space", "height": 8 },
         { "type": "button", "text": "大圆角", "style": { "width": "match", "radius": 20, "background": "#006A65" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "加载中", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "loading: true 显示转圈并禁止点击。也可绑定 {{saving}}。" },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "提交", "loading": true, "loadingText": "提交中" },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "保存", "size": "md", "loading": "{{saving}}", "loadingText": "保存中", "onTap": "onSave" },
+        { "type": "space", "height": 8 },
+        { "type": "button", "text": "描边加载", "variant": "outline", "loading": true }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "涟漪", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "默认有按压涟漪。ripple: false 可关掉。" },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "button", "text": "有涟漪", "size": "md", "action": { "type": "toast", "text": "涟漪" } },
+            { "type": "button", "text": "无涟漪", "size": "md", "ripple": false, "action": { "type": "toast", "text": "无涟漪" } }
+          ]
+        }
       ]
     },
     { "type": "space", "height": 8 },

@@ -27,6 +27,7 @@
           "type": "column",
           "style": { "weight": 1, "padding": 16, "gap": 8 },
           "children": [
+            { "type": "notice", "text": "pages/sideBar/page.js" },
             { "type": "text", "text": "{{title}}", "style": { "fontWeight": "bold" } },
             { "type": "notice", "text": "{{desc}}" }
           ]

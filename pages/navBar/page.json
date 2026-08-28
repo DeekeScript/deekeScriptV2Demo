@@ -15,12 +15,18 @@
       "style": { "padding": 12, "gap": 8 },
       "children": [
         { "type": "notice", "text": "pages/navBar/page.js" },
-        { "type": "notice", "text": "页内导航栏。左侧默认返回上一页，右侧走 onRight。" },
+        { "type": "notice", "text": "左侧颜色用 leftColor / iconColor / style.color，默认主题绿。" },
         {
           "type": "card",
           "children": [
             { "type": "text", "text": "适合隐藏系统顶栏时，自己画返回和标题。" }
           ]
+        },
+        {
+          "type": "navBar",
+          "title": "深色返回",
+          "leftText": "返回",
+          "leftColor": "#191C1C"
         }
       ]
     }

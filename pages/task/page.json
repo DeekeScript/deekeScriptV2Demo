@@ -61,9 +61,9 @@
           "end": { "name": "count_max", "hint": "最大" }
         },
         {
-          "type": "progress",
+          "type": "slider",
           "name": "like_rate",
-          "label": "点赞概率",
+          "label": "点击概率",
           "min": 0,
           "max": 100,
           "unit": "%"

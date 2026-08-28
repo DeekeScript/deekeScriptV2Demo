@@ -7,15 +7,20 @@
   },
   "style": { "background": "#F5F5F5", "padding": 0 },
   "body": [
-    { "type": "notice", "text": "右侧字母可跳到对应分组。", "style": { "padding": 12, "sticky": "top", "background": "#F5F5F5" } },
+    { "type": "notice", "text": "pages/indexBar/page.js", "style": { "padding": 12, "paddingBottom": 0, "sticky": "top", "background": "#F5F5F5" } },
+    { "type": "notice", "text": "点右侧字母，或按住上下滑，可跳到对应分组。", "style": { "padding": 12, "sticky": "top", "background": "#F5F5F5" } },
     {
       "type": "indexBar",
       "bind": "contacts",
       "indexKey": "letter",
+      "railMargin": 6,
       "item": {
-        "type": "text",
-        "text": "{{item.name}}",
-        "style": { "padding": 12 }
+        "type": "column",
+        "style": { "padding": 12, "background": "#FFFFFF", "width": "match" },
+        "children": [
+          { "type": "text", "text": "{{item.name}}", "style": { "fontSize": 16, "color": "#191C1C" } },
+          { "type": "text", "text": "{{item.title}}", "style": { "fontSize": 12, "color": "#6F7978", "marginTop": 2 } }
+        ]
       }
     }
   ]
