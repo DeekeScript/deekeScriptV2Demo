@@ -24,10 +24,10 @@ module.exports = {
     { id: 5, title: '日志回传', status: '排队', user: '脚本B', time: '08:30', jsFile: 'tasks/follow.js', icon: 'img/dy.svg' }
   ],
   stats: [
-    { id: 11, title: '今日点击 12 次', time: '10:21', status: '完成', icon: 'img/avatar-1.svg', jsFile: 'tasks/sample.js', user: '脚本A' },
-    { id: 12, title: '今日滑动 36 次', time: '11:08', status: '进行中', icon: 'img/avatar-2.svg', jsFile: 'tasks/sample.js', user: '脚本B' },
-    { id: 13, title: '今日找图 8 次', time: '14:02', status: '完成', icon: 'img/avatar-3.svg', jsFile: 'tasks/sample.js', user: '脚本A' },
-    { id: 14, title: '今日找色 5 次', time: '15:40', status: '等待', icon: 'img/avatar-4.svg', jsFile: 'tasks/sample.js', user: '脚本C' },
+    { id: 11, title: '今日点击 12 次', time: '10:21', status: '完成', icon: 'img/avatar-1.jpg', jsFile: 'tasks/sample.js', user: '脚本A' },
+    { id: 12, title: '今日滑动 36 次', time: '11:08', status: '进行中', icon: 'img/avatar-2.jpg', jsFile: 'tasks/sample.js', user: '脚本B' },
+    { id: 13, title: '今日找图 8 次', time: '14:02', status: '完成', icon: 'img/avatar-3.jpg', jsFile: 'tasks/sample.js', user: '脚本A' },
+    { id: 14, title: '今日找色 5 次', time: '15:40', status: '等待', icon: 'img/avatar-4.jpg', jsFile: 'tasks/sample.js', user: '脚本C' },
     { id: 15, title: '今日回传 3 次', time: '16:12', status: '完成', icon: 'img/xhs.svg', jsFile: 'tasks/sample.js', user: '脚本B' },
     { id: 16, title: '子脚本 2 条', time: '17:05', status: '失败', icon: 'img/dy.svg', jsFile: 'tasks/sample.js', user: '脚本A' },
     { id: 17, title: '补跑任务 1 次', time: '18:00', status: '等待', icon: 'img/ks.svg', jsFile: 'tasks/sample.js', user: '脚本C' },

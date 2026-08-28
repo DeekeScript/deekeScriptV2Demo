@@ -1,6 +1,6 @@
 Page({
   data: {
-    photos: ['img/avatar-1.svg', 'img/avatar-2.svg'],
+    photos: ['img/avatar-1.jpg', 'img/avatar-2.jpg'],
     count: 2
   },
   onPhotos(e) {

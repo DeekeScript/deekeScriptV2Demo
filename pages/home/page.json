@@ -12,18 +12,22 @@
   "body": [
     {
       "type": "card",
-      "style": { "gap": 6 },
+      "style": { "padding": 0, "gap": 0 },
       "children": [
-        { "type": "title", "text": "DeekeScript Pro", "style": { "color": "#006A65" } },
-        { "type": "text", "text": "AI 可以编写 UI 的 Android 自动化开发框架" },
-        { "type": "notice", "text": "JSON 描述动态页面，page.js 填数据" },
-        { "type": "notice", "text": "JavaScript 写无障碍自动化" },
-        { "type": "notice", "text": "AI 可生成界面，VSCode 同步即可热更新" },
+        { "type": "image", "src": "img/banner.svg", "fit": "cover", "style": { "height": 88, "radius": 0, "width": "match" } },
         {
-          "type": "button",
-          "text": "开始运行",
-          "size": "中",
-          "action": { "type": "navigate", "page": "task", "params": { "id": "dy" } }
+          "type": "column",
+          "style": { "padding": 12, "gap": 8 },
+          "children": [
+            { "type": "text", "text": "{{hello}}", "style": { "fontWeight": "bold", "fontSize": 16 } },
+            { "type": "notice", "text": "今日脚本已就绪，可以开始运行" },
+            {
+              "type": "button",
+              "text": "开始运行",
+              "size": "中",
+              "action": { "type": "navigate", "page": "task", "params": { "id": "dy" } }
+            }
+          ]
         }
       ]
     },

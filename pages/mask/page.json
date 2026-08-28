@@ -3,7 +3,7 @@
   "style": { "background": "#F5F5F5", "padding": 12 },
   "body": [
     { "type": "notice", "text": "pages/mask/page.js" },
-    { "type": "notice", "text": "盖住整页。点空白关闭；也可以在蒙层上叠内容。" },
+    { "type": "notice", "text": "盖住整页。点空白关闭；蒙层上也可以叠加载。" },
     { "type": "space", "height": 8 },
     { "type": "button", "text": "打开蒙层", "onTap": "onOpen" },
     { "type": "button", "text": "白色半透明", "onTap": "onWhite" },
@@ -24,14 +24,13 @@
       "type": "mask",
       "showIf": "busy",
       "opacity": 0.45,
-      "closeOnTap": false,
       "children": [
         {
           "type": "card",
+          "style": { "width": "wrap", "padding": 20, "radius": 12, "align": "center" },
           "children": [
-            { "type": "loading", "text": "正在同步…" },
-            { "type": "space", "height": 8 },
-            { "type": "button", "text": "关闭", "onTap": "onCloseBusy" }
+            { "type": "loading", "text": "正在同步…", "style": { "width": "wrap" } },
+            { "type": "button", "text": "关闭", "size": "sm", "onTap": "onCloseBusy" }
           ]
         }
       ]

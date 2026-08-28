@@ -65,7 +65,7 @@
           "type": "row",
           "style": { "gap": 16 },
           "children": [
-            { "type": "badge", "text": "8", "children": [{ "type": "avatar", "src": "img/avatar-1.svg", "size": 40 }] },
+            { "type": "badge", "text": "8", "children": [{ "type": "avatar", "src": "img/avatar-1.jpg", "size": 40 }] },
             { "type": "badge", "variant": "dot", "children": [{ "type": "avatar", "text": "客", "size": 40 }] }
           ]
         },

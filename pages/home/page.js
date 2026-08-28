@@ -3,6 +3,7 @@ let line = require('common/line.js');
 
 Page({
   data: {
+    hello: '你好，Pro',
     metrics: data.metrics,
     apps: data.apps,
     tags: data.tags,

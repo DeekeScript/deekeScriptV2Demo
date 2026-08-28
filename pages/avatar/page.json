@@ -18,10 +18,10 @@
           "type": "row",
           "style": { "gap": 8 },
           "children": [
-            { "type": "avatar", "src": "img/avatar-1.svg", "size": 40 },
-            { "type": "avatar", "src": "img/avatar-2.svg", "size": 40 },
-            { "type": "avatar", "src": "img/avatar-3.svg", "size": 40 },
-            { "type": "avatar", "src": "img/avatar-4.svg", "size": 40 }
+            { "type": "avatar", "src": "img/avatar-1.jpg", "size": 40 },
+            { "type": "avatar", "src": "img/avatar-2.jpg", "size": 40 },
+            { "type": "avatar", "src": "img/avatar-3.jpg", "size": 40 },
+            { "type": "avatar", "src": "img/avatar-4.jpg", "size": 40 }
           ]
         }
       ]
@@ -35,9 +35,9 @@
           "type": "row",
           "style": { "gap": 8 },
           "children": [
-            { "type": "avatar", "src": "img/avatar-1.svg", "size": 48, "shape": "rounded", "style": { "borderWidth": 2, "borderColor": "#006A65" } },
+            { "type": "avatar", "src": "img/avatar-1.jpg", "size": 48, "shape": "rounded", "style": { "borderWidth": 2, "borderColor": "#006A65" } },
             { "type": "avatar", "text": "运", "size": 48, "shape": "rounded", "style": { "borderWidth": 2, "borderColor": "#C2410C" } },
-            { "type": "avatar", "src": "img/avatar-2.svg", "size": 48, "shape": "square" }
+            { "type": "avatar", "src": "img/avatar-2.jpg", "size": 48, "shape": "square" }
           ]
         }
       ]

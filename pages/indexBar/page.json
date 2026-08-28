@@ -7,7 +7,7 @@
   },
   "style": { "background": "#F5F5F5", "padding": 0 },
   "body": [
-    { "type": "notice", "text": "右侧字母可跳到对应分组。", "style": { "padding": 12 } },
+    { "type": "notice", "text": "右侧字母可跳到对应分组。", "style": { "padding": 12, "sticky": "top", "background": "#F5F5F5" } },
     {
       "type": "indexBar",
       "bind": "contacts",

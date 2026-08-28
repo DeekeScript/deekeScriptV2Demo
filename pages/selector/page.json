@@ -25,7 +25,7 @@
           "multiple": true,
           "options": ["获客", "养号", "评论", "私信"]
         },
-        { "type": "notice", "text": "平台 {{platform}}" }
+        { "type": "notice", "text": "平台 {{platform}} · 标签 {{tags}}" }
       ]
     }
   ]

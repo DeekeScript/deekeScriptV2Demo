@@ -3,7 +3,7 @@
   "style": { "background": "#F5F5F5", "padding": 12 },
   "body": [
     { "type": "notice", "text": "pages/cascader/page.js" },
-    { "type": "notice", "text": "和 Menu 一样多列同时显示，值为路径 zj/hz。" },
+    { "type": "notice", "text": "和 Menu 一样多列同时显示。选完展示中文，提交值仍是路径 zj/hz。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",

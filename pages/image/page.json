@@ -26,10 +26,10 @@
       "type": "row",
       "style": { "gap": 12 },
       "children": [
-        { "type": "image", "src": "img/avatar-1.svg", "style": { "width": 40, "height": 40, "radius": 20 } },
-        { "type": "image", "src": "img/avatar-2.svg", "style": { "width": 48, "height": 48, "radius": 24 } },
-        { "type": "image", "src": "img/avatar-3.svg", "style": { "width": 56, "height": 56, "radius": 8 } },
-        { "type": "image", "src": "img/avatar-4.svg", "style": { "width": 56, "height": 56, "radius": 0 } }
+        { "type": "image", "src": "img/avatar-1.jpg", "style": { "width": 40, "height": 40, "radius": 20 } },
+        { "type": "image", "src": "img/avatar-2.jpg", "style": { "width": 48, "height": 48, "radius": 24 } },
+        { "type": "image", "src": "img/avatar-3.jpg", "style": { "width": 56, "height": 56, "radius": 8 } },
+        { "type": "image", "src": "img/avatar-4.jpg", "style": { "width": 56, "height": 56, "radius": 0 } }
       ]
     },
     { "type": "space", "height": 12 },

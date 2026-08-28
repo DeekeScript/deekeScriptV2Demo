@@ -18,7 +18,7 @@
           "type": "row",
           "style": { "gap": 12 },
           "children": [
-            { "type": "image", "src": "img/avatar-1.svg", "style": { "width": 48, "height": 48, "radius": 24 } },
+            { "type": "image", "src": "img/avatar-1.jpg", "style": { "width": 48, "height": 48, "radius": 24 } },
             {
               "type": "column",
               "style": { "weight": 1, "gap": 2 },

@@ -8,15 +8,16 @@
   "style": { "background": "#F5F5F5", "padding": 12 },
   "body": [
     { "type": "notice", "text": "pages/imageViewer/page.js" },
-    { "type": "notice", "text": "全屏看图。点哪张打开哪张，点空白处关闭。" },
+    { "type": "notice", "text": "点头像或图片即可全屏查看，点空白处关闭。" },
     { "type": "space", "height": 8 },
     {
       "type": "row",
       "style": { "gap": 12 },
       "children": [
-        { "type": "avatar", "src": "img/avatar-1.svg", "size": 56, "value": 0, "onTap": "onOpen" },
-        { "type": "avatar", "src": "img/avatar-2.svg", "size": 56, "value": 1, "onTap": "onOpen" },
-        { "type": "image", "src": "img/avatar-3.svg", "style": { "width": 56, "height": 56, "radius": 8 }, "value": 2, "onTap": "onOpen" }
+        { "type": "avatar", "src": "img/avatar-1.jpg", "size": 56, "value": 0, "onTap": "onOpen" },
+        { "type": "avatar", "src": "img/avatar-2.jpg", "size": 56, "value": 1, "onTap": "onOpen" },
+        { "type": "avatar", "src": "img/avatar-3.jpg", "size": 56, "value": 2, "onTap": "onOpen" },
+        { "type": "avatar", "src": "img/avatar-4.jpg", "size": 56, "value": 3, "onTap": "onOpen" }
       ]
     },
     { "type": "space", "height": 8 },
@@ -25,7 +26,7 @@
       "type": "imageViewer",
       "showIf": "open",
       "index": "{{index}}",
-      "urls": ["img/avatar-1.svg", "img/avatar-2.svg", "img/avatar-3.svg", "img/banner.svg"]
+      "urls": ["img/avatar-1.jpg", "img/avatar-2.jpg", "img/avatar-3.jpg", "img/avatar-4.jpg"]
     }
   ]
 }
