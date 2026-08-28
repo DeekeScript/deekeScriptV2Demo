@@ -11,39 +11,15 @@
   },
   "body": [
     { "type": "notice", "text": "pages/loading/page.js" },
-    { "type": "notice", "text": "loading 配合 showIf。整页遮罩用 this.showLoading / this.hideLoading。列表滑到底时才在 onReachBottom 里打开。空状态见独立示例页。" },
-    { "type": "space", "height": 8 },
-    {
-      "type": "card",
-      "children": [
-        { "type": "text", "text": "带文字", "style": { "fontWeight": "bold" } },
-        { "type": "loading", "text": "正在拉取数据", "showIf": "loading" },
-        {
-          "type": "text",
-          "text": "加载完成",
-          "showIf": "done",
-          "style": { "align": "center", "color": "#006A65" }
-        }
-      ]
-    },
-    { "type": "space", "height": 8 },
-    {
-      "type": "card",
-      "children": [
-        { "type": "text", "text": "仅转圈", "style": { "fontWeight": "bold" } },
-        { "type": "loading", "showIf": "spinOnly" }
-      ]
-    },
-    { "type": "space", "height": 8 },
-    {
-      "type": "row",
-      "style": { "gap": 8 },
-      "children": [
-        { "type": "button", "text": "开始加载", "size": "md", "onTap": "onStart" },
-        { "type": "button", "text": "结束", "size": "md", "style": { "background": "#5F6D6B" }, "onTap": "onDone" }
-      ]
-    },
-    { "type": "space", "height": 8 },
-    { "type": "button", "text": "整页加载", "size": "md", "onTap": "onMask" }
+    { "type": "notice", "text": "几种常见加载效果。整页遮罩用 this.showLoading / this.hideLoading。列表滑到底再出转圈，见列表示例。" },
+    { "type": "notice", "text": "横向 · 转圈 + 文字" },
+    { "type": "card", "children": [{ "type": "loading", "text": "加载中" }] },
+    { "type": "notice", "text": "仅转圈" },
+    { "type": "card", "children": [{ "type": "loading" }] },
+    { "type": "notice", "text": "纵向 · 大转圈" },
+    { "type": "card", "children": [{ "type": "loading", "text": "正在同步…", "mode": "column", "size": 28 }] },
+    { "type": "notice", "text": "三点跳动" },
+    { "type": "card", "children": [{ "type": "loading", "text": "请稍候", "mode": "dots" }] },
+    { "type": "button", "text": "整页遮罩 1.6 秒", "onTap": "onMask" }
   ]
 }
