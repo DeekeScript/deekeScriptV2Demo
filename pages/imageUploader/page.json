@@ -16,15 +16,6 @@
         { "type": "imageUploader", "name": "photos", "label": "凭证图", "max": 6, "columns": 3, "onChange": "onPhotos", "value": ["img/avatar-1.jpg", "img/avatar-2.jpg"] },
         { "type": "notice", "text": "已选 {{count}} 张" }
       ]
-    },
-    { "type": "space", "height": 8 },
-    {
-      "type": "card",
-      "children": [
-        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
-        { "type": "notice", "text": "加号颜色写 style.color。" },
-        { "type": "imageUploader", "name": "blue_photos", "label": "蓝色加号", "max": 4, "columns": 4, "style": { "color": "#1565C0" } }
-      ]
     }
   ]
 }
