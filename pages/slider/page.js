@@ -1,3 +1,3 @@
 Page({
-  data: { delay: 1500, like_rate: 20, speed: 50, level: 50 }
+  data: { delay: 1500, like_rate: 20, speed: 50, level: 50, tone: 60, thumb: 40 }
 });

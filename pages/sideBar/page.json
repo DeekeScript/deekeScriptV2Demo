@@ -16,6 +16,7 @@
           "name": "cat",
           "value": "follow",
           "onChange": "onCat",
+          "style": { "color": "#1565C0" },
           "items": [
             { "text": "关注", "value": "follow" },
             { "text": "点赞", "value": "like" },
@@ -29,7 +30,8 @@
           "children": [
             { "type": "notice", "text": "pages/sideBar/page.js" },
             { "type": "text", "text": "{{title}}", "style": { "fontWeight": "bold" } },
-            { "type": "notice", "text": "{{desc}}" }
+            { "type": "notice", "text": "{{desc}}" },
+            { "type": "notice", "text": "选中色写 style.color，当前为 #1565C0。" }
           ]
         }
       ]

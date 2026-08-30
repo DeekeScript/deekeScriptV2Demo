@@ -15,6 +15,15 @@
       ]
     },
     { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        { "type": "slider", "name": "tone", "label": "蓝色滑条", "value": 60, "min": 0, "max": 100, "unit": "%", "style": { "color": "#1565C0" } },
+        { "type": "slider", "name": "thumb", "label": "橙色滑块", "value": 40, "min": 0, "max": 100, "unit": "%", "style": { "color": "#C45C26", "thumbColor": "#C45C26" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
     { "type": "notice", "text": "间隔 {{delay}}ms · 点赞 {{like_rate}}% · 速度 {{speed}}%" }
   ]
 }

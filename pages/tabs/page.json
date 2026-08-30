@@ -73,6 +73,35 @@
       ]
     },
     { "type": "space", "height": 8 },
-    { "type": "notice", "text": "当前 tab：{{tab}}" }
+    { "type": "notice", "text": "当前 tab：{{tab}}" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "style": { "padding": 0 },
+      "children": [
+        {
+          "type": "tabs",
+          "name": "tab_blue",
+          "value": "a",
+          "style": { "color": "#1565C0" },
+          "items": [
+            {
+              "text": "蓝色",
+              "value": "a",
+              "children": [
+                { "type": "notice", "text": "style.color / selectedColor 改选中色", "style": { "padding": 12 } }
+              ]
+            },
+            {
+              "text": "对照",
+              "value": "b",
+              "children": [
+                { "type": "notice", "text": "未选中为灰色", "style": { "padding": 12 } }
+              ]
+            }
+          ]
+        }
+      ]
+    }
   ]
 }

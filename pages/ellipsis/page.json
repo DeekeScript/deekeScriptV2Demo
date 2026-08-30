@@ -20,6 +20,20 @@
           "text": "这是一段比较长的说明文字，用来演示超出两行之后如何省略。点「展开」可以看到全文，再点「收起」会回到两行。"
         }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "ellipsis",
+          "rows": 2,
+          "expand": true,
+          "style": { "color": "#1565C0" },
+          "text": "展开/收起的文字颜色写 style.color。这是一段比较长的说明，用来对照默认绿色链接。"
+        }
+      ]
     }
   ]
 }

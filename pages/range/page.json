@@ -35,6 +35,23 @@
         },
         { "type": "notice", "text": "{{follow_min}} ~ {{follow_max}}" }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "range",
+          "label": "蓝色聚焦",
+          "separator": "~",
+          "variant": "box",
+          "inputType": "digit",
+          "style": { "focusColor": "#1565C0" },
+          "start": { "name": "blue_min", "hint": "从" },
+          "end": { "name": "blue_max", "hint": "到" }
+        }
+      ]
     }
   ]
 }

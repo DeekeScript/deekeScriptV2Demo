@@ -29,6 +29,24 @@
         },
         { "type": "notice", "text": "当前：{{mode}}" }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "radio",
+          "name": "tone",
+          "label": "蓝色单选",
+          "style": { "color": "#1565C0" },
+          "options": [
+            { "label": "蓝", "value": "blue" },
+            { "label": "对照", "value": "other" }
+          ],
+          "value": "blue"
+        }
+      ]
     }
   ]
 }

@@ -1,3 +1,3 @@
 Page({
-  data: { open: 'a' }
+  data: { open: 'a', tone: 'a' }
 });

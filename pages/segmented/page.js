@@ -1,7 +1,8 @@
 Page({
   data: {
     range: 'day',
-    hint: '查看今日数据'
+    hint: '查看今日数据',
+    tone: 'blue'
   },
   onRange(e) {
     var v = e && e.value ? e.value : this.data.range;

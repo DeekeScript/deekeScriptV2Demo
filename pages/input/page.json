@@ -36,6 +36,14 @@
           "hint": "radius / borderColor",
           "variant": "box",
           "style": { "radius": 16, "borderColor": "#006A65", "borderWidth": 1.5 }
+        },
+        {
+          "type": "input",
+          "name": "focus_blue",
+          "label": "蓝色聚焦",
+          "hint": "focusColor",
+          "variant": "box",
+          "style": { "focusColor": "#1565C0" }
         }
       ]
     },

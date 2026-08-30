@@ -18,6 +18,14 @@
       ]
     },
     { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        { "type": "stepper", "name": "blue_count", "label": "蓝色加减", "value": 5, "min": 1, "max": 20, "style": { "color": "#1565C0" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
     { "type": "notice", "text": "数量 {{count}} · 间隔 {{delay}} 秒" }
   ]
 }

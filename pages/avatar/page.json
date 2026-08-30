@@ -57,6 +57,21 @@
           ]
         }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "row",
+          "style": { "gap": 12 },
+          "children": [
+            { "type": "avatar", "text": "蓝", "size": 40, "style": { "color": "#1565C0" } },
+            { "type": "avatar", "text": "橙", "size": 40, "style": { "color": "#C45C26" } }
+          ]
+        }
+      ]
     }
   ]
 }

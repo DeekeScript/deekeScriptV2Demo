@@ -20,6 +20,16 @@
         { "type": "switch", "name": "notify", "label": "完成通知", "value": true },
         { "type": "switch", "name": "night", "label": "夜间模式", "value": false }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "只用 style.color 改打开态滑块色，不要写 background。" },
+        { "type": "switch", "name": "blue", "label": "蓝色开关", "value": true, "style": { "color": "#1565C0" } },
+        { "type": "switch", "name": "orange", "label": "橙色开关", "value": true, "style": { "color": "#C45C26" } }
+      ]
     }
   ]
 }

@@ -1,6 +1,7 @@
 Page({
   data: {
     platform: 'dy',
-    level: '中'
+    level: '中',
+    tone: 'dy'
   }
 });

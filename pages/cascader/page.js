@@ -1,3 +1,3 @@
 Page({
-  data: { address: '' }
+  data: { address: '', blue_addr: '' }
 });

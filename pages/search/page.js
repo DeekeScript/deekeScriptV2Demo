@@ -1,5 +1,5 @@
 Page({
-  data: { keyword: '', noIcon: '', squareQ: '', cancelQ: '' },
+  data: { keyword: '', noIcon: '', squareQ: '', cancelQ: '', blueQ: '' },
   onKeyword(e) {
     this.setData({ keyword: e.value });
   },
@@ -8,6 +8,10 @@ Page({
   },
   onCancelSearch() {
     this.setData({ cancelQ: '' });
+    this.toast('已取消');
+  },
+  onCancelBlue() {
+    this.setData({ blueQ: '' });
     this.toast('已取消');
   }
 });

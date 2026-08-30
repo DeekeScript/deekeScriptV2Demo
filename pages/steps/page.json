@@ -27,6 +27,24 @@
     },
     { "type": "space", "height": 8 },
     {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "steps",
+          "name": "tone",
+          "value": 1,
+          "style": { "color": "#1565C0" },
+          "items": [
+            { "text": "提交" },
+            { "text": "审核" },
+            { "text": "完成" }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
       "type": "row",
       "style": { "gap": 8 },
       "children": [

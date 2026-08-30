@@ -18,7 +18,8 @@
       "children": [
         { "type": "date", "name": "day", "label": "日期", "value": "2026-08-24" },
         { "type": "time", "name": "clock", "label": "时间", "value": "09:30" },
-        { "type": "datetime", "name": "when", "label": "开始", "value": "2026-08-24 09:30" }
+        { "type": "datetime", "name": "when", "label": "开始", "value": "2026-08-24 09:30" },
+        { "type": "date", "name": "blue_day", "label": "蓝色确定", "value": "2026-08-24", "style": { "color": "#1565C0" } }
       ]
     },
     { "type": "space", "height": 8 },

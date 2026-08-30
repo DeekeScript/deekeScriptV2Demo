@@ -41,7 +41,8 @@
     {
       "type": "card",
       "children": [
-        { "type": "picker", "name": "ampm", "label": "时段", "value": "上午", "options": ["上午", "下午"] }
+        { "type": "picker", "name": "ampm", "label": "时段", "value": "上午", "options": ["上午", "下午"] },
+        { "type": "picker", "name": "blue_ampm", "label": "蓝色确定", "value": "上午", "options": ["上午", "下午"], "style": { "color": "#1565C0" } }
       ]
     },
     { "type": "space", "height": 8 },

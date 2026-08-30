@@ -1,3 +1,3 @@
 Page({
-  data: { mode: 'safe' }
+  data: { mode: 'safe', tone: 'blue' }
 });

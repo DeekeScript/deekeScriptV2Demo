@@ -27,6 +27,24 @@
         },
         { "type": "notice", "text": "平台 {{platform}} · 标签 {{tags}}" }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "selector",
+          "name": "tone",
+          "label": "蓝色胶囊",
+          "style": { "color": "#1565C0" },
+          "options": [
+            { "label": "抖音", "value": "dy" },
+            { "label": "小红书", "value": "xhs" },
+            { "label": "快手", "value": "ks" }
+          ]
+        }
+      ]
     }
   ]
 }

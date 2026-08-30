@@ -19,6 +19,16 @@
     {
       "type": "card",
       "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        { "type": "pageIndicator", "name": "blue_page", "count": 5, "value": 2, "style": { "color": "#1565C0" } },
+        { "type": "space", "height": 8 },
+        { "type": "pageIndicator", "name": "orange_line", "count": 4, "value": 1, "variant": "line", "style": { "color": "#C45C26" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
         { "type": "text", "text": "竖排", "style": { "fontWeight": "bold" } },
         {
           "type": "row",

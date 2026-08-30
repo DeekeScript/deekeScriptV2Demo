@@ -6,6 +6,7 @@ Page({
     small: '',
     large: '',
     custom: '',
+    focus_blue: '',
     phone: '',
     count: '20',
     amount: '',

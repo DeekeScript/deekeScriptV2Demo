@@ -34,6 +34,38 @@
         },
         { "type": "notice", "text": "已选 {{address}}" }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "cascader",
+          "name": "blue_addr",
+          "label": "蓝色确定",
+          "hint": "请选择省 / 市",
+          "style": { "color": "#1565C0" },
+          "options": [
+            {
+              "label": "浙江",
+              "value": "zj",
+              "children": [
+                { "label": "杭州", "value": "hz" },
+                { "label": "宁波", "value": "nb" }
+              ]
+            },
+            {
+              "label": "江苏",
+              "value": "js",
+              "children": [
+                { "label": "南京", "value": "nj" },
+                { "label": "苏州", "value": "sz" }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

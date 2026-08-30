@@ -20,6 +20,9 @@
     { "type": "card", "children": [{ "type": "loading", "text": "正在同步…", "mode": "column", "size": 28 }] },
     { "type": "notice", "text": "三点跳动" },
     { "type": "card", "children": [{ "type": "loading", "text": "请稍候", "mode": "dots" }] },
+    { "type": "notice", "text": "自定义颜色" },
+    { "type": "card", "children": [{ "type": "loading", "text": "蓝色加载", "style": { "color": "#1565C0" } }] },
+    { "type": "card", "children": [{ "type": "loading", "text": "橙色三点", "mode": "dots", "style": { "color": "#C45C26" } }] },
     { "type": "button", "text": "整页遮罩 1.6 秒", "onTap": "onMask" }
   ]
 }

@@ -109,12 +109,14 @@
       "type": "card",
       "children": [
         { "type": "text", "text": "顶部弹出", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "确定按钮色写 style.color，当前为蓝色。" },
         {
           "type": "menu",
           "name": "hukou",
           "label": "户籍",
           "position": "top",
           "hint": "请选择",
+          "style": { "color": "#1565C0" },
           "options": [
             {
               "label": "北京",

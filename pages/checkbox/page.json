@@ -30,6 +30,14 @@
         },
         { "type": "notice", "text": "协议 {{agree}} · 平台 {{platforms}}" }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        { "type": "checkbox", "name": "blue_agree", "label": "蓝色勾选", "value": true, "style": { "color": "#1565C0" } }
+      ]
     }
   ]
 }

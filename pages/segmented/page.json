@@ -27,6 +27,23 @@
         { "type": "space", "height": 12 },
         { "type": "text", "text": "{{hint}}" }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "segmented",
+          "name": "tone",
+          "value": "blue",
+          "style": { "color": "#1565C0" },
+          "options": [
+            { "label": "蓝", "value": "blue" },
+            { "label": "对照", "value": "other" }
+          ]
+        }
+      ]
     }
   ]
 }

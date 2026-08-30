@@ -3,7 +3,7 @@
   "style": { "background": "#F5F5F5", "padding": 12 },
   "body": [
     { "type": "notice", "text": "pages/dialog/page.js" },
-    { "type": "notice", "text": "居中确认。点确定 / 取消会关掉并回调。" },
+    { "type": "notice", "text": "居中确认。点确定 / 取消会关掉并回调。确定按钮色写 style.color。" },
     { "type": "space", "height": 8 },
     { "type": "button", "text": "删除确认", "onTap": "onOpen" },
     { "type": "space", "height": 8 },
@@ -15,6 +15,7 @@
       "text": "删除后无法恢复，是否继续？",
       "cancelText": "取消",
       "confirmText": "删除",
+      "style": { "color": "#1565C0" },
       "onConfirm": "onOk",
       "onCancel": "onNo"
     }

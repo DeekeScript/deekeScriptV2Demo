@@ -12,6 +12,8 @@
     { "type": "space", "height": 8 },
     { "type": "noticeBar", "text": "系统将于今晚 23:00 维护，预计 30 分钟。维护期间任务会暂停。" },
     { "type": "space", "height": 8 },
-    { "type": "noticeBar", "text": "短文本不滚动也可以", "scroll": false }
+    { "type": "noticeBar", "text": "短文本不滚动也可以", "scroll": false },
+    { "type": "space", "height": 8 },
+    { "type": "noticeBar", "text": "蓝色通告栏，用 style.background / color。", "scroll": false, "style": { "background": "#E3F2FD", "color": "#1565C0" } }
   ]
 }

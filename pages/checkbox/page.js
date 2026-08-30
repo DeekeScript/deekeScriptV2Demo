@@ -1,6 +1,7 @@
 Page({
   data: {
     agree: true,
-    platforms: ['xhs']
+    platforms: ['xhs'],
+    blue_agree: true
   }
 });

@@ -34,6 +34,24 @@
         },
         { "type": "notice", "text": "平台 {{platform}} · 优先级 {{level}}" }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "选中项颜色写 style.color。" },
+        {
+          "type": "select",
+          "name": "tone",
+          "label": "蓝色下拉",
+          "style": { "color": "#1565C0" },
+          "options": [
+            { "label": "抖音", "value": "dy" },
+            { "label": "小红书", "value": "xhs" }
+          ]
+        }
+      ]
     }
   ]
 }

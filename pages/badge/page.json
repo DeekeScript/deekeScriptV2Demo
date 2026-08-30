@@ -70,7 +70,18 @@
           ]
         },
         { "type": "space", "height": 8 },
-        { "type": "badge", "text": "推荐", "variant": "ribbon", "color": "warning" }
+        { "type": "badge", "text": "推荐", "variant": "ribbon", "color": "warning" },
+        { "type": "space", "height": 8 },
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        { "type": "space", "height": 8 },
+        {
+          "type": "row",
+          "style": { "gap": 8 },
+          "children": [
+            { "type": "badge", "text": "蓝", "style": { "background": "#1565C0" } },
+            { "type": "badge", "text": "橙", "style": { "background": "#C45C26" } }
+          ]
+        }
       ]
     }
   ]

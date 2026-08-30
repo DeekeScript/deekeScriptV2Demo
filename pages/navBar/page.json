@@ -27,6 +27,13 @@
           "title": "深色返回",
           "leftText": "返回",
           "leftColor": "#191C1C"
+        },
+        {
+          "type": "navBar",
+          "title": "蓝色返回",
+          "leftText": "返回",
+          "rightText": "更多",
+          "style": { "color": "#1565C0" }
         }
       ]
     }

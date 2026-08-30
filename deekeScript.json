@@ -20,6 +20,9 @@
       "background": "#006A65",
       "color": "light"
     },
+    "theme": {
+      "primary": "#006A65"
+    },
     "tabBar": {
       "color": "#6F7978",
       "selectedColor": "#006A65",

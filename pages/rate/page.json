@@ -15,7 +15,8 @@
       "children": [
         { "type": "rate", "name": "score", "label": "任务完成度", "value": 4, "count": 5 },
         { "type": "rate", "name": "half", "label": "允许半星", "value": 3.5, "count": 5, "allowHalf": true },
-        { "type": "rate", "name": "star", "label": "三星评价", "value": 2, "count": 3 }
+        { "type": "rate", "name": "star", "label": "三星评价", "value": 2, "count": 3 },
+        { "type": "rate", "name": "tone", "label": "蓝色星星", "value": 4, "count": 5, "style": { "color": "#1565C0" } }
       ]
     },
     { "type": "space", "height": 8 },

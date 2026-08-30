@@ -17,7 +17,8 @@
       "type": "card",
       "children": [
         { "type": "textarea", "name": "remark", "label": "下划线", "hint": "请输入备注", "minLines": 3, "value": "每天上午执行养号任务" },
-        { "type": "textarea", "name": "bio", "label": "边框", "hint": "个人简介", "minLines": 4, "variant": "box", "style": { "radius": 8 } }
+        { "type": "textarea", "name": "bio", "label": "边框", "hint": "个人简介", "minLines": 4, "variant": "box", "style": { "radius": 8 } },
+        { "type": "textarea", "name": "blue", "label": "蓝色聚焦", "hint": "focusColor", "minLines": 3, "variant": "box", "style": { "focusColor": "#1565C0" } }
       ]
     },
     { "type": "space", "height": 8 },

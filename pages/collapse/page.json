@@ -19,6 +19,23 @@
           ]
         }
       ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        {
+          "type": "collapse",
+          "name": "tone",
+          "accordion": true,
+          "style": { "color": "#1565C0" },
+          "items": [
+            { "name": "a", "title": "蓝色箭头", "text": "折叠箭头颜色写 style.color。" },
+            { "name": "b", "title": "另一项", "text": "点标题展开或收起。" }
+          ]
+        }
+      ]
     }
   ]
 }

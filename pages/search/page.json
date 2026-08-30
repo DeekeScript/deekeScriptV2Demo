@@ -23,7 +23,9 @@
         { "type": "space", "height": 8 },
         { "type": "searchBar", "name": "squareQ", "hint": "方形搜索", "shape": "square" },
         { "type": "space", "height": 8 },
-        { "type": "searchBar", "name": "cancelQ", "hint": "带取消", "showCancel": true, "cancelText": "取消", "onCancel": "onCancelSearch" }
+        { "type": "searchBar", "name": "cancelQ", "hint": "带取消", "showCancel": true, "cancelText": "取消", "onCancel": "onCancelSearch" },
+        { "type": "space", "height": 8 },
+        { "type": "searchBar", "name": "blueQ", "hint": "蓝色取消", "showCancel": true, "style": { "color": "#1565C0" }, "onCancel": "onCancelBlue" }
       ]
     }
   ]

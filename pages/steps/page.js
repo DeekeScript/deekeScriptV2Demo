@@ -1,5 +1,5 @@
 Page({
-  data: { step: 1 },
+  data: { step: 1, tone: 1 },
   onPrev() {
     var n = this.data.step;
     if (n > 0) {
