@@ -8,6 +8,7 @@
     },
     "include": [
         ".vscode/*.d.ts",
-        "**/*.js"
+        "**/*.js",
+        ".vscode/deekeScriptPro.d.ts"
     ]
 }
