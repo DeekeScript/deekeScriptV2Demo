@@ -1,13 +1,9 @@
 /**
- * 悬浮球菜单（V2）。
+ * 悬浮球菜单（展厅）。
  *
- * 任务脚本、页面 JS 都可以 bind()。
- * 点图标可启动 / 停止、隐藏、跳过，并可切换被点图标的文案和底色。
- *
- * 启动脚本请用 Engines.executeScript；JSON 里配了 action: "start"
- * 且当前已有任务文件时由框架执行；否则走这里的 start 回调。
- *
- * 图标个数：开始/停止算 1 个（按是否运行切换），其余始终显示，所以点 N 展开就是 N 个。
+ * 内置 action: start / stop / hide 由框架处理；stop ≈ FloatWindow.stopTask()。
+ * 自定义项（skip / log 等）必须 FloatWindow.on 绑定。
+ * 页面按钮停任务用 FloatWindow.stopTask()；任务内自动结束用 Engines.closeAll()。
  */
 
 function extras() {

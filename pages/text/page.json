@@ -59,6 +59,6 @@
         { "type": "text", "text": "{{hello}}" },
         { "type": "notice", "text": "版本 {{version}}" }
       ]
-    },
+    }
   ]
 }

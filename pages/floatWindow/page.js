@@ -85,7 +85,7 @@ Page({
       this.refreshPerm();
       return true;
     }
-    Dialogs.confirm('温馨提示', 'Android 未授权悬浮窗时无法展示悬浮球，是否前往系统设置开启？', function (ok) {
+    Dialogs.confirm('提示', 'Android 未授权悬浮窗时无法展示悬浮球，是否前往系统设置开启？', function (ok) {
       if (ok) {
         Access.openFloatWindowsSetting();
       }
@@ -99,7 +99,7 @@ Page({
       this.refreshPerm();
       return;
     }
-    Dialogs.confirm('温馨提示', '未开启悬浮窗权限时悬浮球无法展示，是否前往系统设置授权？', function (ok) {
+    Dialogs.confirm('提示', '未开启悬浮窗权限时悬浮球无法展示，是否前往系统设置授权？', function (ok) {
       if (ok) {
         Access.openFloatWindowsSetting();
       }
@@ -146,9 +146,9 @@ Page({
     this.setData({ lastEvent: 'executeScript' });
   },
   onStopAll() {
-    Engines.closeAll();
-    this.setData({ lastEvent: 'closeAll' });
-    System.toast('已停止全部脚本');
+    FloatWindow.stopTask();
+    this.setData({ lastEvent: 'stopTask' });
+    System.toast('已停止项目任务');
   },
   bindMenu() {
     var page = this;

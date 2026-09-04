@@ -1,32 +1,44 @@
-# DeekeScript V2 示例
+# DeekeScript Pro 组件展厅 Demo
 
-> **特别说明：v2版本正在筹划中，预计2026年底（预计11月左右）对外发布**
+本仓库是 **组件 / 能力展厅**，用来预览 UI 与悬浮球等 API。  
+**不是** AI 生成工程的默认模板。生成工程请遵循 [DeekeScriptV2Agent](https://github.com/DeekeScript/DeekeScriptV2Agent) 的 `AGENTS.md`。
 
-用 `deekeScript-v2.json` 作为入口。在 DeekeScript 里打开本目录即可预览。
+入口文件：项目根目录的 **`deekeScript.json`**（不要写 `deekeScript-v2.json`）。用 **DeekeScript Pro** 扩展打开本目录即可预览。
 
 ## 底部 Tab
 
-- 首页：对照文档「概述」的工作台，点卡片进详情，滑到底会加载
-- 组件：各组件示例页入口（文案、表单、列表、布局等）
-- 能力：下拉刷新、悬浮球、底部菜单入口。底部菜单是独立页，进入时创建底栏，返回恢复默认
+- 首页：工作台示意，点卡片进详情，滑到底会加载
+- 组件：各组件示例页入口
+- 能力：下拉刷新、悬浮球、底部菜单等
 
 ## 运行脚本
 
-不要写在 JSON 的 `action` 里。在 `page.js` 的 `onTap` 里调用（会先检查无障碍、悬浮窗）：
+不要写在 JSON 的 `action` 里。在 `page.js` 的 `onTap` 里调用：
 
 ```javascript
-let permission = require('common/permission.js');
+let permission = require('../common/permission.js'); // 页面目录下相对路径
+// 或从 pages/xxx：require('../../common/permission.js')
 permission.runScript('tasks/sample.js');
 ```
 
-权限判断都在 `common/permission.js`。运行起来后会弹窗提示到对应任务文件里写业务。
+`Engines.executeScript` / `runScript` 的路径相对**项目根**（如 `tasks/sample.js`）。  
+`require` **优先** `./`、`../` 相对当前文件。
 
-- `tasks/sample.js`
-- `tasks/follow.js`
+示例任务：
+
+- `tasks/sample.js` — 可点悬浮球停止 / 跳过的占位循环
+- `tasks/follow.js` — 同上（第二份入口）
+
+展厅里的 `permission.hint(...)` **仅用于本 Demo 教学占位**，生成真实工程时不要照抄。
+
+## 悬浮球停任务
+
+- 入口 JSON 里 `"action": "stop"`：框架内置停止（等同手动停整项任务）
+- 自定义菜单回调里停任务：用 `FloatWindow.stopTask()`
+- **不要**在页面按钮 / 菜单回调里用 `Engines.closeAll()`（无效）；任务脚本内自动结束才用 `Engines.closeAll()`
 
 ## require
 
-`page.js` 和任务脚本都可以 `require`。`./`、`../` 相对当前文件；否则相对项目根目录。
+`page.js` 和任务脚本都可以 `require`。推荐相对当前文件；不以 `./`/`../` 开头时相对项目根。
 
-首页：`require('common/data.js')`、`require('common/line.js')` 与 `require('./helper.js')`。
-`tasks/follow.js` 和「我的」页还会 `require('common/hello.js')`。
+本展厅部分历史代码仍写 `require('common/xxx.js')`（相对项目根），能跑；**新代码与 Agent 生成请用相对路径**。

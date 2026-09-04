@@ -36,7 +36,9 @@ Page({
       return;
     }
     this.setData({ loading: true });
-    System.sleep(2000);
-    this.setData({ loading: false, noMore: true, footer: line.end() });
+    var that = this;
+    setTimeout(function () {
+      that.setData({ loading: false, noMore: true, footer: line.end() });
+    }, 2000);
   }
 });

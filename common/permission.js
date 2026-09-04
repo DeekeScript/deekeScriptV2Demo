@@ -1,22 +1,18 @@
 /**
  * 权限检查（运行脚本前调用）。
  *
- * 默认会检查：无障碍、悬浮窗。
- * 下面还提供了录屏/截图、后台弹窗、通知、媒体、文件、位置、蓝牙，
- * 业务需要时自己 ensureXxx() 即可。
+ * 默认检查：无障碍、悬浮窗。其它权限按业务调用 ensureXxx()。
  *
- * 用法：
- *   let permission = require('common/permission.js');
+ *   let permission = require('../common/permission.js');
  *   permission.runScript('tasks/sample.js');
  *
- * 任务脚本里：
- *   let permission = require('common/permission.js');
- *   if (!permission.ensureRun()) return;
- *   permission.hint('tasks/sample.js');
+ *   if (!permission.ensureRun()) { ... } else { ... }
+ *
+ * hint() 仅本展厅教学占位，生成工程禁止使用。
  */
 
 function confirmOpen(content, openSetting) {
-  Dialogs.confirm('温馨提示', content, function (ok) {
+  Dialogs.confirm('提示', content, function (ok) {
     if (ok) {
       openSetting();
     }
@@ -155,12 +151,13 @@ function ensureRun() {
 }
 
 function hint(jsFile) {
-  Dialogs.show('温馨提示', '请在文件 ' + jsFile + ' 中编写业务逻辑');
+  // 展厅专用：提醒去对应文件写业务。生成工程不要调用。
+  Dialogs.show('提示', '请在文件 ' + jsFile + ' 中编写业务逻辑');
 }
 
 function runScript(jsFile) {
   if (!jsFile) {
-    Dialogs.show('温馨提示', '没有可执行的脚本文件');
+    Dialogs.show('提示', '没有可执行的脚本文件');
     return false;
   }
   if (!ensureRun()) {

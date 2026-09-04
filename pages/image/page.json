@@ -56,6 +56,6 @@
         { "type": "image", "src": "img/ks.svg", "style": { "width": 32, "height": 32 } },
         { "type": "image", "src": "img/like.svg", "style": { "width": 32, "height": 32 } }
       ]
-    },
+    }
   ]
 }

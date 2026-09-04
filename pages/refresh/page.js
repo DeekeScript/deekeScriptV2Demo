@@ -40,26 +40,29 @@ Page({
     this.stopPullDownRefresh();
   },
   loadLogs(fromPull) {
-    System.sleep(600);
-    var list = copyLogs(catalog.stats);
-    var n = this.data.times || 0;
-    var stamp = nowText();
-    if (fromPull) {
-      n = n + 1;
-      list.unshift({
-        title: '刚刚刷新',
-        time: stamp,
-        status: '完成'
+    var that = this;
+    var delay = fromPull ? 600 : 0;
+    setTimeout(function () {
+      var list = copyLogs(catalog.stats);
+      var n = that.data.times || 0;
+      var stamp = nowText();
+      if (fromPull) {
+        n = n + 1;
+        list.unshift({
+          title: '刚刚刷新',
+          time: stamp,
+          status: '完成'
+        });
+      }
+      that.setData({
+        logs: list,
+        times: n,
+        updated: stamp,
+        metrics: metricsOf(n, stamp)
       });
-    }
-    this.setData({
-      logs: list,
-      times: n,
-      updated: stamp,
-      metrics: metricsOf(n, stamp)
-    });
-    if (fromPull) {
-      System.toast('已刷新');
-    }
+      if (fromPull) {
+        System.toast('已刷新');
+      }
+    }, delay);
   }
 });

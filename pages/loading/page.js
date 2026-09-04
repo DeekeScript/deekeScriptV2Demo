@@ -1,7 +1,9 @@
 Page({
   onMask() {
     this.showLoading('加载中');
-    System.sleep(1600);
-    this.hideLoading();
+    var that = this;
+    setTimeout(function () {
+      that.hideLoading();
+    }, 1600);
   }
 });

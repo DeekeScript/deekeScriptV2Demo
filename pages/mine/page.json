@@ -46,7 +46,7 @@
         { "type": "notice", "text": "用 JSON 描述页面，JS 填充数据。底部 Tab：首页、组件。" },
         { "type": "divider" },
         { "type": "text", "text": "版本 {{version}}" },
-        { "type": "notice", "text": "入口文件 deekeScript-v2.json" }
+        { "type": "notice", "text": "入口文件 deekeScript.json" }
       ]
     },
     { "type": "space", "height": 8 },

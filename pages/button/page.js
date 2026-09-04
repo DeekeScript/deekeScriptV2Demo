@@ -4,8 +4,10 @@ Page({
   },
   onSave() {
     this.setData({ saving: true });
-    System.sleep(1500);
-    this.setData({ saving: false });
-    this.toast('已保存');
+    var that = this;
+    setTimeout(function () {
+      that.setData({ saving: false });
+      that.toast('已保存');
+    }, 1500);
   }
 });
