@@ -61,7 +61,7 @@
       "type": "card",
       "children": [
         { "type": "text", "text": "任务", "style": { "fontWeight": "bold" } },
-        { "type": "notice", "text": "启动后点悬浮球可停止、隐藏、跳过。菜单「停止」用内置 action:stop；本页按钮用 FloatWindow.stopTask()。不要用 Engines.closeAll() 停整项任务。" },
+        { "type": "notice", "text": "启动后点悬浮球可停止、隐藏、跳过。菜单「停止」与本页按钮都写 FloatWindow.stopTask()。不要用 Engines.closeAll() 停整项任务。" },
         { "type": "space", "height": 8 },
         {
           "type": "row",

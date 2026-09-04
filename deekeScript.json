@@ -107,9 +107,9 @@
   ],
   "floatWindow": {
     "menus": [
-      { "id": "start", "icon": "img/play.svg", "label": "开始", "action": "start", "show": "idle" },
-      { "id": "stop", "icon": "img/stop.svg", "label": "停止", "action": "stop", "show": "running" },
-      { "id": "hide", "icon": "img/hide.svg", "label": "隐藏", "action": "hide" },
+      { "id": "start", "icon": "img/play.svg", "label": "开始", "onTap": "onStart", "show": "idle" },
+      { "id": "stop", "icon": "img/stop.svg", "label": "停止", "onTap": "onStop", "show": "running", "background": "#FFE8E6" },
+      { "id": "hide", "icon": "img/hide.svg", "label": "隐藏", "onTap": "onHide" },
       { "id": "skip", "icon": "img/skip.svg", "label": "跳过", "onTap": "onSkip" }
     ]
   }

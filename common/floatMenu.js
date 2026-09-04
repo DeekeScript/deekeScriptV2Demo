@@ -1,14 +1,13 @@
 /**
  * 悬浮球菜单（展厅）。
  *
- * 内置 action: start / stop / hide 由框架处理；stop ≈ FloatWindow.stopTask()。
- * 自定义项（skip / log 等）必须 FloatWindow.on 绑定。
+ * 全部菜单项用 onTap + FloatWindow.on；停止写 FloatWindow.stopTask()。
  * 页面按钮停任务用 FloatWindow.stopTask()；任务内自动结束用 Engines.closeAll()。
  */
 
 function extras() {
   return [
-    { id: 'hide', icon: 'img/hide.svg', label: '隐藏', action: 'hide' },
+    { id: 'hide', icon: 'img/hide.svg', label: '隐藏', onTap: 'onHide' },
     { id: 'skip', icon: 'img/skip.svg', label: '跳过', onTap: 'onSkip' },
     { id: 'log', icon: 'img/log.svg', label: '日志', onTap: 'onLog' },
     { id: 'setting', icon: 'img/setting.svg', label: '设置', onTap: 'onSetting' }
@@ -33,8 +32,8 @@ function menusForCount(count) {
   if (n < 1) n = 1;
   if (n > 5) n = 5;
   var items = [
-    { id: 'start', icon: 'img/play.svg', label: '开始', action: 'start', show: 'idle' },
-    { id: 'stop', icon: 'img/stop.svg', label: '停止', action: 'stop', show: 'running' }
+    { id: 'start', icon: 'img/play.svg', label: '开始', onTap: 'onStart', show: 'idle' },
+    { id: 'stop', icon: 'img/stop.svg', label: '停止', onTap: 'onStop', show: 'running', background: '#FFE8E6' }
   ];
   var rest = extras();
   var i;
@@ -59,6 +58,14 @@ function bind(state, onEvent) {
     start: function () {
       Engines.executeScript('tasks/sample.js');
       emit(onEvent, 'start');
+    },
+    stop: function () {
+      FloatWindow.stopTask();
+      emit(onEvent, 'stop');
+    },
+    hide: function () {
+      FloatDialogs.setFloatWindowVisible(false);
+      emit(onEvent, 'hide');
     },
     skip: function () {
       state.skipped = true;

@@ -3,7 +3,7 @@
 本仓库是 **组件 / 能力展厅**，用来预览 UI 与悬浮球等 API。  
 **不是** AI 生成工程的默认模板。生成工程请遵循 [DeekeScriptV2Agent](https://github.com/DeekeScript/DeekeScriptV2Agent) 的 `AGENTS.md`。
 
-入口文件：项目根目录的 **`deekeScript.json`**（不要写 `deekeScript-v2.json`）。用 **DeekeScript Pro** 扩展打开本目录即可预览。
+入口文件：项目根目录的 **`deekeScript.json`**。用 **DeekeScript Pro** 扩展打开本目录即可预览。
 
 ## 底部 Tab
 
@@ -33,8 +33,7 @@ permission.runScript('tasks/sample.js');
 
 ## 悬浮球停任务
 
-- 入口 JSON 里 `"action": "stop"`：框架内置停止（等同手动停整项任务）
-- 自定义菜单回调里停任务：用 `FloatWindow.stopTask()`
+- 菜单「停止」：`onTap` + `FloatWindow.on` 里写 `FloatWindow.stopTask()`
 - **不要**在页面按钮 / 菜单回调里用 `Engines.closeAll()`（无效）；任务脚本内自动结束才用 `Engines.closeAll()`
 
 ## require
