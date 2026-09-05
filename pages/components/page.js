@@ -15,7 +15,7 @@ Page({
       { name: '搜索框', desc: 'SearchBar', page: 'pages/search' },
       { name: '区间', desc: 'Range', page: 'pages/range' },
       { name: '步进器', desc: 'Stepper', page: 'pages/stepper' },
-      { name: '开关', desc: 'Switch', page: 'pages/switch' },
+      { name: '开关', desc: 'Switch，含列表行内开关', page: 'pages/switch' },
       { name: '下拉', desc: 'Select', page: 'pages/select' },
       { name: '复选', desc: 'Checkbox', page: 'pages/checkbox' },
       { name: '单选', desc: 'Radio', page: 'pages/radio' },

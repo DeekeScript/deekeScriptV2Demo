@@ -30,6 +30,27 @@
         { "type": "switch", "name": "blue", "label": "蓝色开关", "value": true, "style": { "color": "#1565C0" } },
         { "type": "switch", "name": "orange", "label": "橙色开关", "value": true, "style": { "color": "#C45C26" } }
       ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "列表里的开关", "style": { "fontWeight": "bold" } },
+    { "type": "notice", "text": "行内不必写 name。onChange 带 e.value / e.item / e.index，用下标写回该行。未写 value 时默认读 item.enabled。" },
+    {
+      "type": "list",
+      "bind": "comments",
+      "item": {
+        "type": "card",
+        "style": { "padding": 10 },
+        "children": [
+          {
+            "type": "row",
+            "style": { "gap": 8, "valign": "center" },
+            "children": [
+              { "type": "text", "text": "{{item.content}}", "style": { "weight": 1 } },
+              { "type": "switch", "onChange": "onToggle" }
+            ]
+          }
+        ]
+      }
     }
   ]
 }
