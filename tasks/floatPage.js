@@ -1,9 +1,7 @@
 /**
  * FloatPage 示例任务：显示悬浮窗并推送进度。
  * 仅需悬浮窗权限（不要求无障碍）。
- *
- * 布尔标记必须用 putBoolean / getBoolean：
- * put(false) 会存成字符串 "false"，在 JS 里非空串为真，!Storage.get(...) 会让循环一次都不跑。
+ * 暂停标记请用 putBoolean / getBoolean（put(false) 会存成字符串 "false"，判断会错）。
  */
 
 function panelData(count, total, status, hint) {
