@@ -14,7 +14,8 @@ module.exports = {
     { label: '脚本' },
     { label: '无障碍' },
     { label: '图色' },
-    { label: '悬浮球' }
+    { label: '悬浮球' },
+    { label: '悬浮窗' }
   ],
   tasks: [
     { id: 1, title: '点击控件', status: '运行中', user: '脚本A', time: '10:21', jsFile: 'tasks/follow.js', icon: 'img/dy.svg' },

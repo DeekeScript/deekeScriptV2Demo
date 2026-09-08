@@ -1,0 +1,84 @@
+{
+  "style": {
+    "padding": 12,
+    "background": "#00000000",
+    "radius": 14
+  },
+  "body": [
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        {
+          "type": "column",
+          "style": { "weight": 1, "gap": 2 },
+          "children": [
+            {
+              "type": "text",
+              "text": "{{text}}",
+              "style": { "fontSize": 16, "fontWeight": "bold", "color": "#FFFFFF" }
+            },
+            {
+              "type": "text",
+              "text": "{{hint}} · {{count}}/{{total}}",
+              "style": { "fontSize": 12, "color": "#CCFFFFFF" }
+            }
+          ]
+        },
+        {
+          "type": "tag",
+          "text": "{{status}}",
+          "style": {
+            "background": "{{statusBg}}",
+            "color": "{{statusColor}}",
+            "radius": 999,
+            "paddingLeft": 10,
+            "paddingRight": 10,
+            "paddingTop": 4,
+            "paddingBottom": 4
+          }
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "progressBar",
+      "name": "progress",
+      "value": 0,
+      "min": 0,
+      "max": 100,
+      "unit": "%"
+    },
+    { "type": "space", "height": 10 },
+    {
+      "type": "row",
+      "style": { "gap": 8 },
+      "children": [
+        {
+          "type": "button",
+          "text": "暂停",
+          "size": "sm",
+          "onTap": "onTapPause",
+          "style": {
+            "weight": 1,
+            "background": "#33FFFFFF",
+            "color": "#FFFFFF",
+            "radius": 10
+          }
+        },
+        {
+          "type": "button",
+          "text": "关闭",
+          "size": "sm",
+          "onTap": "onTapClose",
+          "style": {
+            "weight": 1,
+            "background": "#80FFFFFF",
+            "color": "#111111",
+            "radius": 10
+          }
+        }
+      ]
+    }
+  ]
+}

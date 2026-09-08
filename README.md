@@ -1,6 +1,6 @@
 # DeekeScript Pro 组件展厅 Demo
 
-本仓库是 **组件 / 能力展厅**，用来预览 UI 与悬浮球等 API。  
+本仓库是 **组件 / 能力展厅**，用来预览 UI、悬浮球与悬浮窗等 API。  
 **不是** AI 生成工程的默认模板。生成工程请遵循 [DeekeScriptV2Agent](https://github.com/DeekeScript/DeekeScriptV2Agent) 的 `AGENTS.md`。
 
 入口文件：项目根目录的 **`deekeScript.json`**。用 **DeekeScript Pro** 扩展打开本目录即可预览。
@@ -9,7 +9,7 @@
 
 - 首页：工作台示意，点卡片进详情，滑到底会加载
 - 组件：各组件示例页入口
-- 能力：下拉刷新、悬浮球、底部菜单等
+- 能力：下拉刷新、悬浮球、悬浮窗、底部菜单等
 
 ## 运行脚本
 
@@ -28,6 +28,7 @@ permission.runScript('tasks/sample.js');
 
 - `tasks/sample.js` — 可点悬浮球停止 / 跳过的占位循环
 - `tasks/follow.js` — 同上（第二份入口）
+- `tasks/floatPage.js` — 打开 `floats/status` 悬浮窗并用 `FloatPage.setData` 推进度
 
 展厅里的 `permission.hint(...)` **仅用于本 Demo 教学占位**，生成真实工程时不要照抄。
 
@@ -35,6 +36,12 @@ permission.runScript('tasks/sample.js');
 
 - 菜单「停止」：`onTap` + `FloatWindow.on` 里写 `FloatWindow.stopTask()`
 - **不要**在页面按钮 / 菜单回调里用 `Engines.closeAll()`（无效）；任务脚本内自动结束才用 `Engines.closeAll()`
+
+## 悬浮窗 FloatPage
+
+- 目录：`floats/status/page.json` + `page.js`（不必写入 `pages` / `tabBar`）
+- 展厅页：能力 → **悬浮窗**（`pages/floatPage`）
+- 与悬浮球 menus **不是一回事**：球管开始/停止；FloatPage 管 JSON 悬浮窗界面
 
 ## require
 

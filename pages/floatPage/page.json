@@ -1,0 +1,157 @@
+{
+  "title": {
+    "text": "悬浮窗",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 10
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "FloatPage ≠ 悬浮球。最多 3 个；手柄用 setDraggable；内容在 floats/<id>/。"
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "card",
+      "style": { "padding": 10 },
+      "children": [
+        {
+          "type": "text",
+          "text": "权限 {{floatStatus}} · 面板 {{panelStatus}} · {{gripText}} · 上次 {{lastEvent}}",
+          "style": { "fontSize": 12, "color": "#5F6F6D" }
+        },
+        { "type": "space", "height": 6 },
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            {
+              "type": "button",
+              "text": "刷新",
+              "size": "sm",
+              "onTap": "onRefreshPerm",
+              "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" }
+            },
+            {
+              "type": "button",
+              "text": "去授权",
+              "size": "sm",
+              "onTap": "onOpenFloatSetting",
+              "style": { "weight": 1 }
+            }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "card",
+      "style": { "padding": 10 },
+      "children": [
+        {
+          "type": "text",
+          "text": "面板操作",
+          "style": { "fontSize": 13, "fontWeight": "bold" }
+        },
+        {
+          "type": "text",
+          "text": "与文档示例一致：显示 / setData / 隐藏 / 关闭 / 手柄 / 多开延时",
+          "style": { "fontSize": 11, "color": "#6F7978", "marginTop": 2 }
+        },
+        { "type": "space", "height": 6 },
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            { "type": "button", "text": "显示", "size": "sm", "onTap": "onShowPanel", "style": { "weight": 1 } },
+            {
+              "type": "button",
+              "text": "setData+1",
+              "size": "sm",
+              "onTap": "onBumpData",
+              "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" }
+            },
+            {
+              "type": "button",
+              "text": "隐藏",
+              "size": "sm",
+              "onTap": "onHidePanel",
+              "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" }
+            },
+            {
+              "type": "button",
+              "text": "关闭",
+              "size": "sm",
+              "onTap": "onClosePanel",
+              "style": { "weight": 1, "background": "#FDECEC", "color": "#B42318" }
+            }
+          ]
+        },
+        { "type": "space", "height": 6 },
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            {
+              "type": "button",
+              "text": "{{gripBtn}}",
+              "size": "sm",
+              "onTap": "onToggleGrip",
+              "style": { "weight": 1, "background": "#EEF2F1", "color": "#006A65" }
+            },
+            {
+              "type": "button",
+              "text": "多开+延时",
+              "size": "sm",
+              "onTap": "onMultiOpen",
+              "style": { "weight": 1 }
+            },
+            {
+              "type": "button",
+              "text": "关全部",
+              "size": "sm",
+              "onTap": "onCloseAll",
+              "style": { "weight": 1, "background": "#FDECEC", "color": "#B42318" }
+            }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "card",
+      "style": { "padding": 10 },
+      "children": [
+        {
+          "type": "text",
+          "text": "任务驱动",
+          "style": { "fontSize": 13, "fontWeight": "bold" }
+        },
+        {
+          "type": "text",
+          "text": "tasks/floatPage.js 循环 setData；面板「暂停」或停止任务可结束",
+          "style": { "fontSize": 11, "color": "#6F7978", "marginTop": 2 }
+        },
+        { "type": "space", "height": 6 },
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            { "type": "button", "text": "启动任务", "size": "sm", "onTap": "onStartSample", "style": { "weight": 1 } },
+            {
+              "type": "button",
+              "text": "停止任务",
+              "size": "sm",
+              "onTap": "onStopAll",
+              "style": { "weight": 1, "background": "#FDECEC", "color": "#B42318" }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

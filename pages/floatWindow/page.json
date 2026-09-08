@@ -10,7 +10,7 @@
     "padding": 12
   },
   "body": [
-    { "type": "notice", "text": "悬浮球是系统 overlay，不是页面 JSON 控件。Android 未授予悬浮窗权限时球无法展示；是否去授权由本页 JS 决定，框架不会替你弹系统设置。" },
+    { "type": "notice", "text": "悬浮球是系统 overlay，不是页面 JSON 控件。Android 未授予悬浮窗权限时球无法展示；是否去授权由本页 JS 决定，框架不会替你弹系统设置。需要 JSON 界面时见「能力 → 悬浮窗」（FloatPage）。" },
     { "type": "space", "height": 8 },
     {
       "type": "card",

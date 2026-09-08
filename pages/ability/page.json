@@ -10,7 +10,7 @@
     "background": "#F5F5F5"
   },
   "body": [
-    { "type": "notice", "text": "这些不是 body 里的 type。下拉刷新写在 page.json 根上；悬浮球是系统 overlay；底部菜单写在入口 bottomMenus。" },
+    { "type": "notice", "text": "这些不是 body 里的 type。下拉刷新写在 page.json 根上；悬浮球 / 悬浮窗是系统 overlay；底部菜单写在入口 bottomMenus。" },
     { "type": "space", "height": 8 },
     {
       "type": "list",
