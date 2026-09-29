@@ -20,6 +20,24 @@ function confirmOpen(content, openSetting) {
   return false;
 }
 
+/** 已有权限则 true；永久拒绝则引导设置；否则 request 并返回 false */
+function ensureRuntime(opts) {
+  if (opts.has()) {
+    return true;
+  }
+  if (opts.isDenied && opts.isDenied()) {
+    return confirmOpen(opts.deniedMsg, function () {
+      if (opts.openDenied) {
+        opts.openDenied();
+      } else {
+        Access.openPermissionSettings();
+      }
+    });
+  }
+  opts.request();
+  return false;
+}
+
 /** 无障碍 */
 function ensureAccessibility() {
   if (Access.isAccessibilityServiceEnabled()) {
@@ -72,58 +90,83 @@ function ensureNotification() {
 
 /** 媒体（相册 / 视频 / 音频） */
 function ensureMedia() {
-  if (Access.hasMediaReadPermission()) {
-    return true;
-  }
-  if (Access.isMediaPermissionPermanentlyDenied()) {
-    return confirmOpen('媒体权限已被禁止，请在设置中手动开启', function () {
-      Access.openPermissionSettings();
-    });
-  }
-  Access.requestMediaPermissions();
-  return false;
+  return ensureRuntime({
+    has: function () { return Access.hasMediaReadPermission(); },
+    isDenied: function () { return Access.isMediaPermissionPermanentlyDenied(); },
+    deniedMsg: '媒体权限已被禁止，请在设置中手动开启',
+    request: function () { Access.requestMediaPermissions(); }
+  });
 }
 
 /** 文件读写 */
 function ensureStorage() {
-  if (Access.hasStoragePermission()) {
-    return true;
-  }
-  if (Access.isStoragePermissionPermanentlyDenied()) {
-    return confirmOpen('文件权限已被禁止，请在设置中手动开启', function () {
-      Access.openPermissionSettings();
-    });
-  }
-  Access.requestStoragePermission();
-  return false;
+  return ensureRuntime({
+    has: function () { return Access.hasStoragePermission(); },
+    isDenied: function () { return Access.isStoragePermissionPermanentlyDenied(); },
+    deniedMsg: '文件权限已被禁止，请在设置中手动开启',
+    request: function () { Access.requestStoragePermission(); }
+  });
 }
 
 /** 位置 */
 function ensureLocation() {
-  if (Access.hasLocationPermission()) {
-    return true;
-  }
-  if (Access.isLocationPermissionPermanentlyDenied()) {
-    return confirmOpen('位置权限已被禁止，请在设置中手动开启', function () {
-      Access.openPermissionSettings();
-    });
-  }
-  Access.requestLocationPermissions();
-  return false;
+  return ensureRuntime({
+    has: function () { return Access.hasLocationPermission(); },
+    isDenied: function () { return Access.isLocationPermissionPermanentlyDenied(); },
+    deniedMsg: '位置权限已被禁止，请在设置中手动开启',
+    request: function () { Access.requestLocationPermissions(); }
+  });
+}
+
+/** 摄像头（Images.takePhoto） */
+function ensureCamera() {
+  return ensureRuntime({
+    has: function () { return Access.hasCameraPermission(); },
+    isDenied: function () { return Access.isCameraPermissionPermanentlyDenied(); },
+    deniedMsg: '摄像头权限已被禁止，请在设置中手动开启',
+    request: function () { Access.requestCameraPermission(); }
+  });
+}
+
+/** 麦克风（Audio.startRecord） */
+function ensureRecordAudio() {
+  return ensureRuntime({
+    has: function () { return Access.hasRecordAudioPermission(); },
+    isDenied: function () { return Access.isRecordAudioPermissionPermanentlyDenied(); },
+    deniedMsg: '麦克风权限已被禁止，请在设置中手动开启',
+    request: function () { Access.requestRecordAudioPermission(); }
+  });
+}
+
+/** 短信（Sms.startListening） */
+function ensureSms() {
+  return ensureRuntime({
+    has: function () { return Access.hasSmsPermission(); },
+    isDenied: function () { return Access.isSmsPermissionPermanentlyDenied(); },
+    deniedMsg: '短信权限已被禁止，请在设置中手动开启',
+    request: function () { Access.requestSmsPermission(); }
+  });
 }
 
 /** 蓝牙（Hid） */
 function ensureBluetooth() {
-  if (Access.hasBluetoothConnectionPermission()) {
+  return ensureRuntime({
+    has: function () { return Access.hasBluetoothConnectionPermission(); },
+    isDenied: function () { return Access.isBluetoothPermissionPermanentlyDenied(); },
+    deniedMsg: '蓝牙权限已被禁止，请在设置中手动开启',
+    openDenied: function () { Access.openBluetoothPermissionSettings(); },
+    request: function () { Access.requestBluetoothConnectionPermission(); }
+  });
+}
+
+/** 修改系统设置（亮度等） */
+function ensureWriteSettings() {
+  if (Access.canWriteSettings()) {
     return true;
   }
-  if (Access.isBluetoothPermissionPermanentlyDenied()) {
-    return confirmOpen('蓝牙权限已被禁止，请在设置中手动开启', function () {
-      Access.openBluetoothPermissionSettings();
-    });
-  }
-  Access.requestBluetoothConnectionPermission();
-  return false;
+  return confirmOpen('请开启「修改系统设置」权限', function () {
+    Access.openWriteSettings();
+  });
 }
 
 /**
@@ -179,5 +222,9 @@ module.exports = {
   ensureMedia: ensureMedia,
   ensureStorage: ensureStorage,
   ensureLocation: ensureLocation,
-  ensureBluetooth: ensureBluetooth
+  ensureCamera: ensureCamera,
+  ensureRecordAudio: ensureRecordAudio,
+  ensureSms: ensureSms,
+  ensureBluetooth: ensureBluetooth,
+  ensureWriteSettings: ensureWriteSettings
 };

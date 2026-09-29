@@ -1,0 +1,47 @@
+{
+  "title": { "text": "节点 UiSelector", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "需无障碍。探测包名/Activity、可点击节点数、textContains、exists。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "权限", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{perm}}" },
+        { "type": "text", "text": "包名 / Activity", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{pkg}}" },
+        { "type": "text", "text": "可点击可见数", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{count}}" },
+        { "type": "text", "text": "查找结果", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{hit}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "检查无障碍", "onTap": "onCheck", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "引导开启", "onTap": "onRequest", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "探测界面", "onTap": "onProbe", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "textContains", "onTap": "onFindText", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "exists", "onTap": "onExists", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": { "text": "加解密", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "Encrypt.md5 / sha256 / base64Encode / hmac_sha256；md5 可写入 Storage 便于对照。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "input", "name": "plain", "label": "原文", "hint": "待摘要字符串", "variant": "box", "value": "{{plain}}" },
+        { "type": "text", "text": "md5", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{md5}}" },
+        { "type": "text", "text": "sha256", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{sha256}}" },
+        { "type": "text", "text": "base64", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{b64}}" },
+        { "type": "text", "text": "hmac_sha256", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{hmac}}" },
+        { "type": "text", "text": "Storage 中的 md5", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{saved}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "计算摘要", "onTap": "onHash" },
+    { "type": "button", "text": "保存 md5 到 Storage", "onTap": "onSave" },
+    { "type": "button", "text": "base64Decode", "onTap": "onDecode" }
+  ]
+}

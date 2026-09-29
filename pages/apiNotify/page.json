@@ -1,0 +1,127 @@
+{
+  "title": {
+    "text": "通知监听",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "需通知读取权限。startListening 收到通知会写到本页日志。"
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "text",
+          "text": "权限",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{perm}}"
+        },
+        {
+          "type": "text",
+          "text": "监听",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{listening}}"
+        },
+        {
+          "type": "text",
+          "text": "最近通知",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{latest}}"
+        },
+        {
+          "type": "text",
+          "text": "状态",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{status}}"
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "text": "检查权限",
+          "onTap": "onCheck",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "text": "申请权限",
+          "onTap": "onRequest",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "text": "开始监听",
+          "onTap": "onStart",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "text": "停止",
+          "onTap": "onStop",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": { "text": "弹窗", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "前台用 Dialogs；已切到其它 App 用 FloatDialogs（需悬浮窗）。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "input 返回值", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{inputValue}}" },
+        { "type": "text", "text": "confirm 结果", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{confirmResult}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "Dialogs.show", "onTap": "onShowDialog" },
+    { "type": "button", "text": "Dialogs.confirm", "onTap": "onConfirm" },
+    { "type": "button", "text": "Dialogs.input", "onTap": "onInput" },
+    { "type": "button", "text": "FloatDialogs.show", "onTap": "onFloatDialog" }
+  ]
+}

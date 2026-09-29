@@ -1,0 +1,22 @@
+{
+  "title": { "text": "Engines 运行时", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "先拉起脚本再刷新。childScriptCount 统计尚未结束的 Engines 脚本（含页面拉起的主任务）。停任务用悬浮球 stopTask。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "childScriptCount", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{childCount}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "刷新 childScriptCount", "onTap": "onRefresh" },
+    { "type": "button", "text": "executeScriptStr 短任务", "onTap": "onRunStr" },
+    { "type": "button", "text": "executeScript tasks/sample.js", "onTap": "onRunFile" },
+    { "type": "button", "text": "closeOther", "onTap": "onCloseOther" }
+  ]
+}

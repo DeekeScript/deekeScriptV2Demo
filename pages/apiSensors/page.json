@@ -1,0 +1,27 @@
+{
+  "title": { "text": "传感器", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "Sensors.list / has 确认支持后 register；示例用 light。离开页面自动 unregister。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "本机传感器（节选）", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{listText}}" },
+        { "type": "text", "text": "light", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{hasLight}}" },
+        { "type": "text", "text": "采样值", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{reading}}" },
+        { "type": "text", "text": "监听", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{listening}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "刷新 list / has", "onTap": "onRefresh" },
+    { "type": "button", "text": "开始监听 light", "onTap": "onStart" },
+    { "type": "button", "text": "停止 unregister", "onTap": "onStop" }
+  ]
+}

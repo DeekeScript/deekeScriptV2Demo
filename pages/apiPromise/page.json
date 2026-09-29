@@ -1,0 +1,26 @@
+{
+  "title": { "text": "异步 Promise", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "引擎是 Rhino：用 Promise.then。页面里用 setTimeout，不要 System.sleep 卡住界面。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "回调结果", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{result}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "then 成功", "onTap": "onThen", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "reject 失败", "onTap": "onReject", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "title": { "text": "Env / DeekeScript", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "Env 路径 + DeekeScript.readFile + DeekeScriptJson.toJson()。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "工程根", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{root}}" },
+        { "type": "text", "text": "cache / files", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{dirs}}" },
+        { "type": "text", "text": "配置预览", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{preview}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "刷新路径", "onTap": "onRefresh", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "readFile json", "onTap": "onReadJson", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "DeekeScriptJson", "onTap": "onDeekeJson", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "Download / DCIM", "onTap": "onDownload", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

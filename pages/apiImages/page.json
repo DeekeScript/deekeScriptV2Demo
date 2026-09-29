@@ -1,0 +1,196 @@
+{
+  "title": {
+    "text": "图片 Images",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "截图 / 找图 / 裁剪缩放。找色见「取色」、识字见「OCR」。需录屏权限；拍照另需摄像头。运行时间窗口开关见「系统函数 System」。"
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "text",
+          "text": "录屏权限",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{perm}}"
+        },
+        {
+          "type": "text",
+          "text": "最近截图",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{shot}}"
+        },
+        {
+          "type": "text",
+          "text": "结果",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{result}}"
+        },
+        {
+          "type": "text",
+          "text": "状态",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{status}}"
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "检查录屏权限",
+          "onTap": "onCheck",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "申请录屏权限",
+          "onTap": "onRequest",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "Images.capture",
+          "onTap": "onCapture",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "crop 左上 120×120",
+          "onTap": "onCrop",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "scale 0.5",
+          "onTap": "onScale",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "找图：裁一块再 findOneMatch",
+          "onTap": "onFindSelf",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "findMatches（同上模板）",
+          "onTap": "onFindMatches",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "区域找图 findOneInRegion",
+          "onTap": "onFindInRegion",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "Images.takePhoto（需摄像头）",
+          "onTap": "onTakePhoto",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": { "text": "文字识别 OCR", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "OCR / 找字 / 等待文字。mode：contains / exact / regex。需录屏权限。建议先截当前页再找「OCR」「找字」等标题字。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "录屏权限", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{perm}}" },
+        { "type": "input", "name": "keyword", "label": "关键字", "hint": "默认 OCR", "variant": "box", "value": "{{keyword}}" },
+        { "type": "text", "text": "结果", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{result}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    : "检查录屏权限", "onTap": "onCheck" },
+    : "申请录屏权限", "onTap": "onRequest" },
+    : "getText 全图拼接", "onTap": "onGetText" },
+    : "getTextAndRegion 前几行", "onTap": "onGetTextAndRegion" },
+    : "Images.ocr() 截屏识别", "onTap": "onOcr" },
+    : "ocr 上半屏区域", "onTap": "onOcrRegion" },
+    : "hasText 关键字", "onTap": "onHasText" },
+    : "findText / findTextFirst", "onTap": "onFindText" },
+    : "findTextCenter", "onTap": "onFindTextCenter" },
+    : "findTextPosition", "onTap": "onFindTextPosition" },
+    : "findTextMatches 数字正则", "onTap": "onFindRegex" },
+    : "findTextInRegion 上半屏", "onTap": "onFindInRegion" },
+    : "waitText 3秒", "onTap": "onWaitText" }
+  ]
+}

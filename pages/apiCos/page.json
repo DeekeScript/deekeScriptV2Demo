@@ -1,0 +1,26 @@
+{
+  "title": { "text": "腾讯云 Cos", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "需自备腾讯云密钥。本页只说明 API，不实际上传。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "调用模板", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{cfg}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "查看模板", "onTap": "onDemoCode", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "说明", "onTap": "onHint", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

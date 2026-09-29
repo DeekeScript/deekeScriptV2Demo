@@ -1,0 +1,179 @@
+{
+  "title": {
+    "text": "应用与意图",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "App 包信息 / 开设置 / 开链接；Intent.open；以及 registerReceiver + sendBroadcast 小闭环。"
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "text",
+          "text": "currentPackageName",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{pkg}}"
+        },
+        {
+          "type": "text",
+          "text": "版本",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{version}}"
+        },
+        {
+          "type": "text",
+          "text": "isAppInstalled",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{installed}}"
+        },
+        {
+          "type": "text",
+          "text": "最近操作",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{result}}"
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "刷新包信息",
+          "onTap": "onRefresh",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "App.openAppSetting",
+          "onTap": "onOpenSetting",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "App.openUrl 文档站",
+          "onTap": "onOpenUrl",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "Intent.open(URI)",
+          "onTap": "onIntentOpen",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "Intent.open() 本应用详情",
+          "onTap": "onIntentSelf",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "查 settings 是否安装",
+          "onTap": "onCheckSettings",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "registerReceiver",
+          "onTap": "onRegBroadcast",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "sendBroadcast",
+          "onTap": "onSendBroadcast",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "title": {
+    "text": "屏幕录制",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "需录屏权限。短录几秒写入缓存目录，再 stop。"
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "text",
+          "text": "权限",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{perm}}"
+        },
+        {
+          "type": "text",
+          "text": "输出",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{outPath}}"
+        },
+        {
+          "type": "text",
+          "text": "状态",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{status}}"
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "text": "检查权限",
+          "onTap": "onCheck",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "text": "申请录屏权限",
+          "onTap": "onRequest",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "text": "start 3 秒",
+          "onTap": "onStart",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "text": "stop",
+          "onTap": "onStop",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    }
+  ]
+}

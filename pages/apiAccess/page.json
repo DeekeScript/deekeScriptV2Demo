@@ -1,0 +1,147 @@
+{
+  "title": { "text": "权限 Access", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "对照文档逐项申请。状态只汇总数量，不逐条铺开。返回后点「刷新状态」。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "权限汇总", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{summary}}" },
+        { "type": "text", "text": "未开启", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{missing}}" },
+        { "type": "text", "text": "永久拒绝", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{denied}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "刷新状态", "onTap": "onRefresh", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "应用权限设置", "onTap": "onAppSettings", "style": { "weight": 1 } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "系统级权限", "style": { "fontWeight": "bold" } },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "无障碍", "onTap": "onA11y", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "悬浮窗", "onTap": "onFloat", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "后台弹窗", "onTap": "onBgAlert", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "录屏", "onTap": "onScreen", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "通知", "onTap": "onNotify", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "修改系统设置", "onTap": "onWriteSettings", "style": { "weight": 1 } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "运行时权限", "style": { "fontWeight": "bold" } },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "媒体", "onTap": "onMedia", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "存储", "onTap": "onStorage", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "位置", "onTap": "onLocation", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "蓝牙", "onTap": "onBluetooth", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "摄像头", "onTap": "onCamera", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "麦克风", "onTap": "onMic", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "短信", "onTap": "onSms", "style": { "weight": 1 } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "直接调 Access", "style": { "fontWeight": "bold" } },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "openAccessibility", "onTap": "onRawA11y", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "openFloatWindows", "onTap": "onRawFloat", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "openBackgroundAlert", "onTap": "onRawBg", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "openMediaProjection", "onTap": "onRawScreen", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "requestNotification", "onTap": "onRawNotify", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "requestMedia", "onTap": "onRawMedia", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "requestStorage", "onTap": "onRawStorage", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "requestLocation", "onTap": "onRawLocation", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "requestBluetooth", "onTap": "onRawBt", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "openBluetoothSettings", "onTap": "onRawBtSettings", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "requestCamera", "onTap": "onRawCamera", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "requestRecordAudio", "onTap": "onRawMic", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "requestSms", "onTap": "onRawSms", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "openWriteSettings", "onTap": "onRawWrite", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

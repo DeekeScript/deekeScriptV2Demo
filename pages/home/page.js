@@ -1,5 +1,6 @@
 let data = require('common/data.js');
 let line = require('common/line.js');
+let repo = require('common/repo.js');
 
 Page({
   data: {
@@ -20,6 +21,9 @@ Page({
     //   tags: data.tags,
     //   logs: data.logs
     // });
+  },
+  onOpenSource() {
+    repo.openSource();
   },
   onReachBottom() {
     if (this.data.loading || this.data.noMore) {

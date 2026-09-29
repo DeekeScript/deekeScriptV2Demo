@@ -1,0 +1,52 @@
+{
+  "title": { "text": "键盘 KeyBoards", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "KeyBoards 通过本应用输入法注入文字，不需要无障碍。先启用并切换到本应用输入法，再聚焦输入框后测试。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "输入法已启用 isEnabled", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{imeEnabled}}" },
+        { "type": "text", "text": "可输入 canInput（是否默认）", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{canInput}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "刷新状态", "onTap": "onRefresh", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "启用/切换输入法", "onTap": "onPicker", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "input 测试", "onTap": "onInput", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "delete", "onTap": "onDelete", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "pressEnter", "onTap": "onEnter", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "pressTab", "onTap": "onTab", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "pressSpace", "onTap": "onSpace", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "hide 键盘", "onTap": "onHide", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

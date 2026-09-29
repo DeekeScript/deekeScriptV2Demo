@@ -1,0 +1,42 @@
+{
+  "title": { "text": "手势 Gesture", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "需无障碍。演示 back / home / recents / 短距上滑 / press。随机乱点仍不演示。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "屏幕", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{screen}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "刷新尺寸", "onTap": "onRefresh", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "back", "onTap": "onBack", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "home", "onTap": "onHome", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "recents", "onTap": "onRecents", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "短上滑 swipe", "onTap": "onSwipeUp", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "press 400ms", "onTap": "onPress", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

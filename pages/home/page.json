@@ -11,6 +11,12 @@
   },
   "body": [
     {
+      "type": "notice",
+      "text": "本页在手机上运行，看不到源码。完整工程：github.com/DeekeScript/deekeScriptV2Demo（可用 VsCode 打开对照）"
+    },
+    { "type": "button", "text": "打开示例源码仓库", "onTap": "onOpenSource" },
+    { "type": "space", "height": 8 },
+    {
       "type": "card",
       "style": { "padding": 0, "gap": 0 },
       "children": [

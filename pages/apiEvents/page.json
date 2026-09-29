@@ -1,0 +1,24 @@
+{
+  "title": { "text": "事件 Events", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "自定义事件用 on / emit / once；另附亮灭屏。按键 / 无障碍事件依赖服务，本页不演示。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "监听", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{observing}}" },
+        { "type": "text", "text": "事件日志", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{log}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "绑定 on", "onTap": "onBind" },
+    { "type": "button", "text": "emit 自定义事件", "onTap": "onEmit" },
+    { "type": "button", "text": "once 只触发一次", "onTap": "onOnce" },
+    { "type": "button", "text": "off 清理", "onTap": "onClear" }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": { "text": "存储与文件", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "Storage 键值 + Files 读写/列表/大小/路径/zip。只展示摘要，不刷大文件内容。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "input", "name": "note", "label": "备注", "hint": "写入 Storage / Files", "variant": "box", "value": "{{note}}" },
+        { "type": "text", "text": "Storage", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{storageValue}}" },
+        { "type": "text", "text": "文件摘要", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{fileValue}}" },
+        { "type": "text", "text": "路径 / meta", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{filePath}}" },
+        { "type": "notice", "text": "{{meta}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "保存", "onTap": "onSave", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "追加", "onTap": "onAppend", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "list 目录", "onTap": "onList", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "常用路径", "onTap": "onPaths", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "zip", "onTap": "onZip", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "清空", "onTap": "onClear", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

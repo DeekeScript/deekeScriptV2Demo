@@ -1,0 +1,26 @@
+{
+  "title": { "text": "Hid", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "需蓝牙 HID 硬件。本页仅探测连接状态，不演示点击/找图以免无设备时报错刷屏。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "isConnected", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{connected}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "刷新状态", "onTap": "onRefresh", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "说明", "onTap": "onHint", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

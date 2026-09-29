@@ -1,0 +1,25 @@
+{
+  "title": { "text": "数据库与日志", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "Sqlite.create / insert / findOne / count / clear；每次写入同步 Log.log 到文件。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "input", "name": "title", "label": "标题", "hint": "插入一行", "variant": "box", "value": "{{title}}" },
+        { "type": "text", "text": "行数 count", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{count}}" },
+        { "type": "text", "text": "最新一行", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{latest}}" },
+        { "type": "text", "text": "日志文件", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{logHint}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "插入一行", "onTap": "onInsert" },
+    { "type": "button", "text": "清空表 clear", "onTap": "onClear" }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "title": { "text": "音频 Audio", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "播放示例音频（需联网）。录音 startRecord 需麦克风权限，本页不演示以避免误录。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "播放状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{playing}}" },
+        { "type": "text", "text": "时长", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{duration}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "刷新状态", "onTap": "onRefresh", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "playAndRelease", "onTap": "onPlayRelease", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "play", "onTap": "onPlay", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "pause", "onTap": "onPause", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "stop", "onTap": "onStop", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

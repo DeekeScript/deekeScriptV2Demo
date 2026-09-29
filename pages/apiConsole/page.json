@@ -1,0 +1,94 @@
+{
+  "title": {
+    "text": "控制台 console",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "console 打日志；show/hide 控制悬浮日志窗。写文件请用 Log。"
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "text",
+          "text": "状态",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{status}}"
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "text": "console.log",
+          "onTap": "onLog",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "text": "info / warn / error",
+          "onTap": "onLevels",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "text": "console.show",
+          "onTap": "onShow",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "text": "console.hide",
+          "onTap": "onHide",
+          "size": "sm",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    }
+  ]
+}

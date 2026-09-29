@@ -1,0 +1,218 @@
+{
+  "title": {
+    "text": "取色 Colors",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "取色 / 找色 / 多点找色。支持 #RRGGBB、rgb、rgba。需录屏权限。找图见「图片」，识字见「OCR」。"
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "text",
+          "text": "录屏权限",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{perm}}"
+        },
+        {
+          "type": "text",
+          "text": "采样色",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{sample}}"
+        },
+        {
+          "type": "text",
+          "text": "结果",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{result}}"
+        },
+        {
+          "type": "text",
+          "text": "状态",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{status}}"
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "检查录屏权限",
+          "onTap": "onCheck",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "申请录屏权限",
+          "onTap": "onRequest",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "getColor 屏幕中心",
+          "onTap": "onGetColor",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "getColorHex 屏幕中心",
+          "onTap": "onGetColorHex",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "findColor（容差 12）",
+          "onTap": "onFindColor",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "findColorFirst",
+          "onTap": "onFindColorFirst",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "findColorCenter",
+          "onTap": "onFindColorCenter",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "findColorInRegion 上半屏",
+          "onTap": "onFindInRegion",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "findColor 颜色区间",
+          "onTap": "onFindRange",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "findMultiColors 邻点特征",
+          "onTap": "onFindMulti",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "Colors.find (OpenCV)",
+          "onTap": "onColorsFind",
+          "style": { "weight": 1 }
+        }
+      ]
+    }
+  ]
+}

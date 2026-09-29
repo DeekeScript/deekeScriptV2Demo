@@ -1,0 +1,21 @@
+{
+  "title": { "text": "模块 require", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "page.js 用相对路径 require 公共模块。推荐 ./ 或 ../。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "模块 text", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{modText}}" },
+        { "type": "text", "text": "模块 hint", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{modHint}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "require common/hello.js", "onTap": "onRequire" }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "title": {
+    "text": "系统函数 System",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "振动 / 音量 / 常亮 / 运行时间窗口。截图前可先隐藏时间窗，避免挡图；图色页本身不再开关该窗口。"
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "text",
+          "text": "地区",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{locale}}"
+        },
+        {
+          "type": "text",
+          "text": "音乐音量",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{volume}}"
+        },
+        {
+          "type": "text",
+          "text": "包名 / Activity",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{pkg}}"
+        },
+        {
+          "type": "text",
+          "text": "无障碍模式",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{a11yMode}}"
+        },
+        {
+          "type": "text",
+          "text": "常亮",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{keepOn}}"
+        },
+        {
+          "type": "text",
+          "text": "时间窗",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{timeWin}}"
+        },
+        {
+          "type": "text",
+          "text": "状态",
+          "style": {
+            "fontWeight": "bold"
+          }
+        },
+        {
+          "type": "notice",
+          "text": "{{status}}"
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "刷新",
+          "onTap": "onRefresh",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "振动 200ms",
+          "onTap": "onVibrate",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "常亮开",
+          "onTap": "onKeepOn",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "常亮关",
+          "onTap": "onKeepOff",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "text",
+      "text": "运行时间窗口",
+      "style": {
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "时间窗 显示",
+          "onTap": "onTimeShow",
+          "style": {
+            "weight": 1
+          }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "时间窗 隐藏",
+          "onTap": "onTimeHide",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "style": {
+        "gap": 6
+      },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "截图前隐藏再恢复",
+          "onTap": "onCaptureHide",
+          "style": {
+            "weight": 1
+          }
+        }
+      ]
+    }
+  ]
+}

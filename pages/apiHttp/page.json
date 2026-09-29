@@ -1,0 +1,37 @@
+{
+  "title": { "text": "网络请求", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "Http.get 公网 IP；Http.post 示例（httpbin，可能被墙）。响应只展示摘要。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "网络", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{online}} · {{netType}}" },
+        { "type": "text", "text": "URL", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{url}}" },
+        { "type": "text", "text": "响应摘要", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{body}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "检测网络", "onTap": "onCheck", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "Http.get", "onTap": "onGet", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "Http.post", "onTap": "onPost", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

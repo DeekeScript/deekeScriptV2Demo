@@ -1,0 +1,18 @@
+{
+  "title": { "text": "前台服务", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "后台保活用前台服务。本页 start / stop，不挂重任务。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "startService", "onTap": "onStart" },
+    { "type": "button", "text": "stopService", "onTap": "onStop" }
+  ]
+}

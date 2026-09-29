@@ -1,0 +1,330 @@
+{
+  "title": {
+    "text": "接口",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "padding": 10,
+    "background": "#F5F5F5"
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "按文档模块分组。节点/图色需对应权限。Cos、Socket.IO、Device Owner、Hid 需自备密钥、服务或硬件。"
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "text",
+      "text": "节点与手势",
+      "style": {
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "list",
+      "bind": "node",
+      "item": {
+        "type": "card",
+        "action": {
+          "type": "navigate",
+          "page": "{{item.page}}"
+        },
+        "children": [
+          {
+            "type": "row",
+            "style": {
+              "gap": 8
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "{{item.name}}",
+                "style": {
+                  "weight": 1,
+                  "fontWeight": "bold"
+                }
+              },
+              {
+                "type": "notice",
+                "text": "{{item.desc}}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "text",
+      "text": "图色",
+      "style": {
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "list",
+      "bind": "vision",
+      "item": {
+        "type": "card",
+        "action": {
+          "type": "navigate",
+          "page": "{{item.page}}"
+        },
+        "children": [
+          {
+            "type": "row",
+            "style": {
+              "gap": 8
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "{{item.name}}",
+                "style": {
+                  "weight": 1,
+                  "fontWeight": "bold"
+                }
+              },
+              {
+                "type": "notice",
+                "text": "{{item.desc}}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "text",
+      "text": "应用与系统",
+      "style": {
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "list",
+      "bind": "device",
+      "item": {
+        "type": "card",
+        "action": {
+          "type": "navigate",
+          "page": "{{item.page}}"
+        },
+        "children": [
+          {
+            "type": "row",
+            "style": {
+              "gap": 8
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "{{item.name}}",
+                "style": {
+                  "weight": 1,
+                  "fontWeight": "bold"
+                }
+              },
+              {
+                "type": "notice",
+                "text": "{{item.desc}}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "text",
+      "text": "存储",
+      "style": {
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "list",
+      "bind": "persist",
+      "item": {
+        "type": "card",
+        "action": {
+          "type": "navigate",
+          "page": "{{item.page}}"
+        },
+        "children": [
+          {
+            "type": "row",
+            "style": {
+              "gap": 8
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "{{item.name}}",
+                "style": {
+                  "weight": 1,
+                  "fontWeight": "bold"
+                }
+              },
+              {
+                "type": "notice",
+                "text": "{{item.desc}}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "text",
+      "text": "网络",
+      "style": {
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "list",
+      "bind": "net",
+      "item": {
+        "type": "card",
+        "action": {
+          "type": "navigate",
+          "page": "{{item.page}}"
+        },
+        "children": [
+          {
+            "type": "row",
+            "style": {
+              "gap": 8
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "{{item.name}}",
+                "style": {
+                  "weight": 1,
+                  "fontWeight": "bold"
+                }
+              },
+              {
+                "type": "notice",
+                "text": "{{item.desc}}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "text",
+      "text": "媒体",
+      "style": {
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "list",
+      "bind": "media",
+      "item": {
+        "type": "card",
+        "action": {
+          "type": "navigate",
+          "page": "{{item.page}}"
+        },
+        "children": [
+          {
+            "type": "row",
+            "style": {
+              "gap": 8
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "{{item.name}}",
+                "style": {
+                  "weight": 1,
+                  "fontWeight": "bold"
+                }
+              },
+              {
+                "type": "notice",
+                "text": "{{item.desc}}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "space",
+      "height": 8
+    },
+    {
+      "type": "text",
+      "text": "运行与扩展",
+      "style": {
+        "fontWeight": "bold"
+      }
+    },
+    {
+      "type": "list",
+      "bind": "runtime",
+      "item": {
+        "type": "card",
+        "action": {
+          "type": "navigate",
+          "page": "{{item.page}}"
+        },
+        "children": [
+          {
+            "type": "row",
+            "style": {
+              "gap": 8
+            },
+            "children": [
+              {
+                "type": "text",
+                "text": "{{item.name}}",
+                "style": {
+                  "weight": 1,
+                  "fontWeight": "bold"
+                }
+              },
+              {
+                "type": "notice",
+                "text": "{{item.desc}}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "space",
+      "height": 8
+    }
+  ]
+}

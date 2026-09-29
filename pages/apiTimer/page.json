@@ -1,0 +1,24 @@
+{
+  "title": { "text": "定时器", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "setInterval / clearInterval；tick 同步 console.log。隐藏或卸载页面会自动 stop。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "计数", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{ticks}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{running}}" },
+        { "type": "text", "text": "说明", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "开始 setInterval", "onTap": "onStart" },
+    { "type": "button", "text": "停止 clearInterval", "onTap": "onStop" },
+    { "type": "button", "text": "归零", "onTap": "onReset" },
+    { "type": "button", "text": "console.show()", "onTap": "onShowConsole" }
+  ]
+}

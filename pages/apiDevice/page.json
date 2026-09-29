@@ -1,0 +1,33 @@
+{
+  "title": { "text": "设备与系统", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "Device 读屏 / 机型 / 网络 / 电量；System 取时间、Toast、剪贴板。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "屏幕", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{screen}}" },
+        { "type": "text", "text": "品牌 / 厂商", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{brand}}" },
+        { "type": "text", "text": "型号", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{model}}" },
+        { "type": "text", "text": "系统", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{android}}" },
+        { "type": "text", "text": "网络", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{network}}" },
+        { "type": "text", "text": "电量", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{battery}}" },
+        { "type": "text", "text": "System.time()", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{time}}" },
+        { "type": "text", "text": "剪贴板", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{clip}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "刷新 Device / System", "onTap": "onRefresh" },
+    { "type": "button", "text": "System.toast()", "onTap": "onSystemToast" },
+    { "type": "button", "text": "写入剪贴板 setClip", "onTap": "onCopy" }
+  ]
+}

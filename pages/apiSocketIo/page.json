@@ -1,0 +1,37 @@
+{
+  "title": { "text": "Socket.IO", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "全局名 SocketIoClient。需自备 Socket.IO 服务端；默认连本机 3000，可改地址后连接。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "input", "name": "url", "label": "服务地址", "hint": "http://host:port", "variant": "box", "value": "{{url}}" },
+        { "type": "text", "text": "连接状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{connected}}" },
+        { "type": "text", "text": "日志", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{log}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "连接", "onTap": "onConnect", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "emit", "onTap": "onEmit", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "isConnected", "onTap": "onStatus", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "断开", "onTap": "onDisconnect", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

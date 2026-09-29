@@ -1,0 +1,37 @@
+{
+  "title": { "text": "扩展 Java", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "在脚本里直接用 Java 类、JavaImporter，或 Packages 导入。补 JavaScript 没有的能力。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "java.*", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{javaText}}" },
+        { "type": "text", "text": "JavaImporter", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{importerText}}" },
+        { "type": "text", "text": "Packages", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{packagesText}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "java.*", "onTap": "onJava", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "JavaImporter", "onTap": "onImporter", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "Packages", "onTap": "onPackages", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

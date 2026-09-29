@@ -1,0 +1,48 @@
+{
+  "title": { "text": "媒体库 MediaStore", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "只统计相册/视频/音频数量，不展示全部列表（内容可能很大）。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "权限", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{perm}}" },
+        { "type": "text", "text": "图片数", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{images}}" },
+        { "type": "text", "text": "视频数", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{videos}}" },
+        { "type": "text", "text": "音频数", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{audios}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "检查权限", "onTap": "onCheck", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "申请媒体权限", "onTap": "onRequest", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "getImages", "onTap": "onImages", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "getVideos", "onTap": "onVideos", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "getAudios", "onTap": "onAudios", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "全部统计", "onTap": "onAll", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

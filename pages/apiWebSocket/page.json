@@ -1,0 +1,23 @@
+{
+  "title": { "text": "WebSocket", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "演示连接公开 echo；若网络受限可改为局域网 ws://IP:端口。不用时请 close。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "连接", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{conn}}" },
+        { "type": "text", "text": "最近消息", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{latest}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "连接 echo", "onTap": "onConnect" },
+    { "type": "button", "text": "发送 hello", "onTap": "onSend" },
+    { "type": "button", "text": "关闭", "onTap": "onClose" }
+  ]
+}

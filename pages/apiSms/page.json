@@ -1,0 +1,47 @@
+{
+  "title": { "text": "短信 Sms", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "需短信权限。extractCode 可离线测；监听需真机收短信。多数验证码也可走 NotificationBridge。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "权限", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{perm}}" },
+        { "type": "text", "text": "监听", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{listening}}" },
+        { "type": "text", "text": "最近短信", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{latest}}" },
+        { "type": "text", "text": "提取验证码", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{code}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "检查权限", "onTap": "onCheck", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "申请权限", "onTap": "onRequest", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "extractCode 样例", "onTap": "onExtract", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "开始监听", "onTap": "onStart", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "停止监听", "onTap": "onStop", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": { "text": "多线程 Threads", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    { "type": "notice", "text": "短任务优先 Timer；并行用 Threads.create。本页在子线程 sleep 后回写计数。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "计数", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{ticks}}" },
+        { "type": "text", "text": "状态", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{status}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "button", "text": "create 子线程", "onTap": "onCreate" },
+    { "type": "button", "text": "重置", "onTap": "onReset" }
+  ]
+}

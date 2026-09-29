@@ -1,7 +1,11 @@
 # DeekeScript Pro 组件展厅 Demo
 
-本仓库是 **组件 / 能力展厅**，用来预览 UI、悬浮球与悬浮窗等 API。  
+本仓库是 **组件 / 接口 / 能力展厅**，用来预览 UI、自动化脚本 API、悬浮球与悬浮窗等。  
 **不是** AI 生成工程的默认模板。生成工程请遵循 [DeekeScriptV2Agent](https://github.com/DeekeScript/DeekeScriptV2Agent) 的 `AGENTS.md`。
+
+**仓库地址：** [https://github.com/DeekeScript/deekeScriptV2Demo](https://github.com/DeekeScript/deekeScriptV2Demo)
+
+手机端 **DeekeScript Pro** 底栏「示例」会内置运行本工程；要看 / 改源码，请克隆本仓库后用 **VsCode + DeekeScript Pro 扩展** 打开。
 
 入口文件：项目根目录的 **`deekeScript.json`**。用 **DeekeScript Pro** 扩展打开本目录即可预览。
 
@@ -9,7 +13,24 @@
 
 - 首页：工作台示意，点卡片进详情，滑到底会加载
 - 组件：各组件示例页入口
+- 接口：Device / Storage / Http / Sqlite 等脚本 API 组合示例
 - 能力：下拉刷新、悬浮球、悬浮窗、底部菜单等
+
+## 接口 Tab
+
+按文档模块分组；每页只覆盖一小簇相关 API：
+
+| 分组 | 页面 |
+|------|------|
+| 节点与手势 | `apiUi`、`apiGesture`、`apiKeyBoards` |
+| 图色 | `apiImages`、`apiColors`（含 Colors.find）、`apiOcr` |
+| 应用与系统 | `apiDevice`、`apiSystem`、`apiApp`（含 Intent 广播）、`apiEnv`（含 DeekeScriptJson）、`apiEvents`、`apiSensors`、`apiTimer`、`apiConsole` |
+| 存储 | `apiStorage`（list/zip）、`apiData`、`apiMediaStore`（数量统计） |
+| 网络 | `apiHttp`、`apiWebSocket`、`apiSocketIo`（需自备服务）、`apiCos`（仅说明，需密钥） |
+| 媒体 | `apiAudio`、`apiScreenRecord` |
+| 运行与扩展 | `apiDialogs`、`apiEngines`、`apiModule`、`apiPromise`、`apiThreads`、`apiCrypto`、`apiExtend`、`apiNotify`、`apiSms`、`apiForeground`、`apiAccess`、`apiDeviceOwner`（只读）、`apiHid`（连接探测） |
+
+需自备条件才能完整体验：腾讯云密钥（Cos）、Socket.IO 服务端、Device Owner、蓝牙 HID 硬件。详细 API 以文档为准。
 
 ## 运行脚本
 
