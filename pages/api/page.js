@@ -14,6 +14,8 @@ Page({
       { name: '设备与系统', desc: 'Device + 剪贴板 / Toast', page: 'pages/apiDevice' },
       { name: '系统函数 System', desc: '振动 / 常亮 / 时间窗 / 包名', page: 'pages/apiSystem' },
       { name: '应用与意图', desc: 'App + Intent 广播', page: 'pages/apiApp' },
+      { name: '支付宝 Alipay', desc: 'App 支付 + 扫码图（QrCode）', page: 'pages/apiAlipay' },
+      { name: '二维码 QrCode', desc: 'toFile / toDataUrl 本地生成', page: 'pages/apiQrCode' },
       { name: 'Env / DeekeScript', desc: '路径 + Json.toJson', page: 'pages/apiEnv' },
       { name: '事件 Events', desc: 'on / emit / once', page: 'pages/apiEvents' },
       { name: '传感器', desc: 'Sensors.list / register', page: 'pages/apiSensors' },
@@ -46,7 +48,7 @@ Page({
       { name: '通知监听', desc: 'NotificationBridge', page: 'pages/apiNotify' },
       { name: '短信 Sms', desc: '权限 / extractCode / 监听', page: 'pages/apiSms' },
       { name: '前台服务', desc: 'ForegroundServiceBridge', page: 'pages/apiForeground' },
-      { name: '权限 Access', desc: '汇总检测 / 申请 / 设置', page: 'pages/apiAccess' },
+      { name: '权限 Access', desc: '汇总检测 / 申请 / 省电豁免', page: 'pages/apiAccess' },
       { name: 'Device Owner', desc: 'isDeviceOwner 只读', page: 'pages/apiDeviceOwner' },
       { name: 'Hid', desc: 'isConnected 探测', page: 'pages/apiHid' }
     ]

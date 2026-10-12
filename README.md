@@ -24,11 +24,11 @@
 |------|------|
 | 节点与手势 | `apiUi`、`apiGesture`、`apiKeyBoards` |
 | 图色 | `apiImages`、`apiColors`（含 Colors.find）、`apiOcr` |
-| 应用与系统 | `apiDevice`、`apiSystem`、`apiApp`（含 Intent 广播）、`apiEnv`（含 DeekeScriptJson）、`apiEvents`、`apiSensors`、`apiTimer`、`apiConsole` |
+| 应用与系统 | `apiDevice`、`apiSystem`、`apiApp`（含 Intent 广播）、`apiAlipay`（App 支付 + 扫码图）、`apiQrCode`（本地二维码）、`apiEnv`（含 DeekeScriptJson）、`apiEvents`、`apiSensors`、`apiTimer`、`apiConsole` |
 | 存储 | `apiStorage`（list/zip）、`apiData`、`apiMediaStore`（数量统计） |
 | 网络 | `apiHttp`、`apiWebSocket`、`apiSocketIo`（需自备服务）、`apiCos`（仅说明，需密钥） |
 | 媒体 | `apiAudio`、`apiScreenRecord` |
-| 运行与扩展 | `apiDialogs`、`apiEngines`、`apiModule`、`apiPromise`、`apiThreads`、`apiCrypto`、`apiExtend`、`apiNotify`、`apiSms`、`apiForeground`、`apiAccess`、`apiDeviceOwner`（只读）、`apiHid`（连接探测） |
+| 运行与扩展 | `apiDialogs`、`apiEngines`、`apiModule`、`apiPromise`、`apiThreads`、`apiCrypto`、`apiExtend`、`apiNotify`、`apiSms`、`apiForeground`、`apiAccess`（含电池优化豁免）、`apiDeviceOwner`（只读）、`apiHid`（连接探测） |
 
 需自备条件才能完整体验：腾讯云密钥（Cos）、Socket.IO 服务端、Device Owner、蓝牙 HID 硬件。详细 API 以文档为准。
 

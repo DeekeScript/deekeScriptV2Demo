@@ -52,6 +52,13 @@
         { "type": "button", "size": "sm", "text": "修改系统设置", "onTap": "onWriteSettings", "style": { "weight": 1 } }
       ]
     },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "电池优化豁免", "onTap": "onBattery", "style": { "weight": 1 } }
+      ]
+    },
     { "type": "space", "height": 8 },
     { "type": "text", "text": "运行时权限", "style": { "fontWeight": "bold" } },
     {
@@ -141,6 +148,27 @@
       "children": [
         { "type": "button", "size": "sm", "text": "requestSms", "onTap": "onRawSms", "style": { "weight": 1 } },
         { "type": "button", "size": "sm", "text": "openWriteSettings", "onTap": "onRawWrite", "style": { "weight": 1 } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "省电 / 电池优化", "style": { "fontWeight": "bold" } },
+    {
+      "type": "notice",
+      "text": "与底座设置页「电池优化豁免」同一系统入口。request 弹确认框；部分 ROM 无效时用 openIgnoreBatteryOptimizationSettings。"
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "isIgnoring…", "onTap": "onRawBatteryCheck", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "requestIgnore…", "onTap": "onRawBatteryRequest", "style": { "weight": 1 } }
+      ]
+    },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "openIgnoreBattery…Settings", "onTap": "onRawBatterySettings", "style": { "weight": 1 } }
       ]
     }
   ]

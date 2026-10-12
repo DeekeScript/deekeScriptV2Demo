@@ -1,0 +1,104 @@
+{
+  "title": {
+    "text": "二维码 QrCode",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "底座本地生成二维码（ZXing），不依赖外网。常用 QrCode.toFile 得到路径，再给 image 的 src。不要对 QrCode 使用 typeof。"
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "textarea",
+          "name": "content",
+          "label": "内容",
+          "hint": "链接或任意文本",
+          "minLines": 3,
+          "variant": "box"
+        },
+        { "type": "space", "height": 8 },
+        {
+          "type": "text",
+          "text": "预览",
+          "style": { "fontWeight": "bold" }
+        },
+        {
+          "type": "column",
+          "style": { "align": "center", "width": "100%", "gap": 6 },
+          "children": [
+            {
+              "type": "image",
+              "src": "{{qrImage}}",
+              "showIf": "hasImage",
+              "fit": "contain",
+              "style": { "width": 200, "height": 200, "radius": 8 }
+            },
+            {
+              "type": "notice",
+              "text": "{{result}}"
+            }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "button",
+      "text": "toFile 生成",
+      "onTap": "onToFile",
+      "style": { "background": "#006A65", "color": "#FFFFFF", "width": "100%" }
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "彩色 + 大尺寸",
+          "onTap": "onToFileStyled",
+          "style": { "weight": 1 }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "toDataUrl",
+          "onTap": "onToDataUrl",
+          "style": { "weight": 1 }
+        }
+      ]
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "toBase64 长度",
+          "onTap": "onToBase64",
+          "style": { "weight": 1 }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "空内容试失败",
+          "onTap": "onEmpty",
+          "style": { "weight": 1 }
+        }
+      ]
+    }
+  ]
+}

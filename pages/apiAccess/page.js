@@ -90,7 +90,8 @@ Page({
           function () { return Access.isRecordAudioPermissionPermanentlyDenied(); }
         )
       },
-      { name: '修改系统设置', state: safe(function () { return Access.canWriteSettings(); }) ? 'on' : 'off' }
+      { name: '修改系统设置', state: safe(function () { return Access.canWriteSettings(); }) ? 'on' : 'off' },
+      { name: '电池优化豁免', state: safe(function () { return Access.isIgnoringBatteryOptimizations(); }) ? 'on' : 'off' }
     ];
 
     var on = 0;
@@ -134,6 +135,7 @@ Page({
   onScreen() { this._afterEnsure('录屏', permission.ensureScreenCapture()); },
   onNotify() { this._afterEnsure('通知', permission.ensureNotification()); },
   onWriteSettings() { this._afterEnsure('修改系统设置', permission.ensureWriteSettings()); },
+  onBattery() { this._afterEnsure('电池优化豁免', permission.ensureBatteryHint()); },
   onMedia() { this._afterEnsure('媒体', permission.ensureMedia()); },
   onStorage() { this._afterEnsure('存储', permission.ensureStorage()); },
   onLocation() { this._afterEnsure('位置', permission.ensureLocation()); },
@@ -211,5 +213,33 @@ Page({
   onRawWrite() {
     Access.openWriteSettings();
     this.setData({ status: 'openWriteSettings' });
+  },
+  onRawBatteryCheck() {
+    var ok = false;
+    try {
+      ok = !!Access.isIgnoringBatteryOptimizations();
+    } catch (e) {
+      this.setData({ status: 'isIgnoringBatteryOptimizations 异常: ' + ((e && e.message) || e) });
+      return;
+    }
+    this.setData({ status: 'isIgnoringBatteryOptimizations = ' + ok });
+    this.toast(ok ? '已豁免' : '未豁免');
+    this.refresh();
+  },
+  onRawBatteryRequest() {
+    var ok = false;
+    try {
+      ok = !!Access.requestIgnoreBatteryOptimizations();
+    } catch (e) {
+      this.setData({ status: 'requestIgnoreBatteryOptimizations 异常: ' + ((e && e.message) || e) });
+      return;
+    }
+    this.setData({ status: 'requestIgnoreBatteryOptimizations → ' + ok });
+    var that = this;
+    setTimeout(function () { that.refresh(); }, 800);
+  },
+  onRawBatterySettings() {
+    Access.openIgnoreBatteryOptimizationSettings();
+    this.setData({ status: 'openIgnoreBatteryOptimizationSettings' });
   }
 });

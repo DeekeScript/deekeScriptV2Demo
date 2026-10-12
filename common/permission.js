@@ -169,6 +169,20 @@ function ensureWriteSettings() {
   });
 }
 
+/** 电池优化豁免（省电白名单 / 不优化本应用） */
+function openBatteryIgnore() {
+  Access.openIgnoreBatteryOptimizationSettings();
+}
+
+function ensureBatteryHint() {
+  if (Access.isIgnoringBatteryOptimizations()) {
+    return true;
+  }
+  return confirmOpen('请允许忽略电池优化，避免脚本被系统杀掉', function () {
+    Access.requestIgnoreBatteryOptimizations();
+  });
+}
+
 /**
  * 运行脚本前必须通过：无障碍 + 悬浮窗。
  * 未开启会弹窗引导，并返回 false。
@@ -226,5 +240,7 @@ module.exports = {
   ensureRecordAudio: ensureRecordAudio,
   ensureSms: ensureSms,
   ensureBluetooth: ensureBluetooth,
-  ensureWriteSettings: ensureWriteSettings
+  ensureWriteSettings: ensureWriteSettings,
+  ensureBatteryHint: ensureBatteryHint,
+  openBatteryIgnore: openBatteryIgnore
 };

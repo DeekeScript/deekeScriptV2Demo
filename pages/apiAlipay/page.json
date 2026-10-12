@@ -1,0 +1,105 @@
+{
+  "title": {
+    "text": "支付宝 Alipay",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "两条路：① App 支付用 Alipay.pay(orderString)；② 扫码支付用服务端返回的 qrCode + QrCode.toFile 生成本地图（不要用 Alipay 模块）。真机需已安装支付宝。"
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "App 支付", "style": { "fontWeight": "bold" } },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "textarea",
+          "name": "orderString",
+          "label": "orderString",
+          "hint": "粘贴服务端 payParams.orderString（alipay.trade.app.pay）",
+          "minLines": 3,
+          "variant": "box"
+        },
+        { "type": "space", "height": 8 },
+        {
+          "type": "text",
+          "text": "最近结果",
+          "style": { "fontWeight": "bold" }
+        },
+        { "type": "notice", "text": "{{result}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "button",
+      "text": "Alipay.pay",
+      "onTap": "onPay",
+      "style": { "background": "#006A65", "color": "#FFFFFF", "width": "100%" }
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "button",
+      "text": "空串试失败路径",
+      "size": "sm",
+      "onTap": "onPayEmpty",
+      "style": { "background": "#F0F4F3", "color": "#445", "width": "100%" }
+    },
+    { "type": "space", "height": 12 },
+    { "type": "text", "text": "扫码支付", "style": { "fontWeight": "bold" } },
+    {
+      "type": "notice",
+      "text": "服务端当面付 / precreate 返回 qrCode（或 qr_code）字符串后，本地 QrCode.toFile 生成图片再展示。支付结果需轮询服务端订单，不是 Alipay.pay。"
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "textarea",
+          "name": "qrCode",
+          "label": "qrCode",
+          "hint": "粘贴服务端返回的二维码内容，如 https://qr.alipay.com/…",
+          "minLines": 2,
+          "variant": "box"
+        },
+        { "type": "space", "height": 8 },
+        {
+          "type": "column",
+          "style": { "align": "center", "width": "100%", "gap": 6 },
+          "children": [
+            {
+              "type": "image",
+              "src": "{{qrImage}}",
+              "showIf": "hasQr",
+              "fit": "contain",
+              "style": { "width": 200, "height": 200, "radius": 8 }
+            },
+            { "type": "notice", "text": "{{qrStatus}}" }
+          ]
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "button",
+      "text": "生成扫码图（QrCode.toFile）",
+      "onTap": "onMakeQr",
+      "style": { "background": "#0B6E6A", "color": "#FFFFFF", "width": "100%" }
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "button",
+      "text": "打开 QrCode 接口示例",
+      "size": "sm",
+      "onTap": "onOpenQrDemo",
+      "style": { "background": "#F0F4F3", "color": "#445", "width": "100%" }
+    }
+  ]
+}
