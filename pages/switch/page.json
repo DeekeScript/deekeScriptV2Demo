@@ -1,56 +1,67 @@
-{
-  "title": {
-    "text": "开关",
-    "fontSize": 18,
-    "color": "#FFFFFF",
-    "background": "#006A65"
-  },
-  "style": {
-    "background": "#F5F5F5",
-    "padding": 12
-  },
-  "body": [
-    { "type": "notice", "text": "pages/switch/page.js" },
-    { "type": "notice", "text": "左侧文案、右侧胶囊开关。值为 true / false。" },
-    { "type": "space", "height": 8 },
-    {
-      "type": "card",
-      "children": [
-        { "type": "switch", "name": "auto_start", "label": "自动开始", "value": false },
-        { "type": "switch", "name": "notify", "label": "完成通知", "value": true },
-        { "type": "switch", "name": "night", "label": "夜间模式", "value": false }
-      ]
-    },
-    { "type": "space", "height": 8 },
-    {
-      "type": "card",
-      "children": [
-        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
-        { "type": "notice", "text": "只用 style.color 改打开态滑块色，不要写 background。" },
-        { "type": "switch", "name": "blue", "label": "蓝色开关", "value": true, "style": { "color": "#1565C0" } },
-        { "type": "switch", "name": "orange", "label": "橙色开关", "value": true, "style": { "color": "#C45C26" } }
-      ]
-    },
-    { "type": "space", "height": 8 },
-    { "type": "text", "text": "列表里的开关", "style": { "fontWeight": "bold" } },
-    { "type": "notice", "text": "行内不必写 name。onChange 带 e.value / e.item / e.index，用下标写回该行。未写 value 时默认读 item.enabled。" },
-    {
-      "type": "list",
-      "bind": "comments",
-      "item": {
-        "type": "card",
-        "style": { "padding": 10 },
-        "children": [
-          {
-            "type": "row",
-            "style": { "gap": 8, "valign": "center" },
-            "children": [
-              { "type": "text", "text": "{{item.content}}", "style": { "weight": 1 } },
-              { "type": "switch", "onChange": "onToggle" }
-            ]
-          }
-        ]
-      }
-    }
-  ]
-}
+{
+  "title": {
+    "text": "开关",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/switch/page.js" },
+    { "type": "notice", "text": "左侧文案、右侧胶囊开关。值为 true / false。可用 size: sm / md / lg（默认）控制大小。" },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "switch", "name": "auto_start", "label": "自动开始", "value": false },
+        { "type": "switch", "name": "notify", "label": "完成通知", "value": true },
+        { "type": "switch", "name": "night", "label": "夜间模式", "value": false }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "尺寸 size", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "sm 紧凑、md 中等、lg 默认大号（可不写）。" },
+        { "type": "switch", "name": "size_sm", "label": "小号 sm", "size": "sm", "value": true },
+        { "type": "switch", "name": "size_md", "label": "中号 md", "size": "md", "value": true },
+        { "type": "switch", "name": "size_lg", "label": "大号 lg", "size": "lg", "value": true }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "自定义颜色", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "只用 style.color 改打开态滑块色，不要写 background。" },
+        { "type": "switch", "name": "blue", "label": "蓝色开关", "value": true, "style": { "color": "#1565C0" } },
+        { "type": "switch", "name": "orange", "label": "橙色开关", "value": true, "style": { "color": "#C45C26" } }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    { "type": "text", "text": "列表里的开关", "style": { "fontWeight": "bold" } },
+    { "type": "notice", "text": "行内不必写 name。建议 size: sm。onChange 带 e.value / e.item / e.index。" },
+    {
+      "type": "list",
+      "bind": "comments",
+      "item": {
+        "type": "card",
+        "style": { "padding": 10 },
+        "children": [
+          {
+            "type": "row",
+            "style": { "gap": 8, "valign": "center" },
+            "children": [
+              { "type": "text", "text": "{{item.content}}", "style": { "weight": 1 } },
+              { "type": "switch", "size": "sm", "onChange": "onToggle" }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

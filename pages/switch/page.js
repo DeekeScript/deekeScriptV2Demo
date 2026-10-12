@@ -3,6 +3,9 @@ Page({
     auto_start: false,
     notify: true,
     night: false,
+    size_sm: true,
+    size_md: true,
+    size_lg: true,
     blue: true,
     orange: true,
     comments: [
