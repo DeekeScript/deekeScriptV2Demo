@@ -1,6 +1,6 @@
 {
   "title": {
-    "text": "顶栏右侧",
+    "text": "标题栏",
     "fontSize": 18,
     "color": "#FFFFFF",
     "background": "#006A65",
@@ -18,7 +18,7 @@
     {
       "type": "card",
       "children": [
-        { "type": "text", "text": "系统顶栏右侧", "style": { "fontWeight": "bold" } },
+        { "type": "text", "text": "标题栏右侧", "style": { "fontWeight": "bold" } },
         {
           "type": "notice",
           "text": "用 title.right（或 actions / rightActions）放按钮。可写 text 文案，或 icon / src 图标，配合 onTap / action。"
@@ -36,7 +36,7 @@
     { "type": "space", "height": 8 },
     {
       "type": "notice",
-      "text": "只要右侧按钮时不要再叠一套 navBar；页内自绘顶栏请 title.hidden: true，见 pages/navBar。"
+      "text": "只要右侧按钮时不要再叠一套 navBar；页内自绘导航栏请 title.hidden: true，见 pages/navBar。"
     }
   ]
 }

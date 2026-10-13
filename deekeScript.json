@@ -66,7 +66,7 @@
     { "id": "tabs", "file": "pages/tabs", "title": "选项卡" },
     { "id": "segmented", "file": "pages/segmented", "title": "分段" },
     { "id": "navBar", "file": "pages/navBar", "title": "导航栏" },
-    { "id": "titleBar", "file": "pages/titleBar", "title": "顶栏右侧" },
+    { "id": "titleBar", "file": "pages/titleBar", "title": "标题栏" },
     { "id": "sideBar", "file": "pages/sideBar", "title": "侧边导航" },
     { "id": "indexBar", "file": "pages/indexBar", "title": "序列" },
     { "id": "steps", "file": "pages/steps", "title": "步骤条" },
