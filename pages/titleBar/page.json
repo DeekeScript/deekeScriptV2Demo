@@ -1,0 +1,42 @@
+{
+  "title": {
+    "text": "顶栏右侧",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65",
+    "right": [
+      { "text": "分享", "onTap": "onShare" },
+      { "icon": "img/add.svg", "text": "添加", "onTap": "onAdd" }
+    ]
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    { "type": "notice", "text": "pages/titleBar/page.js" },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "系统顶栏右侧", "style": { "fontWeight": "bold" } },
+        {
+          "type": "notice",
+          "text": "用 title.right（或 actions / rightActions）放按钮。可写 text 文案，或 icon / src 图标，配合 onTap / action。"
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "点右上「分享」或「+」", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{hint}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "notice",
+      "text": "只要右侧按钮时不要再叠一套 navBar；页内自绘顶栏请 title.hidden: true，见 pages/navBar。"
+    }
+  ]
+}

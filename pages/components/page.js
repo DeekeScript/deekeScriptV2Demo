@@ -33,6 +33,7 @@ Page({
       { name: '选项卡', desc: 'Tabs', page: 'pages/tabs' },
       { name: '分段', desc: 'Segmented', page: 'pages/segmented' },
       { name: '导航栏', desc: 'NavBar', page: 'pages/navBar' },
+      { name: '顶栏右侧', desc: 'title.right 系统顶栏按钮', page: 'pages/titleBar' },
       { name: '侧边导航', desc: 'SideBar', page: 'pages/sideBar' },
       { name: '序列', desc: 'IndexBar', page: 'pages/indexBar' },
       { name: '步骤条', desc: 'Steps', page: 'pages/steps' },
@@ -69,6 +70,7 @@ Page({
       { name: '居中页', desc: 'Column Valign', page: 'pages/center' },
       { name: '无标题', desc: '隐藏顶栏', page: 'pages/plain' },
       { name: '深色顶栏', desc: 'Title 样式', page: 'pages/contrast' },
+      { name: '顶栏右侧', desc: 'title.right', page: 'pages/titleBar' },
       { name: '登录页', desc: '账号密码整页示例', page: 'pages/login' },
       { name: '我的', desc: '个人页示例', page: 'pages/mine' }
     ]
