@@ -85,5 +85,5 @@ Page({
       try { System.setTimeWindowShow(true); } catch (e2) {}
       this.setData({ status: '截图流程失败: ' + e });
     }
-  }
+  },
 });

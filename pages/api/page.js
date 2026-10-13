@@ -16,6 +16,7 @@ Page({
       { name: '应用与意图', desc: 'App + Intent 广播', page: 'pages/apiApp' },
       { name: '支付宝 Alipay', desc: 'App 支付 + 扫码图（QrCode）', page: 'pages/apiAlipay' },
       { name: '二维码 QrCode', desc: 'toFile / toDataUrl 本地生成', page: 'pages/apiQrCode' },
+      { name: '分享 Share', desc: 'shareText / shareFile / share', page: 'pages/apiShare' },
       { name: 'Env / DeekeScript', desc: '路径 + Json.toJson', page: 'pages/apiEnv' },
       { name: '事件 Events', desc: 'on / emit / once', page: 'pages/apiEvents' },
       { name: '传感器', desc: 'Sensors.list / register', page: 'pages/apiSensors' },

@@ -12,7 +12,7 @@
   "body": [
     {
       "type": "notice",
-      "text": "底座本地生成二维码（ZXing），不依赖外网。常用 QrCode.toFile 得到路径，再给 image 的 src。不要对 QrCode 使用 typeof。"
+      "text": "本地 ZXing 生成，不依赖外网。点「对比示例」可同时看不同 size / 颜色。常用 toFile 路径作 image src。不要对 QrCode 使用 typeof。"
     },
     { "type": "space", "height": 8 },
     {
@@ -23,39 +23,145 @@
           "name": "content",
           "label": "内容",
           "hint": "链接或任意文本",
-          "minLines": 3,
+          "minLines": 2,
           "variant": "box"
         },
         { "type": "space", "height": 8 },
         {
           "type": "text",
-          "text": "预览",
+          "text": "尺寸对比（生成图边长 px）",
           "style": { "fontWeight": "bold" }
         },
+        { "type": "space", "height": 6 },
         {
-          "type": "column",
-          "style": { "align": "center", "width": "100%", "gap": 6 },
+          "type": "row",
+          "style": { "gap": 8, "align": "flex-end", "justify": "center" },
+          "showIf": "hasCompare",
           "children": [
             {
-              "type": "image",
-              "src": "{{qrImage}}",
-              "showIf": "hasImage",
-              "fit": "contain",
-              "style": { "width": 200, "height": 200, "radius": 8 }
+              "type": "column",
+              "style": { "align": "center", "gap": 4 },
+              "children": [
+                {
+                  "type": "image",
+                  "src": "{{qr128}}",
+                  "fit": "contain",
+                  "style": { "width": 72, "height": 72, "radius": 4 }
+                },
+                { "type": "text", "text": "128", "style": { "fontSize": 12, "color": "#666666" } }
+              ]
             },
             {
-              "type": "notice",
-              "text": "{{result}}"
+              "type": "column",
+              "style": { "align": "center", "gap": 4 },
+              "children": [
+                {
+                  "type": "image",
+                  "src": "{{qr256}}",
+                  "fit": "contain",
+                  "style": { "width": 100, "height": 100, "radius": 4 }
+                },
+                { "type": "text", "text": "256", "style": { "fontSize": 12, "color": "#666666" } }
+              ]
+            },
+            {
+              "type": "column",
+              "style": { "align": "center", "gap": 4 },
+              "children": [
+                {
+                  "type": "image",
+                  "src": "{{qr400}}",
+                  "fit": "contain",
+                  "style": { "width": 132, "height": 132, "radius": 4 }
+                },
+                { "type": "text", "text": "400 默认", "style": { "fontSize": 12, "color": "#666666" } }
+              ]
             }
           ]
+        },
+        {
+          "type": "notice",
+          "text": "尚未生成对比图，点下方「对比示例」",
+          "showIf": "needCompareHint"
+        },
+        { "type": "space", "height": 10 },
+        {
+          "type": "text",
+          "text": "颜色对比",
+          "style": { "fontWeight": "bold" }
+        },
+        { "type": "space", "height": 6 },
+        {
+          "type": "row",
+          "style": { "gap": 8, "justify": "center" },
+          "showIf": "hasCompare",
+          "children": [
+            {
+              "type": "column",
+              "style": { "align": "center", "gap": 4, "weight": 1 },
+              "children": [
+                {
+                  "type": "image",
+                  "src": "{{qrDefault}}",
+                  "fit": "contain",
+                  "style": { "width": 88, "height": 88, "radius": 4 }
+                },
+                { "type": "text", "text": "黑白", "style": { "fontSize": 11, "color": "#666666" } }
+              ]
+            },
+            {
+              "type": "column",
+              "style": { "align": "center", "gap": 4, "weight": 1 },
+              "children": [
+                {
+                  "type": "image",
+                  "src": "{{qrBrand}}",
+                  "fit": "contain",
+                  "style": { "width": 88, "height": 88, "radius": 4 }
+                },
+                { "type": "text", "text": "品牌绿", "style": { "fontSize": 11, "color": "#666666" } }
+              ]
+            },
+            {
+              "type": "column",
+              "style": { "align": "center", "gap": 4, "weight": 1 },
+              "children": [
+                {
+                  "type": "image",
+                  "src": "{{qrBlue}}",
+                  "fit": "contain",
+                  "style": { "width": 88, "height": 88, "radius": 4 }
+                },
+                { "type": "text", "text": "蓝色", "style": { "fontSize": 11, "color": "#666666" } }
+              ]
+            },
+            {
+              "type": "column",
+              "style": { "align": "center", "gap": 4, "weight": 1 },
+              "children": [
+                {
+                  "type": "image",
+                  "src": "{{qrOrange}}",
+                  "fit": "contain",
+                  "style": { "width": 88, "height": 88, "radius": 4 }
+                },
+                { "type": "text", "text": "橙色", "style": { "fontSize": 11, "color": "#666666" } }
+              ]
+            }
+          ]
+        },
+        { "type": "space", "height": 8 },
+        {
+          "type": "notice",
+          "text": "{{result}}"
         }
       ]
     },
     { "type": "space", "height": 8 },
     {
       "type": "button",
-      "text": "toFile 生成",
-      "onTap": "onToFile",
+      "text": "对比示例（尺寸 + 颜色）",
+      "onTap": "onCompare",
       "style": { "background": "#006A65", "color": "#FFFFFF", "width": "100%" }
     },
     { "type": "space", "height": 6 },
@@ -66,15 +172,15 @@
         {
           "type": "button",
           "size": "sm",
-          "text": "彩色 + 大尺寸",
-          "onTap": "onToFileStyled",
+          "text": "toFile 默认",
+          "onTap": "onToFile",
           "style": { "weight": 1 }
         },
         {
           "type": "button",
           "size": "sm",
-          "text": "toDataUrl",
-          "onTap": "onToDataUrl",
+          "text": "彩色大图",
+          "onTap": "onToFileStyled",
           "style": { "weight": 1 }
         }
       ]
@@ -87,16 +193,49 @@
         {
           "type": "button",
           "size": "sm",
-          "text": "toBase64 长度",
-          "onTap": "onToBase64",
+          "text": "toDataUrl",
+          "onTap": "onToDataUrl",
           "style": { "weight": 1 }
         },
         {
           "type": "button",
           "size": "sm",
-          "text": "空内容试失败",
-          "onTap": "onEmpty",
+          "text": "toBase64 长度",
+          "onTap": "onToBase64",
           "style": { "weight": 1 }
+        }
+      ]
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "button",
+      "size": "sm",
+      "text": "空内容试失败",
+      "onTap": "onEmpty",
+      "style": { "width": "100%" }
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "showIf": "hasSingle",
+      "children": [
+        {
+          "type": "text",
+          "text": "单次预览",
+          "style": { "fontWeight": "bold" }
+        },
+        { "type": "space", "height": 6 },
+        {
+          "type": "column",
+          "style": { "align": "center", "width": "100%" },
+          "children": [
+            {
+              "type": "image",
+              "src": "{{qrImage}}",
+              "fit": "contain",
+              "style": { "width": 200, "height": 200, "radius": 8 }
+            }
+          ]
         }
       ]
     }

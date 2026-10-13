@@ -1,0 +1,59 @@
+{
+  "title": {
+    "text": "分享 Share",
+    "fontSize": 18,
+    "color": "#FFFFFF",
+    "background": "#006A65"
+  },
+  "style": {
+    "background": "#F5F5F5",
+    "padding": 12
+  },
+  "body": [
+    {
+      "type": "notice",
+      "text": "Share.share* 走系统分享面板（createChooser + FileProvider），不指定任何 App，系统里能接的都会列出来。不要对 Share 使用 typeof。"
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "textarea",
+          "name": "shareText",
+          "label": "分享文本",
+          "hint": "要分享的纯文本",
+          "minLines": 3,
+          "variant": "box"
+        },
+        { "type": "space", "height": 8 },
+        {
+          "type": "notice",
+          "text": "{{status}}"
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "button",
+      "text": "Share.shareText",
+      "onTap": "onShareText",
+      "style": { "background": "#006A65", "color": "#FFFFFF", "width": "100%" }
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "button",
+      "text": "Share.shareFile（写示例 txt）",
+      "onTap": "onShareFile",
+      "style": { "width": "100%" }
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "button",
+      "size": "sm",
+      "text": "Share.share({ text })",
+      "onTap": "onShareOptions",
+      "style": { "width": "100%" }
+    }
+  ]
+}

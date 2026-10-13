@@ -97,6 +97,7 @@
     { "id": "apiApp", "file": "pages/apiApp", "title": "应用与意图" },
     { "id": "apiAlipay", "file": "pages/apiAlipay", "title": "支付宝 Alipay" },
     { "id": "apiQrCode", "file": "pages/apiQrCode", "title": "二维码 QrCode" },
+    { "id": "apiShare", "file": "pages/apiShare", "title": "分享 Share" },
     { "id": "apiEnv", "file": "pages/apiEnv", "title": "Env / DeekeScript" },
     { "id": "apiEvents", "file": "pages/apiEvents", "title": "事件 Events" },
     { "id": "apiSensors", "file": "pages/apiSensors", "title": "传感器" },

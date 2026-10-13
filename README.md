@@ -24,7 +24,7 @@
 |------|------|
 | 节点与手势 | `apiUi`、`apiGesture`、`apiKeyBoards` |
 | 图色 | `apiImages`、`apiColors`（含 Colors.find）、`apiOcr` |
-| 应用与系统 | `apiDevice`、`apiSystem`、`apiApp`（含 Intent 广播）、`apiAlipay`（App 支付 + 扫码图）、`apiQrCode`（本地二维码）、`apiEnv`（含 DeekeScriptJson）、`apiEvents`、`apiSensors`、`apiTimer`、`apiConsole` |
+| 应用与系统 | `apiDevice`、`apiSystem`、`apiApp`（含 Intent 广播）、`apiAlipay`（orderString 调起支付）、`apiQrCode`（本地二维码）、`apiShare`（系统分享）、`apiEnv`（含 DeekeScriptJson）、`apiEvents`、`apiSensors`、`apiTimer`、`apiConsole` |
 | 存储 | `apiStorage`（list/zip）、`apiData`、`apiMediaStore`（数量统计） |
 | 网络 | `apiHttp`、`apiWebSocket`、`apiSocketIo`（需自备服务）、`apiCos`（仅说明，需密钥） |
 | 媒体 | `apiAudio`、`apiScreenRecord` |
