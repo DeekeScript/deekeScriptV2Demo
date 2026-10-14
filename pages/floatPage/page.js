@@ -61,7 +61,7 @@ Page({
   },
   refreshPanel: function () {
     var showing = 0;
-    var ids = ['m1', 'm2', 'm3', 'status'];
+    var ids = ['m1', 'm2', 'm3', 'status', 'runBar'];
     for (var i = 0; i < ids.length; i++) {
       if (FloatPage.isShowing(ids[i])) {
         showing++;
@@ -243,6 +243,13 @@ Page({
       return;
     }
     this.setData({ lastEvent: 'executeScript' });
+    this.refreshPanel();
+  },
+  onStartRunBar: function () {
+    if (!this.runFloatScript('tasks/runBar.js')) {
+      return;
+    }
+    this.setData({ lastEvent: 'runBar' });
     this.refreshPanel();
   },
   onStopAll: function () {

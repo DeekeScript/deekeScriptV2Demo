@@ -150,6 +150,20 @@
               "style": { "weight": 1, "background": "#FDECEC", "color": "#B42318" }
             }
           ]
+        },
+        { "type": "space", "height": 6 },
+        {
+          "type": "text",
+          "text": "运行条是自定义组件。任务显示它，script_stop 关掉它，点「停止」由任务自己结束",
+          "style": { "fontSize": 11, "color": "#6F7978" }
+        },
+        { "type": "space", "height": 6 },
+        {
+          "type": "row",
+          "style": { "gap": 6 },
+          "children": [
+            { "type": "button", "text": "运行条示例", "size": "sm", "onTap": "onStartRunBar", "style": { "weight": 1 } }
+          ]
         }
       ]
     }

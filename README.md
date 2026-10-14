@@ -50,6 +50,7 @@ permission.runScript('tasks/sample.js');
 - `tasks/sample.js` — 可点悬浮球停止 / 跳过的占位循环
 - `tasks/follow.js` — 同上（第二份入口）
 - `tasks/floatPage.js` — 打开 `floats/status` 悬浮窗并用 `FloatPage.setData` 推进度
+- `tasks/runBar.js` — 自定义组件运行条：任务显示，`script_stop` 关闭，点「停止」由任务结束脚本
 
 展厅里的 `permission.hint(...)` **仅用于本 Demo 教学占位**，生成真实工程时不要照抄。
 
@@ -71,6 +72,7 @@ permission.runScript('tasks/sample.js');
 - 目录：`floats/status/page.json` + `page.js`（不必写入 `pages` / `tabBar`）
 - 展厅页：能力 → **悬浮窗**（`pages/floatPage`）
 - 与悬浮球 menus **不是一回事**：球管开始/停止；FloatPage 管 JSON 悬浮窗界面
+- 运行条没有底座接口。`components/runBar` + `floats/runBar` + `tasks/runBar.js`，从能力 → 悬浮窗里的「运行条示例」启动
 
 ## require
 
