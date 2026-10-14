@@ -53,7 +53,15 @@ permission.runScript('tasks/sample.js');
 
 展厅里的 `permission.hint(...)` **仅用于本 Demo 教学占位**，生成真实工程时不要照抄。
 
-## 悬浮球停任务
+## 悬浮球
+
+入口 `floatWindow` 决定项目里这颗球：
+
+- 不写 `floatWindow`：不展示
+- 写了，但 `menus` 为空或不写：系统默认球，连点两次停止
+- `menus` 有内容：自定义菜单。本展厅就是这种，见 `deekeScript.json`
+
+停任务：
 
 - 菜单「停止」：`onTap` + `FloatWindow.on` 里写 `FloatWindow.stopTask()`
 - **不要**在页面按钮 / 菜单回调里用 `Engines.closeAll()`（无效）；任务脚本内自动结束才用 `Engines.closeAll()`
