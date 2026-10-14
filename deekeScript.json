@@ -140,8 +140,7 @@
   ],
   "components": [
     { "id": "choose", "file": "components/choose" },
-    { "id": "filter", "file": "components/filter" },
-    { "id": "runBar", "file": "components/runBar" }
+    { "id": "filter", "file": "components/filter" }
   ],
   "bottomMenus": [
     { "title": "首页", "icon": "img/home.svg", "page": "pages/home" },

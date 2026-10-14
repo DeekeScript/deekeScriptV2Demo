@@ -1,25 +1,20 @@
 /**
- * 运行条示例：自定义组件 components/runBar，用 FloatPage 画出来。
- * 1. 任务一开始显示 floats/runBar
- * 2. 自己跑完，或看到停止标记后 Engines.closeAll()，都会触发 script_stop
+ * 运行条示例：用 floats/runBar 画一条贴在状态栏上的胶囊。
+ * 1. 任务一开始 FloatPage.show，再用 FloatPage.setData 改文案
+ * 2. 点停止发 run_stop，并 FloatWindow.stopTask() 结束整项任务
  * 3. script_stop 里关闭运行条，并提示「任务已关闭」
- * 点「停止」只写 Storage。悬浮窗回调不在任务线程，Engines.closeAll() 在那里无效。
+ * 悬浮窗回调不在任务线程，不能在那里 Engines.closeAll()。
  */
-var TITLE_KEY = 'run_bar_title';
-var STOP_KEY = 'run_bar_stop';
-
-function stopped() {
-  return Storage.getBoolean(STOP_KEY);
-}
+var stopped = false;
 
 function waitOrStop(ms) {
   var left = ms;
-  while (left > 0 && !stopped()) {
+  while (left > 0 && !stopped) {
     var step = left > 200 ? 200 : left;
     System.sleep(step);
     left = left - step;
   }
-  return stopped();
+  return stopped;
 }
 
 if (!Access.isFloatWindowsEnabled()) {
@@ -30,8 +25,6 @@ if (!Access.isFloatWindowsEnabled()) {
   });
   Engines.closeAll();
 } else {
-  Storage.putBoolean(STOP_KEY, false);
-  Storage.put(TITLE_KEY, '任务正在执行');
   var density = Device.width() / 360;
   if (density < 1) {
     density = 1;
@@ -53,6 +46,9 @@ if (!Access.isFloatWindowsEnabled()) {
     System.toast('打开运行条失败');
     Engines.closeAll();
   } else {
+    Events.on('run_stop', function () {
+      stopped = true;
+    });
     Events.on('script_stop', function () {
       FloatPage.close('runBar');
       System.toast('任务已关闭');
@@ -63,8 +59,8 @@ if (!Access.isFloatWindowsEnabled()) {
       { title: '准备点赞', ms: 1500 }
     ];
     var i = 0;
-    while (i < steps.length && !stopped()) {
-      Storage.put(TITLE_KEY, steps[i].title);
+    while (i < steps.length && !stopped) {
+      FloatPage.setData('runBar', { title: steps[i].title });
       if (waitOrStop(steps[i].ms)) {
         break;
       }

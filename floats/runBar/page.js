@@ -1,40 +1,49 @@
 /**
  * 运行条悬浮窗。
- * 文案由任务写入 Storage，这里定时刷到组件上。
- * 点「停止」只写标记。悬浮窗回调不在任务线程，不能在这里 Engines.closeAll()。
+ * 文案由任务 FloatPage.setData 写入本页 data。
+ * 点停止先发 run_stop，再 FloatWindow.stopTask()。
+ * 悬浮窗回调不在任务线程，这里不能 Engines.closeAll()。
  */
-var TITLE_KEY = 'run_bar_title';
-
 Page({
+  data: {
+    title: '任务正在执行',
+    dotOpacity: 1
+  },
+
   onShow: function () {
-    this.watchTitle();
+    this.blink();
   },
+
   onClose: function () {
-    this.stopWatch();
+    this.stopBlink();
   },
-  watchTitle: function () {
-    if (this._timer) {
+
+  blink: function () {
+    if (this._dotTimer) {
       return;
     }
     var that = this;
-    this._timer = setInterval(function () {
-      var title = Storage.get(TITLE_KEY);
-      if (!title) {
-        return;
-      }
-      var bar = that.selectComponent('bar');
-      if (bar && bar.setData) {
-        bar.setData({ title: title });
-      }
-    }, 300);
+    var bright = true;
+    this._dotTimer = setInterval(function () {
+      bright = !bright;
+      that.setData({ dotOpacity: bright ? 1 : 0.45 });
+    }, 700);
   },
-  stopWatch: function () {
-    if (this._timer) {
-      clearInterval(this._timer);
-      this._timer = null;
+
+  stopBlink: function () {
+    if (this._dotTimer) {
+      clearInterval(this._dotTimer);
+      this._dotTimer = null;
     }
   },
+
   onStop: function () {
-    Storage.putBoolean('run_bar_stop', true);
+    if (this._stopped) {
+      return;
+    }
+    this._stopped = true;
+    this.stopBlink();
+    Events.emit('run_stop');
+    FloatWindow.stopTask();
   }
 });
