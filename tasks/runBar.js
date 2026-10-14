@@ -24,6 +24,13 @@ if (!Access.isFloatWindowsEnabled()) {
     }
   });
   Engines.closeAll();
+} else if (!Access.isAccessibilityServiceEnabled()) {
+  Dialogs.confirm('提示', '运行条贴在状态栏上，需要开启无障碍才能点击', function (ok) {
+    if (ok) {
+      Access.openAccessibilityServiceSetting();
+    }
+  });
+  Engines.closeAll();
 } else {
   var density = Device.width() / 360;
   if (density < 1) {

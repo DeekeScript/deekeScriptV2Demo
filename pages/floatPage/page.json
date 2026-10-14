@@ -154,7 +154,7 @@
         { "type": "space", "height": 6 },
         {
           "type": "text",
-          "text": "运行条画在悬浮页里。任务用 FloatPage.setData 改文案，点「停止」发 run_stop，由任务自己结束",
+          "text": "运行条贴在状态栏上。需要先开启无障碍，否则停止图标点不到。任务用 FloatPage.setData 改文案",
           "style": { "fontSize": 11, "color": "#6F7978" }
         },
         { "type": "space", "height": 6 },
