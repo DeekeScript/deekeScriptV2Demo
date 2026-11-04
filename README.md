@@ -28,7 +28,7 @@
 | 存储 | `apiStorage`（list/zip）、`apiData`、`apiMediaStore`（数量统计） |
 | 网络 | `apiHttp`、`apiWebSocket`、`apiSocketIo`（需自备服务）、`apiCos`（仅说明，需密钥） |
 | 媒体 | `apiAudio`、`apiScreenRecord` |
-| 运行与扩展 | `apiDialogs`、`apiEngines`、`apiModule`、`apiPromise`、`apiThreads`、`apiCrypto`、`apiExtend`、`apiNotify`、`apiSms`、`apiForeground`、`apiAccess`（含电池优化豁免）、`apiDeviceOwner`（只读）、`apiHid`（连接探测） |
+| 运行与扩展 | `apiDialogs`、`apiEngines`、`apiModule`、`apiPromise`、`apiThreads`、`apiCrypto`、`apiExtend`、`apiNotify`、`apiSms`、`apiForeground`、`apiAccess`（含电池优化豁免）、`apiDeviceOwner`（只读）、`apiHid`（连接探测）、`apiAdbConnect`（首次连接：分屏 / 无障碍读码）、`apiAdb`（日常重连 / shell） |
 
 需自备条件才能完整体验：腾讯云密钥（Cos）、Socket.IO 服务端、Device Owner、蓝牙 HID 硬件。详细 API 以文档为准。
 
@@ -50,6 +50,7 @@ permission.runScript('tasks/sample.js');
 - `tasks/sample.js` — 可点悬浮球停止 / 跳过的占位循环
 - `tasks/follow.js` — 同上（第二份入口）
 - `tasks/floatPage.js` — 打开 `floats/status` 悬浮窗并用 `FloatPage.setData` 推进度
+- `tasks/runBar.js` — 运行条：任务 `FloatPage.show` 后 `setData` 改文案，`script_stop` 关闭，点「停止」发 `run_stop` 由任务结束脚本
 
 展厅里的 `permission.hint(...)` **仅用于本 Demo 教学占位**，生成真实工程时不要照抄。
 
@@ -71,6 +72,7 @@ permission.runScript('tasks/sample.js');
 - 目录：`floats/status/page.json` + `page.js`（不必写入 `pages` / `tabBar`）
 - 展厅页：能力 → **悬浮窗**（`pages/floatPage`）
 - 与悬浮球 menus **不是一回事**：球管开始/停止；FloatPage 管 JSON 悬浮窗界面
+- 运行条是普通悬浮页。`floats/runBar` + `tasks/runBar.js`，从能力 → 悬浮窗里的「运行条示例」启动。贴在状态栏上时必须开启无障碍，否则停止图标点不到
 
 ## require
 

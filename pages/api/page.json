@@ -12,7 +12,7 @@
   "body": [
     {
       "type": "notice",
-      "text": "按文档模块分组。节点/图色需对应权限。Cos、Socket.IO、Device Owner、Hid 需自备密钥、服务或硬件。"
+      "text": "按文档模块分组。节点/图色需对应权限。Cos、Socket.IO、Device Owner、Hid、Adb 需自备密钥、服务、硬件或系统无线调试（Adb 需 Android 11+）。"
     },
     {
       "type": "space",

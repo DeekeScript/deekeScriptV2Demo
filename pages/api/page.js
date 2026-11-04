@@ -51,7 +51,9 @@ Page({
       { name: '前台服务', desc: 'ForegroundServiceBridge', page: 'pages/apiForeground' },
       { name: '权限 Access', desc: '汇总检测 / 申请 / 省电豁免', page: 'pages/apiAccess' },
       { name: 'Device Owner', desc: 'isDeviceOwner 只读', page: 'pages/apiDeviceOwner' },
-      { name: 'Hid', desc: 'isConnected 探测', page: 'pages/apiHid' }
+      { name: 'Hid', desc: 'isConnected 探测', page: 'pages/apiHid' },
+      { name: 'Adb 连接方法', desc: '分屏手输 / 无障碍读 6 位码', page: 'pages/apiAdbConnect' },
+      { name: 'Adb 无线调试', desc: '重连 / 手填 / shell', page: 'pages/apiAdb' }
     ]
   }
 });

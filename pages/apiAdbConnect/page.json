@@ -1,0 +1,67 @@
+{
+  "title": { "text": "Adb 连接方法", "fontSize": 18, "color": "#FFFFFF", "background": "#006A65" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    {
+      "type": "notice",
+      "text": "首次配对弹窗别关：6 位码只在「使用配对码配对设备」弹窗里有效。一离开设置页，很多机型会关掉弹窗。"
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "方式一：分屏手输", "style": { "fontWeight": "bold", "color": "#006A65" } },
+        { "type": "space", "height": 4 },
+        {
+          "type": "text",
+          "text": "1. 打开无线调试 → 点「使用配对码配对设备」，弹窗先别关。\n2. 系统分屏 / 小窗：左边留设置页（能看见 6 位码），右边打开本应用。\n3. 点下方「分屏手输配对」，只填 6 位码即可。"
+        },
+        { "type": "space", "height": 8 },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "分屏手输配对",
+          "onTap": "onPairSplitScreen",
+          "style": { "background": "#006A65", "color": "#FFFFFF" }
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "方式二：无障碍读码", "style": { "fontWeight": "bold", "color": "#0B6E4F" } },
+        { "type": "space", "height": 4 },
+        {
+          "type": "text",
+          "text": "开启无障碍后，脚本会尽量自动点开配对弹窗，读取界面上的 6 位数字，再调用 Adb.pairWithCode。适合写进正式脚本，少让用户抄码。"
+        },
+        { "type": "space", "height": 8 },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "无障碍读码配对",
+          "onTap": "onPairByAccessibility",
+          "style": { "background": "#0B6E4F", "color": "#FFFFFF" }
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "最近结果", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{result}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "打开无线调试", "onTap": "onOpenWireless", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "Adb 其它能力", "onTap": "onGoAdb", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}
