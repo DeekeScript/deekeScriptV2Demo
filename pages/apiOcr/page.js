@@ -169,24 +169,17 @@ Page({
   onFindInRegion() {
     try {
       var path = this._shot();
-      var kw = this._kw();
       var w = Device.width();
       var h = Math.floor(Device.height() / 2);
-      var hits = Images.findTextInRegion(path, kw, 0, 0, w, h) || [];
+      var hits = Images.getTextAndRegionInRegion(path, 0, 0, w, h) || [];
       var n = hits.length;
-      var preview;
-      if (n > 0 && typeof hits[0] === 'string') {
-        preview = hits.slice(0, 3).join(' / ');
-      } else {
-        preview = demo.textPreview(hits, 3);
-      }
       this.setData({
-        result: preview || '(0)',
-        status: 'findTextInRegion 上半屏 ' + n
+        result: demo.textPreview(hits, 3) || '(0)',
+        status: 'getTextAndRegionInRegion 上半屏 ' + n
       });
       this.toast(n + ' 处');
     } catch (e) {
-      this.setData({ status: 'findTextInRegion 失败: ' + e });
+      this.setData({ status: 'getTextAndRegionInRegion 失败: ' + e });
     }
   },
   onWaitText() {

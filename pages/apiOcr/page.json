@@ -28,7 +28,7 @@
     : "findTextCenter", "onTap": "onFindTextCenter" },
     : "findTextPosition", "onTap": "onFindTextPosition" },
     : "findTextMatches 数字正则", "onTap": "onFindRegex" },
-    : "findTextInRegion 上半屏", "onTap": "onFindInRegion" },
+    : "getTextAndRegionInRegion 上半屏", "onTap": "onFindInRegion" },
     : "waitText 3秒", "onTap": "onWaitText" }
   ]
 }
