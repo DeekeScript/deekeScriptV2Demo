@@ -4,15 +4,7 @@
   "body": [
     {
       "type": "notice",
-      "text": "Android 11+。首次配对（分屏手输 / 无障碍读码）请先看「Adb 连接方法」。本页负责日常重连、手填参数和 shell 验证。"
-    },
-    { "type": "space", "height": 8 },
-    {
-      "type": "button",
-      "size": "sm",
-      "text": "如何首次连接（分屏 / 无障碍读码）",
-      "onTap": "onGoConnect",
-      "style": { "background": "#0B6E4F", "color": "#FFFFFF" }
+      "text": "Android 11+。自动配对会打开无线调试，并在通知栏放一条可回复通知。下拉通知点「输入」回复 6 位码，不要切回本应用。连不上再「Adb 手动配对」。"
     },
     { "type": "space", "height": 8 },
     {
@@ -26,25 +18,51 @@
     },
     { "type": "space", "height": 8 },
     {
+      "type": "text",
+      "text": "首次配对",
+      "style": { "fontWeight": "bold", "color": "#006A65" }
+    },
+    { "type": "space", "height": 4 },
+    {
+      "type": "text",
+      "text": "点「自动配对」后留在设置页。下拉通知，点「输入」回复 6 位码。不要切回本应用。"
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "自动配对",
+          "onTap": "onPairAuto",
+          "style": { "weight": 1, "background": "#006A65", "color": "#FFFFFF" }
+        },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "无障碍读码",
+          "onTap": "onPairByAccessibility",
+          "style": { "weight": 1 }
+        }
+      ]
+    },
+    { "type": "space", "height": 6 },
+    {
+      "type": "button",
+      "size": "sm",
+      "text": "手动配对（自动连不上再用）",
+      "onTap": "onGoManual"
+    },
+    { "type": "space", "height": 8 },
+    {
       "type": "row",
       "style": { "gap": 6 },
       "children": [
         { "type": "button", "size": "sm", "text": "刷新状态", "onTap": "onRefresh", "style": { "weight": 1 } },
         { "type": "button", "size": "sm", "text": "打开无线调试", "onTap": "onOpenWireless", "style": { "weight": 1 } }
       ]
-    },
-    { "type": "space", "height": 8 },
-    {
-      "type": "text",
-      "text": "备选：手填全部参数",
-      "style": { "fontWeight": "bold", "color": "#006A65" }
-    },
-    { "type": "space", "height": 4 },
-    {
-      "type": "button",
-      "size": "sm",
-      "text": "手动填全部参数",
-      "onTap": "onPairManual"
     },
     { "type": "space", "height": 8 },
     {
@@ -57,8 +75,7 @@
       "type": "row",
       "style": { "gap": 6 },
       "children": [
-        { "type": "button", "size": "sm", "text": "历史端口重连", "onTap": "onConnectSaved", "style": { "weight": 1 } },
-        { "type": "button", "size": "sm", "text": "手填连接端口", "onTap": "onConnectPort", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "自动重连", "onTap": "onConnectSaved", "style": { "weight": 1 } },
         { "type": "button", "size": "sm", "text": "断开", "onTap": "onDisconnect", "style": { "weight": 1 } }
       ]
     },

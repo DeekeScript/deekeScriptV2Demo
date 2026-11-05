@@ -55,8 +55,138 @@ Page({
     }
   },
 
-  onGoConnect() {
-    this.navigate('pages/apiAdbConnect');
+  _ensureAccessibility() {
+    if (typeof Access !== 'undefined' && Access.isAccessibilityServiceEnabled()) {
+      return true;
+    }
+    Dialogs.confirm('提示', '无障碍读码需要开启无障碍服务', function (ok) {
+      if (ok && typeof Access !== 'undefined') {
+        Access.openAccessibilityServiceSetting();
+      }
+    });
+    return false;
+  },
+
+  _readWirelessPairingCode(timeoutMs) {
+    timeoutMs = timeoutMs || 30000;
+    var end = Date.now() + timeoutMs;
+    while (Date.now() < end) {
+      var node = UiSelector().textMatches('^[0-9]{6}$').isVisibleToUser(true).findOne(400);
+      if (!node) {
+        node = UiSelector().textMatches('^[0-9]{3}\\s+[0-9]{3}$').isVisibleToUser(true).findOne(200);
+      }
+      if (node) {
+        return String(node.text()).replace(/\s+/g, '');
+      }
+      System.sleep(250);
+    }
+    return null;
+  },
+
+  _openPairingDialog() {
+    var btn =
+      UiSelector().textContains('使用配对码配对设备').isVisibleToUser(true).findOne(1500) ||
+      UiSelector().textContains('Pair device with pairing code').isVisibleToUser(true).findOne(800) ||
+      UiSelector().descContains('使用配对码配对设备').isVisibleToUser(true).findOne(500);
+    if (btn) {
+      btn.click();
+      System.sleep(800);
+      return true;
+    }
+    return false;
+  },
+
+  onGoManual() {
+    this.navigate('pages/apiAdbManual');
+  },
+
+  onPairAuto() {
+    if (!this._adbReady()) {
+      return;
+    }
+    if (!Adb.isSupported()) {
+      Dialogs.show('提示', '需要 Android 11 及以上');
+      return;
+    }
+    var self = this;
+    Dialogs.confirm(
+      '自动配对',
+      '将打开无线调试，并在通知栏放一条可回复的通知。\n\n' +
+        '1. 点「使用配对码配对设备」\n' +
+        '2. 下拉通知，点「输入」，回复 6 位码\n' +
+        '不要切回本应用，否则配对弹窗会被关掉。\n' +
+        '仍连不上再点「手动配对」。',
+      function (ok) {
+        if (!ok) {
+          return;
+        }
+        try {
+          var code = App.notifyInput(
+            '无线调试配对',
+            '点「输入」回复 6 位配对码。不要回到 DeekeScript。',
+            '6 位配对码',
+            function () {
+              Adb.openWirelessDebuggingSettings();
+            }
+          );
+          if (!code) {
+            self.setData({ result: '已取消' });
+            return;
+          }
+          var r = Adb.pairWithCode(String(code), 120000);
+          var tip = r && r.ok ? '' : ' · 仍失败再「Adb 手动配对」';
+          self.setData({ result: '自动配对 · ' + self._fmt(r) + tip });
+          self.onRefresh();
+        } catch (e) {
+          self.setData({ result: '' + e + ' · 可改试「Adb 手动配对」' });
+        }
+      }
+    );
+  },
+
+  onPairByAccessibility() {
+    if (!this._adbReady()) {
+      return;
+    }
+    if (!Adb.isSupported()) {
+      Dialogs.show('提示', '需要 Android 11 及以上');
+      return;
+    }
+    if (!this._ensureAccessibility()) {
+      this.setData({ result: '请先开启无障碍后再点本按钮' });
+      return;
+    }
+    var self = this;
+    Dialogs.confirm(
+      '无障碍读码',
+      '将打开无线调试页，尽量自动点「使用配对码配对设备」，读取 6 位码后自动配对。',
+      function (ok) {
+        if (!ok) {
+          return;
+        }
+        try {
+          Adb.openWirelessDebuggingSettings();
+          System.sleep(1200);
+          if (!self._openPairingDialog()) {
+            FloatDialogs.toast('请手动点「使用配对码配对设备」');
+          }
+          var code = self._readWirelessPairingCode(30000);
+          if (!code) {
+            self.setData({
+              result: '没有读到 6 位码。可改用「自动配对」手输，仍失败再「手动配对」。'
+            });
+            return;
+          }
+          FloatDialogs.toast('已读到配对码：' + code);
+          var r = Adb.pairWithCode(String(code), 120000);
+          var tip = r && r.ok ? '' : ' · 仍失败请打开「Adb 手动配对」';
+          self.setData({ result: '无障碍读码=' + code + ' · ' + self._fmt(r) + tip });
+          self.onRefresh();
+        } catch (e) {
+          self.setData({ result: '' + e });
+        }
+      }
+    );
   },
 
   onRefresh() {
@@ -99,66 +229,6 @@ Page({
     }
   },
 
-  onPairManual() {
-    if (!this._adbReady()) {
-      return;
-    }
-    if (!Adb.isSupported()) {
-      Dialogs.show('提示', '需要 Android 11 及以上');
-      return;
-    }
-    Adb.openWirelessDebuggingSettings();
-    var self = this;
-    Dialogs.confirm(
-      '手动填全部参数',
-      '自动发现失败时再用。\n' +
-        '1. 打开无线调试\n' +
-        '2. 点「使用配对码配对设备」：抄【配对端口】和【6位码】（建议分屏，见「Adb 连接方法」）\n' +
-        '3. 回到无线调试主界面：抄【IP:端口】里冒号后面的【连接端口】\n' +
-        '两个端口不是同一个。',
-      function (ok) {
-        if (!ok) {
-          return;
-        }
-        var pairPort = Dialogs.input('配对端口（配对码弹窗上的端口）', '');
-        if (!pairPort) {
-          self.setData({ result: '已取消：未填配对端口' });
-          return;
-        }
-        var pairCode = Dialogs.input('6 位配对码', '');
-        if (!pairCode) {
-          self.setData({ result: '已取消：未填配对码' });
-          return;
-        }
-        var connectPort = Dialogs.input('连接端口（主界面 IP:端口 冒号后）', String(Adb.getPort() || ''));
-        if (!connectPort) {
-          self.setData({ result: '已取消：未填连接端口' });
-          return;
-        }
-        try {
-          var r = Adb.pairWithCode({
-            code: String(pairCode),
-            pairPort: Number(pairPort),
-            connectPort: Number(connectPort),
-            timeoutMs: 15000
-          });
-          self.setData({
-            result:
-              '手动完成 · ' +
-              self._fmt(r) +
-              ' · pairPort=' +
-              pairPort +
-              ' connectPort=' +
-              connectPort
-          });
-          self.onRefresh();
-        } catch (e) {
-          self.setData({ result: '' + e });
-        }
-      }
-    );
-  },
-
   onConnectSaved() {
     if (!this._adbReady()) {
       return;
@@ -166,24 +236,6 @@ Page({
     try {
       var r = Adb.connectSaved();
       this.setData({ result: this._fmt(r) });
-      this.onRefresh();
-    } catch (e) {
-      this.setData({ result: '' + e });
-    }
-  },
-
-  onConnectPort() {
-    if (!this._adbReady()) {
-      return;
-    }
-    var port = Dialogs.input('连接端口（无线调试主界面 IP:端口 冒号后）', String(Adb.getPort() || ''));
-    if (!port) {
-      this.setData({ result: '已取消' });
-      return;
-    }
-    try {
-      var r = Adb.connect(Number(port));
-      this.setData({ result: this._fmt(r) + ' · port=' + port });
       this.onRefresh();
     } catch (e) {
       this.setData({ result: '' + e });
@@ -209,7 +261,7 @@ Page({
     }
     try {
       if (!Adb.isConnected()) {
-        this.setData({ result: '未连接，请先到「Adb 连接方法」完成首次配对，或本页历史端口重连' });
+        this.setData({ result: '未连接，请先本页「自动配对」，或「自动重连」' });
         return;
       }
       var r = Adb.shell('id');
@@ -250,10 +302,10 @@ Page({
   onHint() {
     Dialogs.show(
       '说明',
-      '【首次怎么连】请打开「Adb 连接方法」：分屏手输 6 位码，或无障碍自动读码。\n\n' +
-        '【本页】日常历史端口重连；自动发现失败再「手动填全部参数」。\n' +
-        '配对端口 = 配对码弹窗上的端口；连接端口 = 主界面「IP:端口」冒号后。\n' +
-        '文档：Adb 连接方法 / 开启与配对 / Adb 方法。'
+      '【首次】本页「自动配对」只填 6 位码。\n' +
+        '在通知栏点「输入」回复，不要分屏，也不要切回本应用。\n' +
+        '自动连不上再打开「Adb 手动配对」。\n\n' +
+        '【日常】「自动重连」会自己扫描端口。手填端口只在「Adb 手动配对」。'
     );
   }
 });

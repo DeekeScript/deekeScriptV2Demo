@@ -52,8 +52,8 @@ Page({
       { name: '权限 Access', desc: '汇总检测 / 申请 / 省电豁免', page: 'pages/apiAccess' },
       { name: 'Device Owner', desc: 'isDeviceOwner 只读', page: 'pages/apiDeviceOwner' },
       { name: 'Hid', desc: 'isConnected 探测', page: 'pages/apiHid' },
-      { name: 'Adb 连接方法', desc: '分屏手输 / 无障碍读 6 位码', page: 'pages/apiAdbConnect' },
-      { name: 'Adb 无线调试', desc: '重连 / 手填 / shell', page: 'pages/apiAdb' }
+      { name: 'Adb 无线调试', desc: '自动配对 / 日常重连 / shell', page: 'pages/apiAdb' },
+      { name: 'Adb 手动配对', desc: '自动连不上再手填端口', page: 'pages/apiAdbManual' }
     ]
   }
 });

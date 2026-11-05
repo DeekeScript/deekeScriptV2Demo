@@ -511,14 +511,14 @@
       "title": "Hid"
     },
     {
-      "id": "apiAdbConnect",
-      "file": "pages/apiAdbConnect",
-      "title": "Adb 连接方法"
-    },
-    {
       "id": "apiAdb",
       "file": "pages/apiAdb",
       "title": "Adb 无线调试"
+    },
+    {
+      "id": "apiAdbManual",
+      "file": "pages/apiAdbManual",
+      "title": "Adb 手动配对"
     },
     {
       "id": "tabBar",

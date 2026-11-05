@@ -1,0 +1,47 @@
+{
+  "title": { "text": "Adb 手动配对", "fontSize": 18, "color": "#FFFFFF", "background": "#8A4B08" },
+  "style": { "background": "#F5F5F5", "padding": 12 },
+  "body": [
+    {
+      "type": "notice",
+      "text": "请先用「Adb 无线调试」自动配对。只有自动配对不上时再用本页。手填改为通知栏回复，不要切回本应用，否则配对弹窗会被关掉。"
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "手填全部参数", "style": { "fontWeight": "bold", "color": "#8A4B08" } },
+        { "type": "space", "height": 4 },
+        {
+          "type": "text",
+          "text": "配对端口 + 6 位码：在「使用配对码配对设备」弹窗上抄。\n连接端口：在无线调试主界面「IP:端口」冒号后面抄。两个端口不是同一个。"
+        },
+        { "type": "space", "height": 8 },
+        {
+          "type": "button",
+          "size": "sm",
+          "text": "手动扫描配对",
+          "onTap": "onPairManual",
+          "style": { "background": "#8A4B08", "color": "#FFFFFF" }
+        }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "card",
+      "children": [
+        { "type": "text", "text": "最近结果", "style": { "fontWeight": "bold" } },
+        { "type": "notice", "text": "{{result}}" }
+      ]
+    },
+    { "type": "space", "height": 8 },
+    {
+      "type": "row",
+      "style": { "gap": 6 },
+      "children": [
+        { "type": "button", "size": "sm", "text": "打开无线调试", "onTap": "onOpenWireless", "style": { "weight": 1 } },
+        { "type": "button", "size": "sm", "text": "回到自动配对", "onTap": "onGoAdb", "style": { "weight": 1 } }
+      ]
+    }
+  ]
+}
